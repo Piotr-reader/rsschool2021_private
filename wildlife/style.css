@@ -217,6 +217,9 @@ color: #CCCCCC;
     border: 0;
     background: #CCCCCC;
 }
+.prev:hover, .next:hover {
+    cursor: pointer;
+}
 .prev img, .next img {
 margin: 0;
 }
