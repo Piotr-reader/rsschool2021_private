@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+.active {
+    color: #333333;
+    font-weight: 900;
+    border-bottom:2px solid #333333;
+}
+a:hover {
+    color: #333333;
+    font-weight: 900;
+    text-decoration: none;
+}
+.wrapper-around {
+    max-width: 1920px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+}
+.wrapper {
+    max-width: 1620px;
+    margin: auto;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 94px;
+}
+.logo {
+    font-weight: 900;
+    color: #333333;
+}
+h1 {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.logo-online {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.08em;
+    margin-top: -8px;
+    margin-left: 6px;
+}
+.header-nav {
+    display: flex;
+}
+.header-nav-link {
+    margin-right: 122px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input {display:none;}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #F2F2F2;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/*   Header end    */
+
+
+/*    First-screen start */
+.first-screen {
+    background: url(assets/images/Rectangle\ 32.jpg) no-repeat;
+    height: 940px;
+}
+
+
+/*    Footer    */
+footer {
+    margin-top: auto;
+}
+.footer-top {
+    height: 50px;
+    background: #000;
+}
