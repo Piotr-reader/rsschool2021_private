@@ -1,5 +1,6 @@
 "use strict";
 
+// play Audio
 const piano = document.querySelector(".piano");
 const pianoКeys = document.querySelectorAll(".piano-key");
 
@@ -67,14 +68,16 @@ function codeButton(event) {
 }
 
 piano.addEventListener("mousedown", (event) => {
-  if (event.target.classList.contains("piano-key")) {
-    pianoКeys.forEach((el) => {
-      if (el.classList.contains("active")) {
-        el.classList.remove("active");
-      }
-    });
-    event.target.classList.add("active");
+  pianoКeys.forEach((el) => {
+  if (el.classList.contains("piano-key-active")) {
+    el.classList.add("piano-key-remove-mouse");
+    el.classList.remove("piano-key-active");
+    el.classList.remove("piano-key-active-pseudo");
   }
+    event.target.classList.remove("piano-key-remove-mouse");
+    event.target.classList.add("piano-key-active");
+    event.target.classList.add("piano-key-active-pseudo");
+});
   codeButton(event.target.dataset.code);
 });
 
@@ -93,7 +96,7 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-// notes letters
+// switch notes letters
 const btnNotes = document.querySelector(".btn-container");
 const btn = document.querySelectorAll(".btn");
 const btnLetters = document.querySelector(".btn-letters");
@@ -121,3 +124,36 @@ btnNote.addEventListener("mousedown", (event) => {
     elem.classList.remove("letter-add");
   });
 });
+
+// fullScreen
+const fullScreen = document.querySelector(".fullscreen");
+const elem = document.documentElement;
+
+  window.addEventListener("keydown", (e) => {
+    if (e.code === "Escape") {
+      console.log(e);
+        fullScreen.classList.add("openfullscreen");
+      }
+  });
+
+fullScreen.addEventListener("mousedown", (e) => {
+  if (e.target.classList.contains("openfullscreen")) {
+    e.target.classList.remove("openfullscreen");
+    openFullscreen();
+  } else {
+    closeFullscreen();
+    e.target.classList.add("openfullscreen");
+  }
+});
+function openFullscreen() {
+    elem.requestFullscreen();
+};
+function closeFullscreen() {
+    document.exitFullscreen();
+};
+
+
+
+
+
+
