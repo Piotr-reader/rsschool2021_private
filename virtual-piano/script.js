@@ -167,20 +167,11 @@ btnNote.addEventListener("mousedown", (event) => {
 const fullScreen = document.querySelector(".fullscreen");
 const elem = document.documentElement;
 
-window.addEventListener("keydown", (e) => {
-  if (e.code === "Escape") {
-    console.log(e);
-    fullScreen.classList.add("openfullscreen");
-  }
-});
-
-fullScreen.addEventListener("mousedown", (e) => {
-  if (e.target.classList.contains("openfullscreen")) {
-    e.target.classList.remove("openfullscreen");
+fullScreen.addEventListener("mousedown", (event) => {
+  if (document.fullscreenElement === null) {
     openFullscreen();
   } else {
     closeFullscreen();
-    e.target.classList.add("openfullscreen");
   }
 });
 function openFullscreen() {
@@ -189,5 +180,3 @@ function openFullscreen() {
 function closeFullscreen() {
   document.exitFullscreen();
 }
-
-// expirience
