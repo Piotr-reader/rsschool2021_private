@@ -67,32 +67,70 @@ function codeButton(event) {
   playAudio(src);
 }
 
-piano.addEventListener("mousedown", (event) => {
+// mouse functions
+window.addEventListener("mouseup", (event) => {
   pianoКeys.forEach((el) => {
-  if (el.classList.contains("piano-key-active")) {
     el.classList.add("piano-key-remove-mouse");
     el.classList.remove("piano-key-active");
     el.classList.remove("piano-key-active-pseudo");
-  }
+    el.classList.remove("piano-key-pressed");
+  });
+});
+piano.addEventListener("mousedown", (event) => {
+  pianoКeys.forEach((el) => {
+    if (el.classList.contains("piano-key-active")) {
+      el.classList.add("piano-key-remove-mouse");
+      el.classList.remove("piano-key-active");
+      el.classList.remove("piano-key-active-pseudo");
+    }
     event.target.classList.remove("piano-key-remove-mouse");
     event.target.classList.add("piano-key-active");
     event.target.classList.add("piano-key-active-pseudo");
-});
+    event.target.classList.add("piano-key-pressed");
+  });
   codeButton(event.target.dataset.code);
 });
+piano.addEventListener("mouseover", (event) => {
+  if (!event.target.classList.contains("piano")) {
+    pianoКeys.forEach((el) => {
+      if (el.classList.contains("piano-key-pressed")) {
+        el.classList.add("piano-key-remove-mouse");
+        el.classList.remove("piano-key-pressed");
+        el.classList.remove("piano-key-active");
+        el.classList.remove("piano-key-active-pseudo");
+        codeButton(event.target.dataset.code);
+        event.target.classList.add("piano-key-pressed");
+        event.target.classList.add("piano-key-active");
+        event.target.classList.add("piano-key-active-pseudo");
+      }
+    });
+  }
+});
 
+// keyboard function
 window.addEventListener("keydown", (event) => {
   let key = document.querySelector(`.piano-key[data-code="${event.code}"]`);
   if (key !== null) {
-    if (key.classList.contains("piano-key")) {
+    if (key.classList.contains("piano-key-remove-mouse")) {
       pianoКeys.forEach((el) => {
-        if (el.classList.contains("active")) {
-          el.classList.remove("active");
+        if (el.classList.contains("piano-key-active")) {
+          el.classList.remove("piano-key-remove-mouse");
         }
       });
     }
-    key.classList.add("active");
+    key.classList.add("piano-key-active");
+    key.classList.add("piano-key-active-pseudo");
     codeButton(event.code);
+  }
+});
+window.addEventListener("keyup", (event) => {
+  let key = document.querySelector(`.piano-key[data-code="${event.code}"]`);
+  if (key !== null) {
+    pianoКeys.forEach((el) => {
+      el.classList.add("piano-key-remove-mouse");
+      el.classList.remove("piano-key-active");
+      el.classList.remove("piano-key-active-pseudo");
+    });
   }
 });
 
@@ -129,12 +167,12 @@ btnNote.addEventListener("mousedown", (event) => {
 const fullScreen = document.querySelector(".fullscreen");
 const elem = document.documentElement;
 
-  window.addEventListener("keydown", (e) => {
-    if (e.code === "Escape") {
-      console.log(e);
-        fullScreen.classList.add("openfullscreen");
-      }
-  });
+window.addEventListener("keydown", (e) => {
+  if (e.code === "Escape") {
+    console.log(e);
+    fullScreen.classList.add("openfullscreen");
+  }
+});
 
 fullScreen.addEventListener("mousedown", (e) => {
   if (e.target.classList.contains("openfullscreen")) {
@@ -146,14 +184,10 @@ fullScreen.addEventListener("mousedown", (e) => {
   }
 });
 function openFullscreen() {
-    elem.requestFullscreen();
-};
+  elem.requestFullscreen();
+}
 function closeFullscreen() {
-    document.exitFullscreen();
-};
+  document.exitFullscreen();
+}
 
-
-
-
-
-
+// expirience
