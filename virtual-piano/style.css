@@ -140,6 +140,7 @@ body {
 	border-radius: 0;
 	pointer-events: none;
 }
+
 .piano-key::before,
 .piano-key::after {
 	content: attr(data-note);
@@ -153,6 +154,10 @@ body {
 	bottom: -45px;
 	left: 20px;
 	transition: 0.3s;
+}
+.piano-key.letter-add::after,
+.piano-key.letter-add::before {
+	content: attr(data-letter);
 }
 .piano-key::after {
 	display: none;

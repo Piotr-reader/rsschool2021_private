@@ -66,7 +66,7 @@ function codeButton(event) {
   playAudio(src);
 }
 
-piano.addEventListener("click", (event) => {
+piano.addEventListener("mousedown", (event) => {
   if (event.target.classList.contains("piano-key")) {
     pianoКeys.forEach((el) => {
       if (el.classList.contains("active")) {
@@ -77,7 +77,6 @@ piano.addEventListener("click", (event) => {
   }
   codeButton(event.target.dataset.code);
 });
-
 
 window.addEventListener("keydown", (event) => {
   let key = document.querySelector(`.piano-key[data-code="${event.code}"]`);
@@ -92,4 +91,33 @@ window.addEventListener("keydown", (event) => {
     key.classList.add("active");
     codeButton(event.code);
   }
+});
+
+// notes letters
+const btnNotes = document.querySelector(".btn-container");
+const btn = document.querySelectorAll(".btn");
+const btnLetters = document.querySelector(".btn-letters");
+const btnNote = document.querySelector(".btn-notes");
+
+btnNotes.addEventListener("mousedown", (event) => {
+  if (event.target.classList.contains("btn")) {
+    btn.forEach((el) => {
+      if (el.classList.contains("btn-active")) {
+        el.classList.remove("btn-active");
+      }
+    });
+    event.target.classList.add("btn-active");
+  }
+});
+
+btnLetters.addEventListener("mousedown", (event) => {
+  pianoКeys.forEach((elem) => {
+    elem.classList.add("letter-add");
+  });
+});
+
+btnNote.addEventListener("mousedown", (event) => {
+  pianoКeys.forEach((elem) => {
+    elem.classList.remove("letter-add");
+  });
 });
