@@ -68,49 +68,52 @@ function codeButton(event) {
 }
 
 // mouse functions
-window.addEventListener("mouseup", (event) => {
+const mouseBtnEl = () => {
   pianoКeys.forEach((el) => {
+    el.classList.remove(
+      "piano-key-active",
+      "piano-key-pressed",
+      "piano-key-active-pseudo"
+    );
     el.classList.add("piano-key-remove-mouse");
-    el.classList.remove("piano-key-active");
-    el.classList.remove("piano-key-active-pseudo");
-    el.classList.remove("piano-key-pressed");
   });
+};
+const mouseBtnEvent = (event) => {
+  event.target.classList.remove("piano-key-remove-mouse");
+  event.target.classList.add(
+    "piano-key-active",
+    "piano-key-pressed",
+    "piano-key-active-pseudo"
+  );
+  codeButton(event.target.dataset.code);
+};
+
+window.addEventListener("mouseup", (el) => {
+  mouseBtnEl(el);
 });
 piano.addEventListener("mousedown", (event) => {
-  pianoКeys.forEach((el) => {
-    if (el.classList.contains("piano-key-active")) {
-      el.classList.add("piano-key-remove-mouse");
-      el.classList.remove("piano-key-active");
-      el.classList.remove("piano-key-active-pseudo");
-    }
-    event.target.classList.remove("piano-key-remove-mouse");
-    event.target.classList.add("piano-key-active");
-    event.target.classList.add("piano-key-active-pseudo");
-    event.target.classList.add("piano-key-pressed");
-  });
-  codeButton(event.target.dataset.code);
+  if (event.which == 1) {
+    mouseBtnEvent(event);
+  }
 });
 piano.addEventListener("mouseover", (event) => {
   if (!event.target.classList.contains("piano")) {
     pianoКeys.forEach((el) => {
-      if (el.classList.contains("piano-key-pressed")) {
-        el.classList.add("piano-key-remove-mouse");
-        el.classList.remove("piano-key-pressed");
-        el.classList.remove("piano-key-active");
-        el.classList.remove("piano-key-active-pseudo");
-        codeButton(event.target.dataset.code);
-        event.target.classList.add("piano-key-pressed");
-        event.target.classList.add("piano-key-active");
-        event.target.classList.add("piano-key-active-pseudo");
+      if (el.classList.contains("piano-key-active-pseudo")) {
+        mouseBtnEl(el);
+        mouseBtnEvent(event);
       }
     });
   }
+});
+piano.addEventListener("mouseout", (event) => {
+  event.target.classList.remove("piano-key-active", "piano-key-pressed");
 });
 
 // keyboard function
 window.addEventListener("keydown", (event) => {
   let key = document.querySelector(`.piano-key[data-code="${event.code}"]`);
-  if (key !== null) {
+  if (key !== null && !event.repeat) {
     if (key.classList.contains("piano-key-remove-mouse")) {
       pianoКeys.forEach((el) => {
         if (el.classList.contains("piano-key-active")) {
@@ -123,6 +126,7 @@ window.addEventListener("keydown", (event) => {
     codeButton(event.code);
   }
 });
+
 window.addEventListener("keyup", (event) => {
   let key = document.querySelector(`.piano-key[data-code="${event.code}"]`);
   if (key !== null) {
@@ -135,29 +139,20 @@ window.addEventListener("keyup", (event) => {
 });
 
 // switch notes letters
-const btnNotes = document.querySelector(".btn-container");
-const btn = document.querySelectorAll(".btn");
+
 const btnLetters = document.querySelector(".btn-letters");
 const btnNote = document.querySelector(".btn-notes");
 
-btnNotes.addEventListener("mousedown", (event) => {
-  if (event.target.classList.contains("btn")) {
-    btn.forEach((el) => {
-      if (el.classList.contains("btn-active")) {
-        el.classList.remove("btn-active");
-      }
-    });
-    event.target.classList.add("btn-active");
-  }
-});
-
 btnLetters.addEventListener("mousedown", (event) => {
+  event.target.classList.add("btn-active");
+  btnNote.classList.remove("btn-active");
   pianoКeys.forEach((elem) => {
     elem.classList.add("letter-add");
   });
 });
-
 btnNote.addEventListener("mousedown", (event) => {
+  event.target.classList.add("btn-active");
+  btnLetters.classList.remove("btn-active");
   pianoКeys.forEach((elem) => {
     elem.classList.remove("letter-add");
   });
@@ -169,14 +164,9 @@ const elem = document.documentElement;
 
 fullScreen.addEventListener("mousedown", (event) => {
   if (document.fullscreenElement === null) {
-    openFullscreen();
+    elem.requestFullscreen();
   } else {
-    closeFullscreen();
+    document.exitFullscreen()
   }
 });
-function openFullscreen() {
-  elem.requestFullscreen();
-}
-function closeFullscreen() {
-  document.exitFullscreen();
-}
+
