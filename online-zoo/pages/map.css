@@ -1,0 +1,61 @@
+main {
+  background: #f2f2f2;
+}
+.map-content {
+  height: 827px;
+}
+.map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.map-description {
+  width: 790px;
+  text-align: center;
+}
+h3 {
+  margin-bottom: 20px;
+}
+.map-slider {
+  margin-top: 54px;
+}
+.slider {
+  display: flex;
+  align-items: center;
+}
+.map-pets-slider {
+  display: flex;
+  width: 1256px;
+  height: 157px;
+}
+.pets-item {
+  width: 157px;
+  height: 157px;
+  border-radius: 50%;
+  background: white;
+  overflow: hidden;
+  border: 18px solid #f2f2f2;
+  box-sizing: border-box;
+}
+.pets-item:hover {
+  border: 10px solid white;
+}
+/* .active {
+  border: 10px solid white;
+} */
+.pets-item-img {
+  width: 157px;
+  height: 157px;
+}
+.red-img-none {
+  display: none;
+}
+.red-img-visible {
+  display: block;
+}
+/* .active-map-placeholder {
+  background: url(../assets/icons/map-placeholder.svg) no-repeat center;
+}
+.active-map-placeholder:hover {
+  background: url(../assets/icons/placeholder-red.svg) no-repeat center;
+} */

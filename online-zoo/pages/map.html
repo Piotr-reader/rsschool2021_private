@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../style.css" />
-    <title>About Us</title>
+    <link rel="stylesheet" href="./map.css" />
+    <title>OnlineZoo</title>
   </head>
+
   <body>
     <div class="wrapper-around">
       <header>
@@ -29,138 +34,228 @@
                   <a href="../index.html" class="header-nav-anchor">About</a>
                 </li>
                 <li class="header-nav-link">
-                  <a href="map.html" class="header-nav-anchor active">Map</a>
+                  <a href="./zoos.html" class="header-nav-anchor">Zoos</a>
                 </li>
                 <li class="header-nav-link">
-                  <a href="contact.html" class="header-nav-anchor"
-                    >Contact us</a
-                  >
+                  <a href="./map.html" class="header-nav-anchor active">Map</a>
+                </li>
+                <li class="header-nav-link">
+                  <a href="./contact.html" class="header-nav-anchor">Contact us</a>
+                </li>
+                <li class="header-nav-link">
+                  <a href="./design.html" class="header-nav-anchor">Design</a>
                 </li>
               </ul>
             </nav>
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider round"></span>
+            <label class="switch-dark">
+              <input type="checkbox" name="switch-dark" />
+              <span class="switch-dark-button round"></span>
             </label>
           </div>
         </div>
       </header>
-      <footer>
-        <div class="wrapper">
-          <div class="footer-top">
-            <div class="footer-left">
-              <nav>
-                <ul class="footer-list-left">
-                  <li>
-                    <div class="footer-logo">
-                      <h1>zoo</h1>
-                      <p class="logo-online">online</p>
-                    </div>
-                  </li>
-                  <li class="footer-contact-list">
-                    <a class="footer-contact" href="pages/contact.html"
-                      >Contact us</a
-                    >
-                  </li>
-                  <li>
-                    <form class="footer-form" action="#">
-                      <input
-                        class="footer-form-input"
-                        type="text"
-                        name="Name"
-                        id="#"
-                        placeholder="Name"
-                      />
-                      <input
-                        class="footer-form-input"
-                        type="email"
-                        name="Email"
-                        id="#"
-                        placeholder="Email"
-                      />
-                      <div class="checkbox-form">
-                        <input type="checkbox" name="checkbox" id="#" />
-                        <span class="checkbox-form-span"
-                          >I agree to the processing of Personal Data</span
-                        >
-                      </div>
-                      <input
-                        class="footer-form-submit"
-                        type="submit"
-                        value="send"
-                      />
-                    </form>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div class="footer-center">
-              <nav>
-                <ul class="footer-center-nav">
-                  <li class="footer-center-list">
-                    <a href="pages/about.html" class="footer-center-link"
-                      >About</a
-                    >
-                  </li>
-                  <li class="footer-center-list">
-                    <a href="pages/map.html" class="footer-center-link">Map</a>
-                  </li>
-                  <li class="footer-center-list">
-                    <a href="#" class="footer-center-link">Zoos</a>
-                  </li>
-                </ul>
-              </nav>
-              <ul class="footer-center-p">
-                <li><p class="footer-center-p-first">ZOO Online Centre</p></li>
-                <li>
-                  <p>132, Address District, Street</p>
-                  <p>Open Daily 10:00 am - 5:00 pm</p>
+
+      <main>
+
+        <div class="map gray-bg">
+          <section class="map-description">
+            <h3>Choose your favorite</h3>
+            <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects, including providing veterinary support and raising much-needed emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
+          </section>
+
+          <section class="map-slider">
+            <div class="slider">
+              <div class="slider-arrow left-map">
+                <img class="left-arrow" src="../assets/icons/left-arrow.png" alt="left arrow">
+              </div>
+
+              <ul class="map-pets-slider" id="map-pets">
+
+                <li class="pets-item">
+                  <img class="pets-item-img" src="../assets/images/monkey.jpg" alt="monkey">
                 </li>
-                <li class="footer-center-p-list">
-                  <p>T(702) 163-3433</p>
-                  <p>zoo.online@gmail.com</p>
+                <li class="pets-item">
+                  <img class="pets-item-img" src="../assets/images/monkey.jpg" alt="monkey">
                 </li>
+                <li class="pets-item">
+                  <img class="pets-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                </li>
+                <li class="pets-item">
+                  <img class="pets-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                </li>
+                <li class="pets-item">
+                  <img class="pets-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                </li>
+                <li class="pets-item">
+                  <img class="pets-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                </li>
+                <li class="pets-item">
+                  <img class="pets-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                </li>
+                <li class="pets-item">
+                  <img class="pets-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                </li>
+
               </ul>
-              <nav>
-                <ul class="footer-media">
-                  <li class="footer-media-list">
-                    <a href="#"
-                      ><img src="/assets/icons/instagram 1.svg" alt="inst"
-                    /></a>
-                  </li>
-                  <li class="footer-media-list">
-                    <a href="#"
-                      ><img src="/assets/icons/twetter.svg" alt="twit"
-                    /></a>
-                  </li>
-                  <li class="footer-media-list">
-                    <a href="#"><img src="/assets/icons/vk.svg" alt="vk" /></a>
-                  </li>
-                  <li class="footer-media-list">
-                    <a href="#"
-                      ><img src="/assets/icons/twetter.svg" alt="youtube"
-                    /></a>
-                  </li>
-                </ul>
-              </nav>
+
+              <div class="slider-arrow right-map">
+                <img class="right-arrow" src="../assets/icons/right-arrow.png" alt="right arrow">
+              </div>
             </div>
-            <div class="footer-right">
-              <form action="#">
-                <input
-                  class="footer-btn"
-                  type="submit"
-                  value="donate for volunteers"
-                />
-              </form>
+
+          </section>
+
+          <div class="map-content">
+            <div class="button-container">
+              <div class="btn-wraper">
+               <div class="output-range-container">
+                <output class="output-range-strong" name="pets-in-zoo">01/</output>
+                <output class="output-range-small" data-name="pets-in-zoo">08</output>
+               </div>
+              <input class="input-range" type="range"  min="1" max="8" value="0" name="pets-in-zoo" step="1">
             </div>
           </div>
 
-          <div class="footer-copyright">
-            <p>©Noora Sagnayeva</p>
-            <p>©RSSchool and ©Yem Digital - 2021</p>
+            <section class="active-map-animals">
+                <div class="active-map-placeholder map-panda">
+                  <img src="../assets/icons/map-placeholder.svg" alt="placeholder">
+                <img class="red-img-none" src="../assets/icons/placeholder-red.svg" alt="placeholder">
+                </div>
+                <div class="active-map-placeholder map-eagle">
+                <img src="../assets/icons/map-placeholder.svg" alt="placeholder">
+                <img class="red-img-none" src="../assets/icons/placeholder-red.svg" alt="placeholder">
+                </div>
+                <div class="active-map-placeholder map-crocodile">
+                  <img src="../assets/icons/map-placeholder.svg" alt="placeholder">
+                  <img class="red-img-none" src="../assets/icons/placeholder-red.svg" alt="placeholder">
+                </div>
+                <div class="active-map-placeholder map-monkey">
+                  <img src="../assets/icons/map-placeholder.svg" alt="placeholder">
+                  <img class="red-img-none" src="../assets/icons/placeholder-red.svg" alt="placeholder">
+                </div>
+            </section>
+
+            <div class="button-container">
+              <div class="btn-wraper">
+                <button class="button">
+                <img
+                  class="img-btn"
+                  src="/assets/icons/btn.svg"
+                  alt="watch online"
+                />
+                watch online
+                </button>
+            </div>
+            </div>
+
           </div>
         </div>
+        <script src="../script.js"></script>
+      </main>
+
+      <footer>
+        <div class="wrapper">
+
+          <div class="footer">
+
+            <aside class="footer-left">
+              <section class="footer-top footer-column">
+                <p class="footer-logo-zoo">zoo</p>
+                <p class="footer-logo-online">online</p>
+              </section>
+              <section class="footer-middle">
+                <a class="footer-contact color-beige" href="pages/contact.html">Contact us</a>
+              </section>
+              <section class="footer-bottom footer-column">
+                <input class="footer-form-input" type="text" name="Name" placeholder="Name" />
+                <input class="footer-form-input" type="email" name="Email" placeholder="Email" />
+                <fieldset>
+                  <legend>Please enter your message</legend>
+                </fieldset>
+                <div class="checkbox-form">
+                  <input type="checkbox" name="checkbox" id="checkbox-form" />
+                  <label for="checkbox-form" class="label-checkbox">I agree to the processing of Personal Data</label>
+                </div>
+              </section>
+              <div class="footer-submit">
+                <a href="#" class="footer-submit-btn"
+                  ><p class="footer-submit-value">send</p>
+                  <img src="../assets/icons/footer-submit-arrow.svg" alt="submit form"
+                /></a>
+              </div>
+            </aside>
+
+            <aside class="footer-center">
+              <div class="footer-center-aside">
+                <section class="footer-top">
+                  <nav>
+                    <ul class="footer-center-top-link">
+                      <li class="footer-center-list">
+                        <a href="../index.html".html" class="footer-center-link">About</a>
+                      </li>
+                      <li class="footer-center-list">
+                        <a href="./map.html" class="footer-center-link">Map</a>
+                      </li>
+                      <li class="footer-center-list">
+                        <a href="./zoos.html" class="footer-center-link">Zoos</a>
+                      </li>
+                      <li class="footer-center-list">
+                        <a href="./design.html" class="footer-center-link">Design</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </section>
+
+                <section class="footer-middle">
+                  <a class="footer-zoo-center" href="#">ZOO Online Centre</a>
+                </section>
+
+                <section class="footer-bottom">
+                  <div class="footer-bottom-contact">
+                    <p class="footer-bottom-p">132, Address District, Street</p>
+                    <p class="footer-bottom-p">Open Daily 10:00 am - 5:00 pm</p>
+                  </div>
+                  <p class="footer-bottom-p">T(702) 163-3433</p>
+                  <p class="footer-bottom-p">zoo.online@gmail.com</p>
+                </section>
+
+                <section class="media-aside-footer">
+                  <ul class="media-footer">
+                    <li class="media-list-footer">
+                      <a href="#"><img src="/assets/icons/social-instagram.svg" alt="inst" /></a>
+                    </li>
+                    <li class="media-list-footer">
+                      <a href="#"><img src="/assets/icons/social-twetter.svg" alt="twit" /></a>
+                    </li>
+                    <li class="media-list-footer">
+                      <a href="#"><img src="/assets/icons/social-vk.svg" alt="vk" /></a>
+                    </li>
+                    <li class="media-list-footer">
+                      <a href="#"><img src="/assets/icons/social-youtube.svg" alt="youtube" /></a>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <section class="footer-top footer-right">
+                <form action="#">
+                  <input class="button footer-btn" type="submit" value="donate for volunteers" />
+                </form>
+              </section>
+            </aside>
+
+          </div>
+
+          <section class="footer-copyright footer-column">
+            <p class="footer-p-copyright">©Noora Sagnayeva</p>
+            <p class="footer-p-copyright">©RSSchool and ©Yem Digital - 2021</p>
+          </section>
+
+        </div>
+
       </footer>
+
     </div>
   </body>
+
 </html>
