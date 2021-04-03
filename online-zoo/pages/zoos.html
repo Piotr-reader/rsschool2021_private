@@ -13,6 +13,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./map.css" />
+    <link rel="stylesheet" href="./zoos.css" />
     <title>OnlineZoo</title>
   </head>
 
@@ -33,7 +35,7 @@
                   <a href="../index.html" class="header-nav-anchor">About</a>
                 </li>
                 <li class="header-nav-link">
-                  <a href="./zoos.html" class="header-nav-anchor active">Zoos</a>
+                  <a href="./zoos.html" class="header-nav-anchor  active">Zoos</a>
                 </li>
                 <li class="header-nav-link">
                   <a href="./map.html" class="header-nav-anchor">Map</a>
@@ -54,9 +56,85 @@
         </div>
       </header>
 
-      <footer>
+      <main>
+        <div class="wrapper-zoos">
+          <aside class="animals-video">
+            <section class="animals">
+
+                  <div class="slider-arrow left-zoos">
+                    <img class="left-arrow" src="../assets/icons/left-arrow.png" alt="left arrow">
+                  </div>
+                  <div class="zoos-slider-wrapper">
+                    <ul class="zoos-pets-slider" id="zoos-zoo">
+
+                      <li class="zoos-pets-item">
+                        <img class="zoos-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                      </li>
+                      <li class="zoos-pets-item">
+                        <img class="zoos-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                      </li>
+                      <li class="zoos-pets-item">
+                        <img class="zoos-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                      </li>
+                      <li class="zoos-pets-item">
+                        <img class="zoos-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                      </li>
+                      <li class="zoos-pets-item">
+                        <img class="zoos-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                      </li>
+                      <li class="zoos-pets-item">
+                        <img class="zoos-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                      </li>
+                      <li class="zoos-pets-item">
+                        <img class="zoos-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                      </li>
+                      <li class="zoos-pets-item">
+                        <img class="zoos-item-img" src="../assets/images/monkey.jpg" alt="monkey">
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="slider-arrow right-zoos">
+                    <img class="right-arrow" src="../assets/icons/right-arrow.png" alt="right arrow">
+                  </div>
+
+            </section>
+
+            <section class="video">
+              <h3>The Beijing Zoo</h3>
+              <div class="main-video">
+
+              </div>
+
+              <div class="additional-video">
+
+              </div>
+
+              <div class="switcher-btn">
+                <div class="switch-circle active-circle"></div>
+                <div class="switch-circle"></div>
+                <div class="switch-circle"></div>
+              </div>
+            </section>
+          </aside>
+
+          <section class="description">
+            <h4>Population:</h4>
+            <p>About 1,590 individuals</p>
+            <h4>Habitat:</h4>
+            <p>Temperate forests high in the mountains of southwest China</p>
+            <h4>Diet:</h4>
+            <p>A panda's daily diet consists almost entirely of the leaves, stems and shoots of various bamboo species. Bamboo contains very little nutritional value so pandas must eat 12-38kg every day to meet their energy needs.</p>
+            <button class="button">feed</button>
+          </section>
+        </div>
+      </main>
+
+    <footer>
         <div class="wrapper">
+
           <div class="footer">
+
             <aside class="footer-left">
               <section class="footer-top footer-column">
                 <p class="footer-logo-zoo">zoo</p>
@@ -121,16 +199,16 @@
                 <section class="media-aside-footer">
                   <ul class="media-footer">
                     <li class="media-list-footer">
-                      <a href="#"><img src="/assets/icons/social-instagram.svg" alt="inst" /></a>
+                      <a href="#"><img src="../assets/icons/social-instagram.svg" alt="inst" /></a>
                     </li>
                     <li class="media-list-footer">
-                      <a href="#"><img src="/assets/icons/social-twetter.svg" alt="twit" /></a>
+                      <a href="#"><img src="../assets/icons/social-twetter.svg" alt="twit" /></a>
                     </li>
                     <li class="media-list-footer">
-                      <a href="#"><img src="/assets/icons/social-vk.svg" alt="vk" /></a>
+                      <a href="#"><img src="../assets/icons/social-vk.svg" alt="vk" /></a>
                     </li>
                     <li class="media-list-footer">
-                      <a href="#"><img src="/assets/icons/social-youtube.svg" alt="youtube" /></a>
+                      <a href="#"><img src="../assets/icons/social-youtube.svg" alt="youtube" /></a>
                     </li>
                   </ul>
                 </section>
@@ -142,14 +220,20 @@
                 </form>
               </section>
             </aside>
+
           </div>
 
           <section class="footer-copyright footer-column">
             <p class="footer-p-copyright">©Noora Sagnayeva</p>
             <p class="footer-p-copyright">©RSSchool and ©Yem Digital - 2021</p>
           </section>
+
         </div>
+
       </footer>
+
     </div>
+    <script src="../script.js"></script>
   </body>
+
 </html>

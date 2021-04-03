@@ -1,0 +1,100 @@
+main {
+  display: flex;
+  height: 910px;
+}
+h3 {
+  margin-top: 0;
+}
+h4 {
+  margin-top: 6px;
+  margin-bottom: 13px;
+}
+.wrapper-zoos {
+  display: flex;
+  width: 1620px;
+  margin: auto;
+  margin-top: 60px;
+}
+.animals-video {
+  display: flex;
+}
+.animals {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+.zoos-slider-wrapper {
+  height: 480px;
+  overflow: hidden;
+}
+.zoos-pets-slider {
+  display: flex;
+  flex-direction: column;
+}
+.zoos-pets-item {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  overflow: hidden;
+  border: 18px solid #f2f2f2;
+  box-sizing: border-box;
+}
+.zoos-pets-item:hover {
+  border: 12px solid white;
+}
+.zoos-item-img {
+  width: 96px;
+  height: 96px;
+}
+
+/* video section */
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 527px;
+  height: 680px;
+  margin-left: 150px;
+  margin-right: 30px;
+}
+.main-video {
+  max-height: 297px;
+  margin-top: 20px;
+}
+.additional-video {
+  display: flex;
+  justify-content: space-between;
+  max-width: 164px;
+  max-height: 94px;
+}
+.switcher-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 37px;
+}
+.switch-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c4c4c4;
+}
+.active-circle {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+}
+.description {
+  max-width: 253px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 90px;
+}
+.button {
+  width: 185px;
+  height: 53px;
+}
