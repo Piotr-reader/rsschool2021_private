@@ -4,12 +4,14 @@ const root = document.querySelector(":root");
 const input = document.querySelectorAll("input");
 const output = document.querySelectorAll("output");
 let firstScreenItem = document.querySelectorAll(".small-slider-item");
+let mapPetsItem = document.querySelectorAll(".map-pets-item");
 let firstScreenContainer = document.querySelectorAll(".container-zoo-small");
 let petsInZooContainer = document.querySelectorAll(".pets-in-zoo-item");
 let testimonialPerson = document.querySelectorAll(".testimonial-person");
 let howItWorksItem = document.querySelectorAll(".how-it-works-item");
 const leftPets = document.querySelector(".left-pets");
 const rightPets = document.querySelector(".right-pets");
+
 let indexItem = 0;
 let count = 0;
 
@@ -19,40 +21,44 @@ function inputValue(event) {
     if (el.name === event.target.name) {
       el.value = "0" + event.target.value + "/";
       switch (event.target.name) {
-        case 'first-screen':
-          firstScreenItem.forEach((item) => item.classList.remove('slider-active'));
-          firstScreenContainer.forEach((item) => item.classList.remove('visible'));
-          firstScreenItem[event.target.value-1].classList.add('slider-active');
-          firstScreenContainer[event.target.value-1].classList.add('visible');
+        case "first-screen":
+          firstScreenItem.forEach((item) => item.classList.remove("slider-active"));
+          firstScreenContainer.forEach((item) => item.classList.remove("visible"));
+          firstScreenItem[event.target.value - 1].classList.add("slider-active");
+          firstScreenContainer[event.target.value - 1].classList.add("visible");
           break;
-        case 'pets-in-zoo':
-          petsInZooContainer.forEach((item) => item.classList.remove('visible'));
-          petsInZooContainer[event.target.value-1].classList.add('visible');
+        case "map-zoo":
+          mapPetsItem.forEach((item) => item.classList.remove("map-pets-item-big"));
+          mapPetsItem[event.target.value - 1].classList.add("map-pets-item-big");
           break;
-        case 'testimonial':
-          testimonialPerson.forEach((item) => item.classList.remove('person-visible'));
-          testimonialPerson[event.target.value-1].classList.add('person-visible');
+        case "pets-in-zoo":
+          petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+          petsInZooContainer[event.target.value - 1].classList.add("visible");
           break;
-        case 'how-it-works':
-          howItWorksItem.forEach((item) => item.classList.remove('how-it-works-item-visible'));
-          howItWorksItem[event.target.value-1].classList.add('how-it-works-item-visible');
+        case "testimonial":
+          testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
+          testimonialPerson[event.target.value - 1].classList.add("person-visible");
+          break;
+        case "how-it-works":
+          howItWorksItem.forEach((item) => item.classList.remove("how-it-works-item-visible"));
+          howItWorksItem[event.target.value - 1].classList.add("how-it-works-item-visible");
           break;
         default:
           break;
       }
     }
-});
+  });
 }
 input.forEach((event) => event.addEventListener("input", inputValue));
 
 function countLengthOutput() {
-    output.forEach((elem) => {
-      let doc = document.getElementById(`${elem.dataset.name}`);
-      if (doc !== null) {
-        elem.value = "0" + doc.childElementCount;
-        // root.style.setProperty(`--${elem.dataset.name}`, (245/doc.childElementCount) + "px");
-      }
-  })
+  output.forEach((elem) => {
+    let doc = document.getElementById(`${elem.dataset.name}`);
+    if (doc !== null) {
+      elem.value = "0" + doc.childElementCount;
+      // root.style.setProperty(`--${elem.dataset.name}`, (245/doc.childElementCount) + "px");
+    }
+  });
 }
 countLengthOutput();
 
@@ -62,21 +68,18 @@ function countLengthInput() {
     if (doc !== null) {
       el.max = doc.childElementCount;
     }
-  })
+  });
 }
 countLengthInput();
 
 // dark thema
-
 function thema(event) {
   if (event.target.name === "switch-dark") {
-     root.style.setProperty(`--color-text`, `#fefefe`);
-      root.style.setProperty(`--color-dark`, `#333333`);
+    root.style.setProperty(`--color-text`, `#fefefe`);
+    root.style.setProperty(`--color-dark`, `#333333`);
   }
 }
 input.forEach((event) => event.addEventListener("input", thema));
-
-
 
 // TODO
 // leftPets.addEventListener('mousedown', () => {
@@ -107,3 +110,26 @@ input.forEach((event) => event.addEventListener("input", thema));
 //     }
 //   })
 // });
+
+// Map page
+const activeMapAnimal = document.querySelector(".active-map-animals");
+let activeImg = document.querySelectorAll(".red-img-none");
+let visibleImg = document.querySelectorAll(".active-img");
+
+activeMapAnimal.addEventListener("mouseover", (event) => {
+  if (event.target.classList.contains("active-img")) {
+    if (!event.target.classList.contains("red-img-none") && !event.target.classList.contains("img-visible")) {
+      activeImg.forEach((el) => {
+        el.classList.remove("img-visible");
+        el.classList.add("red-img-none");
+      });
+      visibleImg.forEach((el) => {
+        el.classList.remove("red-img-none");
+      });
+      let redImg = event.target.nextElementSibling;
+      event.target.classList.add("red-img-none");
+      redImg.classList.remove("red-img-none");
+      redImg.classList.add("img-visible");
+    }
+  }
+});

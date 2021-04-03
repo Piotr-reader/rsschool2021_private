@@ -1,8 +1,9 @@
 main {
   background: #f2f2f2;
+  min-height: 1287px;
 }
 .map-content {
-  height: 827px;
+  /* height: 827px; */
 }
 .map {
   display: flex;
@@ -28,7 +29,7 @@ h3 {
   width: 1256px;
   height: 157px;
 }
-.pets-item {
+.map-pets-item {
   width: 157px;
   height: 157px;
   border-radius: 50%;
@@ -37,25 +38,56 @@ h3 {
   border: 18px solid #f2f2f2;
   box-sizing: border-box;
 }
-.pets-item:hover {
+.map-pets-item-big {
   border: 10px solid white;
 }
-/* .active {
-  border: 10px solid white;
-} */
 .pets-item-img {
   width: 157px;
   height: 157px;
 }
+
+/* map placeholder */
+.active-img {
+  width: 90px;
+  height: 115px;
+  filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
+}
 .red-img-none {
   display: none;
+  visibility: 0;
+  filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
 }
-.red-img-visible {
+.img-visible {
   display: block;
+  width: 90px;
+  height: 115px;
+  filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
 }
-/* .active-map-placeholder {
-  background: url(../assets/icons/map-placeholder.svg) no-repeat center;
+.map-panda {
+  left: 120%;
+  bottom: 82%;
 }
-.active-map-placeholder:hover {
-  background: url(../assets/icons/placeholder-red.svg) no-repeat center;
-} */
+.panda {
+  background: url(../assets/images/active-map-panda.png) no-repeat 50% 28%;
+}
+.map-eagle {
+  right: 107%;
+  bottom: 91%;
+}
+.eagle {
+  background: url(../assets/images/active-map-eagle.png) no-repeat 50% 28%;
+}
+.map-monkey {
+  right: 36%;
+  top: 12%;
+}
+.monkey {
+  background: url(../assets/images/active-map-monkey.png) no-repeat 50% 28%;
+}
+.map-crocodile {
+  right: 102%;
+  bottom: 84%;
+}
+.crocodile {
+  background: url(../assets/images/active-map-crocodile.png) no-repeat 50% 28%;
+}
