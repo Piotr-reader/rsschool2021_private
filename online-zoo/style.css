@@ -294,7 +294,7 @@ input:checked + .switch-dark-button:before {
 /*    Main section  */
 /*    First-screen  */
 .first-screen {
-  background: url(assets/images/Rectangle\ 32.jpg) no-repeat;
+  background: url(assets/images/first-screen-bg.jpg) no-repeat;
   display: flex;
 }
 .wrapper-first-screen {

@@ -21,17 +21,20 @@ h4 {
 .animals {
   display: flex;
   flex-direction: column;
+  text-align: center;
   width: 150px;
 }
 .zoos-slider-wrapper {
   height: 480px;
   overflow: hidden;
 }
-.zoos-pets-slider {
-  display: flex;
+.map-pets-slider {
   flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: auto;
 }
-.zoos-pets-item {
+.map-pets-item {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -40,12 +43,18 @@ h4 {
   border: 18px solid #f2f2f2;
   box-sizing: border-box;
 }
-.zoos-pets-item:hover {
+.map-pets-item:hover {
   border: 12px solid white;
 }
-.zoos-item-img {
+.pets-item-img {
   width: 96px;
   height: 96px;
+}
+.slider-arrow {
+  cursor: pointer;
+}
+.slider-arrow:hover {
+  background: #fefefe;
 }
 
 /* video section */
@@ -62,7 +71,6 @@ h4 {
   visibility: 0;
   pointer-events: none;
 }
-
 .size-video-top {
   width: 790px;
   height: 442px;
