@@ -9,11 +9,6 @@ let firstScreenContainer = document.querySelectorAll(".container-zoo-small");
 let petsInZooContainer = document.querySelectorAll(".pets-in-zoo-item");
 let testimonialPerson = document.querySelectorAll(".testimonial-person");
 let howItWorksItem = document.querySelectorAll(".how-it-works-item");
-const leftPets = document.querySelector(".left-pets");
-const rightPets = document.querySelector(".right-pets");
-
-let indexItem = 0;
-let count = 0;
 
 //  input output
 function inputValue(event) {
@@ -72,16 +67,25 @@ function countLengthInput() {
 }
 countLengthInput();
 
+// todo добавить стили в css
 // dark thema
 function thema(event) {
-  if (event.target.name === "switch-dark") {
+  if (event.target.name === "switch-dark" && !event.target.classList.contains("dark-active")) {
+    event.target.classList.add("dark-active");
     root.style.setProperty(`--color-text`, `#fefefe`);
     root.style.setProperty(`--color-dark`, `#333333`);
+  } else {
+    event.target.classList.remove("dark-active");
+    root.style.setProperty(`--color-text`, null);
+    root.style.setProperty(`--color-dark`, null);
   }
 }
 input.forEach((event) => event.addEventListener("input", thema));
 
-// TODO
+// TODO не работает
+// const leftPets = document.querySelector(".left-pets");
+// const rightPets = document.querySelector(".right-pets");
+// let indexItem = 0;
 // leftPets.addEventListener('mousedown', () => {
 //   input.forEach((event) => {
 //     if(event.name === 'pets-in-zoo') {
@@ -111,10 +115,10 @@ input.forEach((event) => event.addEventListener("input", thema));
 //   })
 // });
 
-// Map page
 const activeMapAnimal = document.querySelector(".active-map-animals");
 let activeImg = document.querySelectorAll(".red-img-none");
 let visibleImg = document.querySelectorAll(".active-img");
+// Map page
 
 activeMapAnimal.addEventListener("mouseover", (event) => {
   if (event.target.classList.contains("active-img")) {

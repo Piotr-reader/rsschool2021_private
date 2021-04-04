@@ -70,10 +70,9 @@ h4,
   line-height: 21px;
   letter-spacing: 0.08em;
   color: #333333;
-  text-align: center;
 }
 h1 {
-  font-size: 2.5em;
+  font-size: 36px;
   line-height: 42px;
   text-transform: uppercase;
   margin: 0;
@@ -463,24 +462,26 @@ input:checked + .switch-dark-button:before {
 }
 
 /* testimonials */
-.testimonials-cards {
+.slider-person {
   display: flex;
   align-items: center;
-  margin: auto;
+}
+.testimonials-card {
+  display: flex;
+  align-items: center;
+  width: 1200px;
   overflow: hidden;
 }
 .person-container {
   display: flex;
-  margin-top: 20px;
-  width: 1200px;
-  justify-content: space-between;
 }
 .testimonial-person {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 585px;
+  width: 570px;
   height: 310px;
+  margin: 20px 15px;
   background: #fefefe;
   border-radius: 5px;
   pointer-events: none;
