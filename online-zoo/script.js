@@ -23,8 +23,10 @@ function inputValue(event) {
           firstScreenContainer[event.target.value - 1].classList.add("visible");
           break;
         case "map-zoo":
-          mapPetsItem.forEach((item) => item.classList.remove("map-pets-item-big"));
-          mapPetsItem[event.target.value - 1].classList.add("map-pets-item-big");
+          mapPetsItem.forEach((item) => {
+            item.firstElementChild.classList.remove("img-wrapper-visible");
+          });
+          mapPetsItem[event.target.value - 1].firstElementChild.classList.add("img-wrapper-visible");
           break;
         case "pets-in-zoo":
           petsInZooContainer.forEach((item) => item.classList.remove("visible"));

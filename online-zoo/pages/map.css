@@ -2,9 +2,6 @@ main {
   background: #f2f2f2;
   min-height: 1287px;
 }
-.map-content {
-  /* height: 827px; */
-}
 .map {
   display: flex;
   flex-direction: column;
@@ -29,23 +26,82 @@ h3 {
   width: 1256px;
   height: 157px;
 }
+/* circle */
 .map-pets-item {
   width: 157px;
   height: 157px;
-  border-radius: 50%;
-  background: white;
-  overflow: hidden;
-  border: 18px solid #f2f2f2;
-  box-sizing: border-box;
 }
-.map-pets-item-big {
-  border: 10px solid white;
+.img-wrapper {
+  height: 157px;
+  width: 157px;
+  visibility: hidden;
 }
-.pets-item-img {
+.big-circle {
   width: 157px;
   height: 157px;
+  border-radius: 50%;
+  position: absolute;
+  background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  animation: 1.7s linear infinite reverse running rotate;
 }
+.circle-white {
+  width: 154px;
+  height: 154px;
+  background-color: white;
+  position: relative;
+  border-radius: 50%;
+  top: 2px;
+  left: 1px;
+  pointer-events: none;
+}
+.border-img {
+  width: 141px;
+  height: 141px;
+  position: relative;
+  background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+  animation: 1.5s linear infinite running rotate;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  bottom: 146px;
+  left: 7px;
+}
+.inner-img {
+  width: 137px;
+  height: 137px;
+  border-radius: 505%;
+  background-color: red;
+  background-size: contain;
 
+  position: relative;
+  z-index: 2;
+  left: 9px;
+  bottom: 147px;
+  pointer-events: none;
+}
+.img-wrapper-visible {
+  visibility: visible;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.bg-panda {
+  background-image: url(../assets/images/panda.jpg);
+}
+.bg-eagle {
+  background-image: url(../assets/images/eagle.jpg);
+}
+.bg-crocodile {
+  background-image: url(../assets/images/crocodile.jpg);
+}
+.bg-monkey {
+  background-image: url(../assets/images/monkey.jpg);
+}
 /* map placeholder */
 .active-img {
   width: 90px;
@@ -68,7 +124,7 @@ h3 {
   bottom: 82%;
 }
 .panda {
-  background: url(../assets/images/active-map-panda.png) no-repeat 50% 28%;
+  background-image: url(../assets/images/active-map-panda.png) no-repeat 50% 28%;
 }
 .map-eagle {
   right: 107%;
