@@ -23,10 +23,11 @@
         <div class="wrapper">
           <div class="header-top">
             <div class="logo">
-              <a href="../index.html"
-                ><h1>zoo</h1>
-                <p class="logo-online">online</p></a
-              >
+              <a class="logo-online" href="../index.html"
+                >
+                <p class="header-logo">zoo</p>
+               online
+              </a>
             </div>
             <nav>
               <ul class="header-nav">
@@ -40,10 +41,10 @@
                   <a href="./map.html" class="header-nav-anchor active">Map</a>
                 </li>
                 <li class="header-nav-link">
-                  <a href="./contact.html" class="header-nav-anchor">Contact us</a>
+                  <label class="header-nav-anchor label-contact-us" for="contact-us">Contact us</label>
                 </li>
                 <li class="header-nav-link">
-                  <a href="./design.html" class="header-nav-anchor">Design</a>
+                  <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" target="_blank" class="header-nav-anchor">Design</a>
                 </li>
               </ul>
             </nav>
@@ -56,7 +57,7 @@
       </header>
 
       <main>
-
+        <h1>Online Zoo</h1>
         <div class="map gray-bg">
           <section class="map-description">
             <h3>Choose your favorite</h3>
@@ -160,11 +161,11 @@
             <section class="active-map-animals">
                 <div class="active-map-placeholder map-panda">
                   <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
-                <img class="red-img-none panda" src="../assets/icons/placeholder-red.svg" alt="placeholder">
+                  <img class="red-img-none panda" src="../assets/icons/placeholder-red.svg" alt="placeholder">
                 </div>
                 <div class="active-map-placeholder map-eagle">
-                <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
-                <img class="red-img-none eagle" src="../assets/icons/placeholder-red.svg" alt="placeholder">
+                  <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
+                 <img class="red-img-none eagle" src="../assets/icons/placeholder-red.svg" alt="placeholder">
                 </div>
                 <div class="active-map-placeholder map-crocodile">
                   <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
@@ -195,43 +196,52 @@
 
       <footer>
         <div class="wrapper">
-
           <div class="footer">
 
             <aside class="footer-left">
-              <section class="footer-top footer-column">
-                <p class="footer-logo-zoo">zoo</p>
-                <p class="footer-logo-online">online</p>
-              </section>
+
+                <div class="footer-top footer-column logo">
+                  <a class="logo-online footer-logo-online" href="../index.html"
+                    >
+                    <p class="header-logo footer-logo-zoo">zoo</p>
+                   online
+                  </a>
+                </div>
               <section class="footer-middle">
-                <a class="footer-contact color-beige" href="pages/contact.html">Contact us</a>
+                <label class="footer-contact color-beige" for="contact-us">Contact us</label>
               </section>
               <section class="footer-bottom footer-column">
-                <input class="footer-form-input" type="text" name="Name" placeholder="Name" />
-                <input class="footer-form-input" type="email" name="Email" placeholder="Email" />
+
+                <form action="#">
+
+                  <p><input id="contact-us" class="footer-form-input" type="text" name="Name" placeholder="Name" required/></p>
+                  <p><input class="footer-form-input" type="email" name="Email" placeholder="Email" required/></p>
+
                 <fieldset>
                   <legend>Please enter your message</legend>
+                  <textarea class="textarea" maxlength="280"></textarea>
                 </fieldset>
+
                 <div class="checkbox-form">
-                  <input type="checkbox" name="checkbox" id="checkbox-form" />
+                  <input type="checkbox" name="checkbox" id="checkbox-form" checked/>
                   <label for="checkbox-form" class="label-checkbox">I agree to the processing of Personal Data</label>
                 </div>
-              </section>
-              <div class="footer-submit">
-                <a href="#" class="footer-submit-btn"
-                  ><p class="footer-submit-value">send</p>
-                  <img src="../assets/icons/footer-submit-arrow.svg" alt="submit form"
-                /></a>
-              </div>
+
+                <div class="footer-submit">
+                  <p class="footer-submit-value"></p><input type="submit" value="send" class="footer-submit-btn"></p>
+                </div>
+              </form>
+            </section>
             </aside>
 
             <aside class="footer-center">
+
               <div class="footer-center-aside">
                 <section class="footer-top">
                   <nav>
                     <ul class="footer-center-top-link">
                       <li class="footer-center-list">
-                        <a href="../index.html".html" class="footer-center-link">About</a>
+                        <a href="../index.html" class="footer-center-link">About</a>
                       </li>
                       <li class="footer-center-list">
                         <a href="./map.html" class="footer-center-link">Map</a>
@@ -240,7 +250,7 @@
                         <a href="./zoos.html" class="footer-center-link">Zoos</a>
                       </li>
                       <li class="footer-center-list">
-                        <a href="./design.html" class="footer-center-link">Design</a>
+                        <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" target="_blank" class="footer-center-link">Design</a>
                       </li>
                     </ul>
                   </nav>
@@ -251,48 +261,54 @@
                 </section>
 
                 <section class="footer-bottom">
-                  <div class="footer-bottom-contact">
-                    <p class="footer-bottom-p">132, Address District, Street</p>
-                    <p class="footer-bottom-p">Open Daily 10:00 am - 5:00 pm</p>
-                  </div>
-                  <p class="footer-bottom-p">T(702) 163-3433</p>
-                  <p class="footer-bottom-p">zoo.online@gmail.com</p>
+                  <address>
+                    <div class="footer-bottom-contact">
+                      <p class="footer-bottom-p">132, Address District, Street</p>
+                      <p class="footer-bottom-p">Open Daily 10:00 am - 5:00 pm</p>
+                    </div>
+                    <a href="tel:+(702) 163-3433"><p class="footer-bottom-p">T(702) 163-3433</p></a>
+                   <a href="mailto:zoo.online@gmail.com"><p class="footer-bottom-p">zoo.online@gmail.com</p></a>
+                  </address>
                 </section>
 
                 <section class="media-aside-footer">
                   <ul class="media-footer">
                     <li class="media-list-footer">
-                      <a href="#"><img src="../assets/icons/social-instagram.svg" alt="inst" /></a>
+                      <a href="https://www.instagram.com/" target="_blank"><img class="img-media" src="../assets/icons/social-instagram.svg" alt="instagram"/></a>
                     </li>
                     <li class="media-list-footer">
-                      <a href="#"><img src="../assets/icons/social-twetter.svg" alt="twit" /></a>
+                      <a href="https://twitter.com/" target="_blank"><img class="img-media" src="../assets/icons/social-twetter.svg" alt="twit"/></a>
                     </li>
                     <li class="media-list-footer">
-                      <a href="#"><img src="../assets/icons/social-vk.svg" alt="vk" /></a>
+                      <a href="https://vk.com/" target="_blank"><img img class="img-media" src="../assets/icons/social-vk.svg" alt="vk" /></a>
                     </li>
                     <li class="media-list-footer">
-                      <a href="#"><img src="../assets/icons/social-youtube.svg" alt="youtube" /></a>
+                      <a href="https://www.youtube.com/" target="_blank"><img img class="img-media" src="../assets/icons/social-youtube.svg" alt="youtube"/></a>
                     </li>
                   </ul>
                 </section>
               </div>
 
-              <section class="footer-top footer-right">
+              <section class=" footer-top footer-right">
                 <form action="#">
-                  <input class="button footer-btn" type="submit" value="donate for volunteers" />
+                  <input
+                    class="button footer-btn"
+                    type="submit"
+                    value="donate for volunteers"
+                  />
                 </form>
               </section>
+
             </aside>
 
           </div>
 
           <section class="footer-copyright footer-column">
-            <p class="footer-p-copyright">©Noora Sagnayeva</p>
-            <p class="footer-p-copyright">©RSSchool and ©Yem Digital - 2021</p>
+            <p class="footer-p-copyright ">©Noora Sagnayeva</p>
+            <p class="footer-p-copyright ">©RSSchool and ©Yem Digital - 2021</p>
           </section>
 
         </div>
-
       </footer>
 
     </div>

@@ -10,6 +10,9 @@ let petsInZooContainer = document.querySelectorAll(".pets-in-zoo-item");
 let testimonialPerson = document.querySelectorAll(".testimonial-person");
 let howItWorksItem = document.querySelectorAll(".how-it-works-item");
 
+// checkbox required
+document.getElementById("checkbox-form").required = true;
+
 //  input output
 function inputValue(event) {
   output.forEach((el) => {
@@ -28,10 +31,10 @@ function inputValue(event) {
           });
           mapPetsItem[event.target.value - 1].firstElementChild.classList.add("img-wrapper-visible");
           break;
-        case "pets-in-zoo":
-          petsInZooContainer.forEach((item) => item.classList.remove("visible"));
-          petsInZooContainer[event.target.value - 1].classList.add("visible");
-          break;
+        // case "pets-in-zoo":
+        //   petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+        //   petsInZooContainer[event.target.value - 1].classList.add("visible");
+        //   break;
         case "testimonial":
           testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
           testimonialPerson[event.target.value - 1].classList.add("person-visible");
@@ -68,6 +71,19 @@ function countLengthInput() {
   });
 }
 countLengthInput();
+
+// todo  нашел индекс страницы, доделать функцию для сслыки перехода
+// btn-slider-top
+const btnSliderTop = document.querySelector(".btn-slider-top");
+if (btnSliderTop !== null) {
+  btnSliderTop.addEventListener("mousedown", () => {
+    input.forEach((el) => {
+      if (el.name === "first-screen") {
+        console.log(el.value);
+      }
+    });
+  });
+}
 
 // todo добавить стили в css
 // dark thema
@@ -139,3 +155,5 @@ activeMapAnimal.addEventListener("mouseover", (event) => {
     }
   }
 });
+
+// zoos page

@@ -22,7 +22,6 @@ a {
   color: #333333;
 }
 a:hover {
-  line-height: 19px;
   text-decoration: none;
   color: #615f5f85;
 }
@@ -31,9 +30,16 @@ a:hover {
   border-bottom: 2px solid #333333;
   pointer-events: none;
 }
-/* body {
+.label-contact-us {
+  cursor: pointer;
+  line-height: 19px;
+}
+.label-contact-us:hover {
+  color: #615f5f85;
+}
+body {
   overflow-x: hidden;
-} */
+}
 .wrapper-around {
   display: flex;
   flex-direction: column;
@@ -65,17 +71,35 @@ h4,
 .logo-online {
   font-weight: 900;
 }
+.logo-online:hover .header-logo {
+  color: #615f5f85;
+}
+.logo {
+  margin-left: 7px;
+}
 .logo-online {
+  width: 80px;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.08em;
   color: #333333;
 }
-h1 {
+.header-logo {
+  font-weight: 900;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 21px;
   text-transform: uppercase;
-  margin: 0;
+  margin-left: -7px;
+  color: #333333;
+}
+
+h1 {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
 }
 h2 {
   font-size: 89px;
@@ -200,10 +224,15 @@ input[name="pets-in-zoo"]::-webkit-slider-thumb {
   text-transform: uppercase;
   color: #ffffff;
   margin-top: 32px;
+  transition: 150ms;
 }
-/* .button:hover {
-
-} */
+.button:hover {
+  background: linear-gradient(106.89deg, #49d6df -14.32%, #4bd8b5 100.68%);
+}
+.button:active {
+  background: #49d6df;
+  box-shadow: 0 2px #4bd8b5 inset;
+}
 .img-btn {
   width: 32px;
   height: 32px;
@@ -227,7 +256,6 @@ header {
 .header-nav-link {
   margin-right: 122px;
 }
-
 .switch-dark {
   position: relative;
   display: inline-block;
@@ -316,12 +344,14 @@ input:checked + .switch-dark-button:before {
   height: 230px !important;
   margin-right: 45px !important;
   filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
+  border-radius: 5px;
 }
 .slider-active {
   width: 245px !important;
   height: 342px !important;
   margin-right: 45px !important;
   filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
+  border-radius: 5px;
 }
 .first-screen-input {
   justify-content: flex-start !important;
@@ -343,10 +373,20 @@ input:checked + .switch-dark-button:before {
   justify-content: center;
 }
 .main-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 160px;
   margin-bottom: 111px;
 }
-.main-media-list {
-  margin-bottom: 15px;
+.img-media {
+  width: 25px;
+  height: 25px;
+}
+.img-media:hover {
+  border-radius: 5px;
+  background: #4f4f4f;
 }
 
 /*    how it is work   */
@@ -389,18 +429,60 @@ input:checked + .switch-dark-button:before {
   align-items: center;
 }
 .slider-arrow {
+  display: flex;
+  align-items: center;
   margin: 0 20px;
+  height: 59px;
+  border-radius: 5px;
+
   cursor: pointer;
+}
+.slider-arrow:hover {
+  background: #615f5f85;
+}
+.slider-arrow:active {
+  background: #5f6161dc;
 }
 .item-container {
   position: absolute;
-  bottom: 9%;
-  left: 7%;
-  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 277px;
+  height: 400px;
+  background: #11111198;
+  opacity: 0;
+  transition: ease-in-out 300ms;
+}
+.container-zoo-small {
+  width: 245px;
+  height: 343px;
+  margin-left: 27px;
+  margin-bottom: 29px;
+  background: none;
 }
 .visible {
-  visibility: visible;
+  opacity: 1;
 }
+.item-container:hover {
+  position: absolute;
+  transition: ease-in-out 300ms;
+  opacity: 1;
+}
+.item-container-wrapper {
+  margin-left: 27px;
+  margin-bottom: 29px;
+  animation: zoo 0.6s linear infinite;
+}
+@keyframes zoo {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, -10%);
+  }
+}
+
 .slider-pets-in-zoo-list {
   display: flex;
   align-items: center;
@@ -424,6 +506,9 @@ input:checked + .switch-dark-button:before {
 }
 .slider-pets-in-zoo-watch {
   margin-right: 10px;
+}
+.slider-pets-in-zoo-list-img {
+  border-radius: 5px;
 }
 
 /* pay-and-feet */
@@ -528,8 +613,6 @@ input:checked + .switch-dark-button:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none;
-  cursor: none;
   opacity: 0;
   visibility: hidden;
   transition: all 0.7s ease;
@@ -541,6 +624,7 @@ input:checked + .switch-dark-button:before {
   top: 144px;
   right: 89px;
   transform: translateX(10%) translateY(-50%);
+  /* pointer-events: none; */
 }
 .active-map-placeholder:hover .tooltip-content {
   opacity: 1;
@@ -570,34 +654,63 @@ input:checked + .switch-dark-button:before {
   margin-top: 7px;
   margin-bottom: 5px;
 }
-.map-panda {
-  left: 120%;
-  bottom: 55%;
-}
 .map-panda:hover {
   background: url(./assets/images/active-map-panda.png) no-repeat 50% 30%;
 }
-.map-eagle {
-  right: 97%;
-  bottom: 69%;
+.map-crocodile:hover {
+  background: url(./assets/images/active-map-crocodile.png) no-repeat 50% 30%;
+}
+.map-monkey:hover {
+  background: url(./assets/images/active-map-monkey.png) no-repeat 50% 30%;
 }
 .map-eagle:hover {
   background: url(./assets/images/active-map-eagle.png) no-repeat 50% 30%;
 }
-.map-crocodile {
-  right: 94%;
-  bottom: 61%;
+.panda {
+  background: url(./assets/images/active-map-panda.png) no-repeat 50% 28%;
 }
-.map-crocodile:hover {
-  background: url(./assets/images/active-map-crocodile.png) no-repeat 50% 30%;
+.eagle {
+  background: url(./assets/images/active-map-eagle.png) no-repeat 50% 28%;
+}
+.monkey {
+  background: url(./assets/images/active-map-monkey.png) no-repeat 50% 28%;
+}
+.crocodile {
+  background: url(./assets/images/active-map-crocodile.png) no-repeat 50% 28%;
+}
+.active-img {
+  width: 90px;
+  height: 115px;
+  filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
+}
+.red-img-none {
+  display: none;
+  visibility: 0;
+  filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
+}
+.img-visible {
+  display: block;
+  width: 90px;
+  height: 115px;
+  filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
 }
 .map-monkey {
   right: 36%;
   top: 19%;
 }
-.map-monkey:hover {
-  background: url(./assets/images/active-map-monkey.png) no-repeat 50% 30%;
+.map-panda {
+  left: 120%;
+  bottom: 82%;
 }
+.map-eagle {
+  right: 107%;
+  bottom: 91%;
+}
+.map-crocodile {
+  right: 102%;
+  bottom: 84%;
+}
+
 /*    Footer    */
 .footer-column {
   display: flex;
@@ -621,17 +734,11 @@ footer {
   margin-top: 100px;
   margin-bottom: 57px;
 }
+
 .footer-logo-zoo {
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 21px;
   color: #fefefe;
 }
 .footer-logo-online {
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 27px;
-  letter-spacing: 0.08em;
   color: #fefefe;
 }
 .footer-middle {
@@ -658,7 +765,7 @@ footer {
   border: none;
   border-bottom: 1px solid #bdbdbd;
   color: #e0e0e0;
-  height: 26px;
+  width: 380px;
   margin-bottom: 20px;
 }
 .footer-form-input:focus {
@@ -669,7 +776,7 @@ fieldset {
   background-color: #333;
   box-sizing: border-box;
   border-radius: 3px;
-  height: 124px;
+
   margin-bottom: 25px;
 }
 legend {
@@ -677,9 +784,16 @@ legend {
   line-height: 14px;
   color: #bdbdbd;
   border: none;
-  width: 153px;
+
   padding: 0 3px;
   margin: 0;
+}
+.textarea {
+  border: none;
+  background: #333;
+  width: 360px;
+  height: 124px;
+  color: #e0e0e0;
 }
 
 input[type="checkbox"] {
@@ -709,6 +823,7 @@ input[type="checkbox"]:checked + .label-checkbox:before {
   content: "\2714";
   color: white;
 }
+
 .footer-submit {
   margin-top: 15px;
   float: right;
@@ -717,8 +832,10 @@ input[type="checkbox"]:checked + .label-checkbox:before {
   display: flex;
   width: 108px;
   margin-right: 13px;
-}
-.footer-submit-value {
+  background: url(./assets/icons/footer-submit-arrow.svg) no-repeat center right;
+  border: none;
+  color: #f2f2f2;
+  cursor: pointer;
   font-style: normal;
   text-transform: uppercase;
   font-weight: 500;
@@ -727,6 +844,7 @@ input[type="checkbox"]:checked + .label-checkbox:before {
   margin-right: 24px;
   color: #fefefe;
 }
+
 /* footer left end */
 
 /*  footer center */
@@ -758,6 +876,7 @@ input[type="checkbox"]:checked + .label-checkbox:before {
   line-height: 16px;
   text-transform: uppercase;
   color: #fefefe;
+  pointer-events: none;
 }
 .footer-zoo-center:hover {
   line-height: 16px;
