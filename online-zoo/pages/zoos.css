@@ -1,0 +1,155 @@
+main {
+  display: flex;
+  height: 910px;
+}
+h3 {
+  margin-top: 0;
+}
+h4 {
+  margin-top: 6px;
+  margin-bottom: 13px;
+}
+.wrapper-zoos {
+  display: flex;
+  width: 1620px;
+  margin: auto;
+  margin-top: 60px;
+}
+.animals-video {
+  display: flex;
+}
+.animals {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 120px;
+}
+.zoos-slider-wrapper {
+  width: 120px;
+  height: 480px;
+  overflow: hidden;
+}
+.map-pets-slider {
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  height: auto;
+}
+.map-pets-item {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.big-circle {
+  width: 120px;
+  height: 120px;
+}
+.circle-white {
+  width: 118px;
+  height: 118px;
+  top: 1px;
+  left: 1px;
+}
+.border-img {
+  width: 108px;
+  height: 108px;
+  bottom: 112px;
+  left: 6px;
+}
+.inner-img {
+  width: 104px;
+  height: 104px;
+  left: 8px;
+  bottom: 149px;
+}
+/* .inner-img:hover {
+  border: 16px solid #f2f2f2;
+  left: -7px;
+  bottom: 165px;
+} */
+.slider-arrow {
+  justify-content: center;
+  height: 15px;
+  cursor: pointer;
+  margin: 5px;
+}
+.slider-arrow:hover {
+  background: #fefefe;
+}
+.up-arrow {
+  transform: rotate(-180deg);
+}
+
+/* video section */
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 150px;
+  margin-right: 30px;
+}
+.video-non-visible {
+  display: flex;
+  justify-content: space-between;
+  visibility: 0;
+  pointer-events: none;
+}
+.size-video-top {
+  width: 790px;
+  height: 442px;
+  border-radius: 5px;
+}
+.additional-video {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.size-video-down {
+  width: 246px;
+  height: 141px;
+  border-radius: 5px;
+}
+.switcher-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.switcher-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 37px;
+}
+.switch-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  cursor: pointer;
+}
+.switch-circle:hover {
+  background: #c4c4c49a;
+}
+.active-circle {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #4bd8b5;
+}
+.active-circle:hover {
+  background: #4bd8b5;
+}
+
+/* description section */
+.description {
+  max-width: 253px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 69px;
+}
+.button-feed {
+  width: 185px;
+  height: 53px;
+}
