@@ -3,6 +3,7 @@ main {
   height: 910px;
 }
 h3 {
+  padding-top: 15px;
   margin-top: 0;
 }
 h4 {
@@ -21,7 +22,7 @@ h4 {
 .animals {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   width: 120px;
 }
 .zoos-slider-wrapper {
@@ -35,7 +36,7 @@ h4 {
   width: 120px;
   height: auto;
 }
-.map-pets-item {
+.map-pets {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -67,16 +68,23 @@ h4 {
   left: -7px;
   bottom: 165px;
 } */
-.slider-arrow {
-  justify-content: center;
-  height: 15px;
+.arrow {
+  border-radius: 5px;
   cursor: pointer;
-  margin: 5px;
+  margin: 20px 0;
+  width: 30px;
+  height: 30px;
+  background: var(--arrow-down, url(../assets/icons/arrow-down-dark.png))  no-repeat center;
 }
-.slider-arrow:hover {
-  background: #fefefe;
+.arrow:hover {
+  width: 30px;
+  height: 30px;
+  background-color: #615f5f85;
 }
-.up-arrow {
+.arrow:active {
+  background-color: #5f6161dc;
+}
+.arrow-up {
   transform: rotate(-180deg);
 }
 
@@ -119,7 +127,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 37px;
+  width: 49px;
 }
 .switch-circle {
   width: 8px;
@@ -139,15 +147,15 @@ h4 {
 }
 .active-circle:hover {
   background: #4bd8b5;
+  pointer-events: none;
 }
-
 /* description section */
 .description {
   max-width: 253px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 69px;
+  margin-top: 80px;
 }
 .button-feed {
   width: 185px;
