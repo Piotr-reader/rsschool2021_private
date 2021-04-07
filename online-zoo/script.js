@@ -6,9 +6,9 @@ const output = document.querySelectorAll("output");
 let firstScreenItem = document.querySelectorAll(".small-slider-item");
 let mapPetsItem = document.querySelectorAll(".map-pets-item");
 let firstScreenContainer = document.querySelectorAll(".container-zoo-small");
-let petsInZooContainer = document.querySelectorAll(".pets-in-zoo-item");
+let petsInZooContainer = document.querySelectorAll(".item-container");
 let testimonialPerson = document.querySelectorAll(".testimonial-person");
-let howItWorksItem = document.querySelectorAll(".how-it-works-item");
+let howItWorksItem = document.querySelectorAll(".top-item");
 
 // checkbox required
 document.getElementById("checkbox-form").required = true;
@@ -40,8 +40,8 @@ function inputValue(event) {
           testimonialPerson[event.target.value - 1].classList.add("person-visible");
           break;
         case "how-it-works":
-          howItWorksItem.forEach((item) => item.classList.remove("how-it-works-item-visible"));
-          howItWorksItem[event.target.value - 1].classList.add("how-it-works-item-visible");
+          howItWorksItem.forEach((item) => item.classList.remove("top-item-visible"));
+          howItWorksItem[event.target.value - 1].classList.add("top-item-visible");
           break;
         default:
           break;
@@ -73,8 +73,8 @@ function countLengthInput() {
 countLengthInput();
 
 // todo  нашел индекс страницы, доделать функцию для сслыки перехода
-// btn-slider-top
-const btnSliderTop = document.querySelector(".btn-slider-top");
+// btn-slider
+const btnSliderTop = document.querySelector(".btn-slider");
 if (btnSliderTop !== null) {
   btnSliderTop.addEventListener("mousedown", () => {
     input.forEach((el) => {
@@ -90,19 +90,27 @@ if (btnSliderTop !== null) {
 function thema(event) {
   if (event.target.name === "switch-dark" && !event.target.classList.contains("dark-active")) {
     event.target.classList.add("dark-active");
-    root.style.setProperty(`--color-text`, `#fefefe`);
-    root.style.setProperty(`--color-dark`, `#333333`);
+    root.style.setProperty(`--text-h4`, `#fefefe`);
+    root.style.setProperty(`--color-p`, `#f2f2f2`);
+    root.style.setProperty(`--bg-testimonial-card`, `#3c3c3c`);
+    root.style.setProperty(`--bg-dark`, `#333333`);
+    root.style.setProperty(`--bg-soft`, `#4f4f4f`);
+    root.style.setProperty(`--bg-map`, `url(./assets/icons/map-dark.svg)`);
+    root.style.setProperty(`--arrow-right`, `url(./assets/icons/arrow-right-dark.png)`);
   } else {
     event.target.classList.remove("dark-active");
-    root.style.setProperty(`--color-text`, null);
-    root.style.setProperty(`--color-dark`, null);
+    root.style.setProperty(`--text-h4`, null);
+    root.style.setProperty(`--color-p`, null);
+    root.style.setProperty(`--bg-testimonial-card`, null);
+    root.style.setProperty(`--bg-dark`, null);
+    root.style.setProperty(`--bg-soft`, null);
+    root.style.setProperty(`--bg-map`, null);
+    root.style.setProperty(`--arrow-right`, null);
   }
 }
 input.forEach((event) => event.addEventListener("input", thema));
 
 // TODO не работает
-// const leftPets = document.querySelector(".left-pets");
-// const rightPets = document.querySelector(".right-pets");
 // let indexItem = 0;
 // leftPets.addEventListener('mousedown', () => {
 //   input.forEach((event) => {
