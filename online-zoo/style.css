@@ -265,7 +265,8 @@ input[name="pets-in-zoo"]::-webkit-slider-thumb {
 /*  Header  */
 header {
   background: var(--bg-dark, #ffffff);
-
+  box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+  z-index: 1;
 }
 .header-top {
   display: flex;
