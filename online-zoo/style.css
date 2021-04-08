@@ -265,7 +265,8 @@ input[name="pets-in-zoo"]::-webkit-slider-thumb {
 /*  Header  */
 header {
   background: var(--bg-dark, #ffffff);
-
+  box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+  z-index: 1;
 }
 .header-top {
   display: flex;
@@ -483,6 +484,7 @@ input:checked + .switch-dark-button:before {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   width: 277px;
   height: 398px;
   background: #11111198;
@@ -490,25 +492,14 @@ input:checked + .switch-dark-button:before {
   transition: ease-in-out 300ms;
   border-radius: 5px;
 }
-
 .visible {
   opacity: 1;
+  padding-bottom: 29px;
 }
+
 .item-container:hover {
   opacity: 1;
-}
-.animation {
-  margin-left: 27px;
-  margin-bottom: 29px;
-  animation: zoo 0.6s linear infinite;
-}
-@keyframes zoo {
-  0% {
-    transform: translate(0, 100%);
-  }
-  100% {
-    transform: translate(0, -10%);
-  }
+  padding-bottom: 29px;
 }
 
 .slider-list {
