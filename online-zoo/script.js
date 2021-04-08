@@ -31,10 +31,10 @@ function inputValue(event) {
           });
           mapPetsItem[event.target.value - 1].firstElementChild.classList.add("img-wrapper-visible");
           break;
-        // case "pets-in-zoo":
-        //   petsInZooContainer.forEach((item) => item.classList.remove("visible"));
-        //   petsInZooContainer[event.target.value - 1].classList.add("visible");
-        //   break;
+        case "pets-in-zoo":
+          petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+          petsInZooContainer[event.target.value - 1].classList.add("visible");
+          break;
         case "testimonial":
           testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
           testimonialPerson[event.target.value - 1].classList.add("person-visible");

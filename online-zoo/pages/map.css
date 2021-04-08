@@ -79,6 +79,7 @@ h3 {
   z-index: 2;
   left: 9px;
   bottom: 147px;
+  cursor: pointer;
 }
 .img-wrapper-visible {
   visibility: visible;
