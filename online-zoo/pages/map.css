@@ -17,51 +17,47 @@ h3 {
   margin-bottom: 20px;
 }
 .map-slider {
-  margin-top: 67px;
+  margin-top: 32px;
+  margin-bottom: 10px;
 }
-.slider {
-  display: flex;
-  align-items: center;
+.arrow {
+  margin-top: 11px;
 }
 .map-pets-slider {
   display: flex;
-  justify-content: space-between;
-  width: 1099px;
+  align-items: center;
+  height: 157px;
 }
 /* circle */
 .map-pets-item {
-  display: flex;
- justify-content: center;
-  width: 131px;
+  width: 138px;
   height: 131px;
 }
 .img-wrapper {
   height: 157px;
   width: 157px;
   visibility: hidden;
-  pointer-events: none
+  pointer-events: none;
 }
-
 .big-circle {
-  width: 157px;
-  height: 157px;
+  width: 155px;
+  height: 155px;
   border-radius: 50%;
   position: relative;
   background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
   animation: 1.7s linear infinite reverse running rotate;
   pointer-events: none;
-  bottom: 23px;
-  right: 25px;
-
+  bottom: 9px;
+  right: 9px;
 }
 .circle-white {
-  width: 152px;
-  height: 152px;
+  width: 149px;
+  height: 150px;
   background-color: white;
   position: relative;
   border-radius: 50%;
-  bottom: 178px;
-  right: 23px;
+  bottom: 161px;
+  right: 6px;
   pointer-events: none;
 }
 .border-img {
@@ -72,8 +68,8 @@ h3 {
   animation: 1.5s linear infinite running rotate;
   border-radius: 50%;
   pointer-events: none;
-  bottom: 324px;
-  right: 17px;
+  bottom: 307px;
+  right: 2px;
 }
 .inner-img {
   width: 108px;
@@ -83,10 +79,13 @@ h3 {
   background-size: contain;
   cursor: pointer;
   z-index: 1;
+  margin-top: 18px;
+  margin-left: 15px;
 }
 .inner-img-visible {
   width: 137px;
   height: 137px;
+  margin: 0;
 }
 .img-wrapper-visible {
   visibility: visible;
@@ -123,11 +122,18 @@ h3 {
 .bg-zebra {
   background-image: url(../assets/icons/ellipse-zebra.png);
 }
+.button-container-input {
+  margin-right: 34px;
+  margin-bottom: 25px;
+}
 /* map placeholder */
 .active-img {
   width: 90px;
   height: 115px;
   filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
+}
+.map-content {
+  height: 784px;
 }
 .red-img-none {
   display: none;
@@ -141,15 +147,15 @@ h3 {
   filter: drop-shadow(2px 4px 15px rgba(6, 12, 70, 0.15));
 }
 .map-panda {
-  left: 120%;
-  bottom: 82%;
+  left: 132%;
+  bottom: 64%;
 }
 .panda {
   background-image: url(../assets/images/active-map-panda.png) no-repeat 50% 28%;
 }
 .map-eagle {
-  right: 107%;
-  bottom: 91%;
+  right: 108%;
+  bottom: 76%;
 }
 .eagle {
   background: url(../assets/images/active-map-eagle.png) no-repeat 50% 28%;
@@ -163,8 +169,15 @@ h3 {
 }
 .map-crocodile {
   right: 102%;
-  bottom: 84%;
+  bottom: 62%;
 }
 .crocodile {
   background: url(../assets/images/active-map-crocodile.png) no-repeat 50% 28%;
+}
+.btn-map {
+  margin-bottom: 28px;
+  margin-left: 5px;
+}
+.footer-btn {
+  margin-top: 2px;
 }
