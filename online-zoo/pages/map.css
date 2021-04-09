@@ -10,12 +10,14 @@ main {
 .map-description {
   width: 790px;
   text-align: center;
+  padding: 0;
 }
 h3 {
+  padding-top: 61px;
   margin-bottom: 20px;
 }
 .map-slider {
-  margin-top: 54px;
+  margin-top: 67px;
 }
 .slider {
   display: flex;
@@ -23,29 +25,34 @@ h3 {
 }
 .map-pets-slider {
   display: flex;
-  width: 1256px;
-  height: 157px;
+  justify-content: space-between;
+  width: 1099px;
 }
 /* circle */
-.map-pets{
-  width: 157px;
-  height: 157px;
+.map-pets-item {
+  display: flex;
+ justify-content: center;
+  width: 131px;
+  height: 131px;
 }
 .img-wrapper {
   height: 157px;
   width: 157px;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none
 }
 
 .big-circle {
   width: 157px;
   height: 157px;
   border-radius: 50%;
-  position: absolute;
+  position: relative;
   background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
   animation: 1.7s linear infinite reverse running rotate;
   pointer-events: none;
+  bottom: 23px;
+  right: 25px;
+
 }
 .circle-white {
   width: 152px;
@@ -53,8 +60,8 @@ h3 {
   background-color: white;
   position: relative;
   border-radius: 50%;
-  top: 3px;
-  left: 3px;
+  bottom: 178px;
+  right: 23px;
   pointer-events: none;
 }
 .border-img {
@@ -65,20 +72,21 @@ h3 {
   animation: 1.5s linear infinite running rotate;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 1;
-  bottom: 143px;
-  left: 8px;
+  bottom: 324px;
+  right: 17px;
 }
 .inner-img {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  position: absolute;
+  background-size: contain;
+  cursor: pointer;
+  z-index: 1;
+}
+.inner-img-visible {
   width: 137px;
   height: 137px;
-  border-radius: 50%;
-  background-size: contain;
-  position: relative;
-  z-index: 2;
-  left: 10px;
-  bottom: 146px;
-  cursor: pointer;
 }
 .img-wrapper-visible {
   visibility: visible;
