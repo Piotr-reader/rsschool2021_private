@@ -39,7 +39,7 @@
                   <a href="./pages/map.html" class="header-nav-anchor">Map</a>
                 </li>
                 <li class="header-nav-link">
-                  <label class="header-nav-anchor label-contact-us" for="contact-us">Contact us</label>
+                  <label class="header-nav-anchor label-contact-us" for="contact-us">Contact Us</label>
                 </li>
                 <li class="header-nav-link">
                   <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" target="_blank" class="header-nav-anchor">Design</a>
@@ -68,10 +68,10 @@
                   <a href="https://twitter.com/" target="_blank"><img class="img-media" src="./assets/icons/social-twetter.svg" alt="twit"/></a>
               </li>
               <li class="main-media-list">
-                <a href="https://vk.com/" target="_blank"><img img class="img-media" src="./assets/icons/social-vk.svg" alt="vk" /></a>
+                <a href="https://www.youtube.com/" target="_blank"><img img class="img-media" src="./assets/icons/social-youtube.svg" alt="youtube"/></a>
               </li>
               <li class="main-media-list">
-                <a href="https://www.youtube.com/" target="_blank"><img img class="img-media" src="./assets/icons/social-youtube.svg" alt="youtube"/></a>
+                <a href="https://vk.com/" target="_blank"><img img class="img-media" src="./assets/icons/social-vk.svg" alt="vk" /></a>
               </li>
             </ul>
           </aside>
@@ -239,23 +239,25 @@
                 </div>
             </div>
 
-            <ul class="how-it-works-down">
-              <li class="down-item">
-                <img  src="assets/icons/Group.svg" alt="group"></img>
-                <h4>What inspires us?</h4>
-                <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects.</p>
-              </li>
-              <li class="down-item">
-                  <img src="assets/icons/mission.svg" alt="mission"></img>
-                  <h4>Our mission</h4>
-                  <p>Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. </p>
-              </li>
-              <li class="down-item">
-                <img src="assets/icons/believe.svg" alt="believe"></img>
-                <h4>What we believe in?</h4>
-                <p>Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.</p>
-              </li>
-            </ul>
+            <div class="how-it-works-down-wrapper">
+              <ul class="how-it-works-down">
+                <li class="down-item">
+                  <img  src="assets/icons/Group.svg" alt="group"></img>
+                  <h4>What inspires us?</h4>
+                  <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects.</p>
+                </li>
+                <li class="down-item">
+                    <img src="assets/icons/mission.svg" alt="mission"></img>
+                    <h4>Our mission</h4>
+                    <p>Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. </p>
+                </li>
+                <li class="down-item">
+                  <img src="assets/icons/believe.svg" alt="believe"></img>
+                  <h4>What we believe in?</h4>
+                  <p>Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.</p>
+                </li>
+              </ul>
+            </div>
 
         </section>
 
@@ -269,7 +271,7 @@
             <ul class="slider-list" id="pets-in-zoo">
               <li class="slider-list-item">
                 <img src="./assets/images/panda.jpg" alt="panda">
-                <div class="item-container">
+                <div class="item-container visible">
                   <div class="animation">
                     <p class="slider-description">Panda’s name is Bei Bei. He
                       is 2 years old. Bei Bei is from China. He loves bamboos.</p>
@@ -382,31 +384,29 @@
               <h3 class="pay-and-feet-tittle">Pay and feed</h3>
               <p>The opportunity to easily and naturally (but as often as possible) donate to the needs of animals that you like.</p>
             </div>
+
             <div class="pay-and-feet-items">
-              <div class="pay-and-feet-circle">
-                <div class="circle-item">
-                  <img class="circle-img" src="./assets/icons/visa.svg" alt="visa">
+
+              <div class="pay-and-feet-circle visa">
                   <h4 class="circle-text">You pay with a
                     VISA card</h4>
-                </div>
-                  <img class="pay-and-feet-arrow" src="./assets/icons/Arrow3.svg" alt="arrow">
               </div>
-              <div class="pay-and-feet-circle">
-                <div class="circle-item">
-                  <img class="circle-img" src="./assets/icons/pay-and-feet.svg" alt="visa">
+
+              <img class="pay-and-feet-arrow" src="./assets/icons/Arrow3.svg" alt="arrow">
+
+              <div class="pay-and-feet-circle pay-and-feet-svg">
                   <h4 class="circle-text">Payment goes
                     to the Zoo</h4>
-                </div>
-                  <img class="pay-and-feet-arrow" src="./assets/icons/Arrow3.svg" alt="arrow">
               </div>
-              <div class="pay-and-feet-circle">
-                <div class="circle-item">
-                  <img class="circle-img" src="./assets/icons/pay-and-feet-panda.svg" alt="visa">
+
+              <img class="pay-and-feet-arrow" src="./assets/icons/Arrow3.svg" alt="arrow">
+
+              <div class="pay-and-feet-circle pay-and-feet-panda">
                   <h4 class="circle-text">Panda gets
                     the bamboo</h4>
-                </div>
               </div>
             </div>
+
             <div class="button-container">
               <div class="btn-wraper">
                 <button class="button">
@@ -418,7 +418,7 @@
         </section>
 
         <section class="testimonial wrapper-main">
-          <h3>Testimonials</h3>
+          <h3 class="testimonial-description">Testimonials</h3>
 
         <div class="slider-person">
 
@@ -491,7 +491,7 @@
 
         <section class="map">
           <div class="map-content">
-            <h3>Map</h3>
+            <h3 class="map-description">Map</h3>
             <section class="active-map-animals">
               <div class="active-map-placeholder map-panda">
                 <img class="active-img" src="./assets/icons/map-placeholder.svg" alt="placeholder">
@@ -542,7 +542,7 @@
                   </div>
                     </div>
             </section>
-            <div class="button-container">
+            <div class="button-container btn-map">
               <div class="btn-wraper">
                 <form action="./pages/zoos.html">
                   <button class="button">
@@ -574,9 +574,11 @@
                    online
                   </a>
                 </div>
+
               <section class="footer-middle">
-                <label class="footer-contact" for="contact-us">Contact us</label>
+                <label class="footer-contact">Contact us</label>
               </section>
+
               <section class="footer-bottom footer-column">
 
                 <form action="#">
@@ -604,17 +606,17 @@
             <aside class="footer-center">
 
               <div class="footer-center-aside">
-                <section class="footer-top">
+                <section class="footer-top footer-top-center">
                   <nav>
                     <ul class="footer-center-top-link">
                       <li class="footer-center-list">
                         <a href="./index.html" class="footer-center-link">About</a>
                       </li>
                       <li class="footer-center-list">
-                        <a href="./pages/map.html" class="footer-center-link">Map</a>
+                        <a href="./pages/zoos.html" class="footer-center-link">Zoos</a>
                       </li>
                       <li class="footer-center-list">
-                        <a href="./pages/zoos.html" class="footer-center-link">Zoos</a>
+                        <a href="./pages/map.html" class="footer-center-link">Map</a>
                       </li>
                       <li class="footer-center-list">
                         <a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp" target="_blank" class="footer-center-link">Design</a>
