@@ -10,7 +10,7 @@
   padding: 0;
 }
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 :root {
   --first-screen: 62px;
@@ -644,7 +644,7 @@ input:checked + .switch-dark-button:before {
   transition: all 0.7s ease;
   width: 436px;
   height: 149px;
-  background: #fefefe;
+  background: var( --bg-dark, #ffffff);
   box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
   border-radius: 8px;
   top: 144px;

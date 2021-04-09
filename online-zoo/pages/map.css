@@ -48,13 +48,13 @@ h3 {
   pointer-events: none;
 }
 .circle-white {
-  width: 154px;
-  height: 154px;
+  width: 152px;
+  height: 152px;
   background-color: white;
   position: relative;
   border-radius: 50%;
-  top: 2px;
-  left: 1px;
+  top: 3px;
+  left: 3px;
   pointer-events: none;
 }
 .border-img {
@@ -66,19 +66,18 @@ h3 {
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
-  bottom: 146px;
-  left: 7px;
+  bottom: 143px;
+  left: 8px;
 }
 .inner-img {
   width: 137px;
   height: 137px;
-  border-radius: 505%;
-  background-color: red;
+  border-radius: 50%;
   background-size: contain;
   position: relative;
   z-index: 2;
-  left: 9px;
-  bottom: 147px;
+  left: 10px;
+  bottom: 146px;
   cursor: pointer;
 }
 .img-wrapper-visible {
@@ -93,16 +92,28 @@ h3 {
   }
 }
 .bg-panda {
-  background-image: url(../assets/images/panda.jpg);
+  background-image: url(../assets/icons/ellipse-panda.png);
 }
 .bg-eagle {
-  background-image: url(../assets/images/eagle.jpg);
+  background-image: url(../assets/icons/ellipse-eagle.png);
 }
 .bg-crocodile {
-  background-image: url(../assets/images/crocodile.jpg);
+  background-image: url(../assets/icons/ellipse-crocodile.png);
 }
 .bg-monkey {
-  background-image: url(../assets/images/monkey.jpg);
+  background-image: url(../assets/icons/ellipse-monkye.png);
+}
+.bg-tiger {
+  background-image: url(../assets/icons/ellipse-tiger.png);
+}
+.bg-elephant {
+  background-image: url(../assets/icons/ellipse-elephant.png);
+}
+.bg-leon {
+  background-image: url(../assets/icons/ellipse-leon.png);
+}
+.bg-zebra {
+  background-image: url(../assets/icons/ellipse-zebra.png);
 }
 /* map placeholder */
 .active-img {

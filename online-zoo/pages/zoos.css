@@ -1,6 +1,7 @@
 main {
   display: flex;
   height: 910px;
+  background: var(--bg-soft, #f2f2f2);
 }
 h3 {
   padding-top: 15px;
@@ -70,24 +71,17 @@ h4 {
   left: -7px;
   bottom: 165px;
 } */
-.arrow {
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 20px 0;
-  width: 30px;
-  height: 30px;
-  background: var(--arrow-down, url(../assets/icons/arrow-down-dark.png))  no-repeat center;
-}
-.arrow:hover {
-  width: 30px;
-  height: 30px;
-  background-color: #615f5f85;
-}
-.arrow:active {
-  background-color: #5f6161dc;
+.arrow-down {
+   margin: 20px 0;
+   transform: rotate(90deg);
 }
 .arrow-up {
-  transform: rotate(-180deg);
+  margin: 20px 0;
+  transform: rotate(-90deg);
+}
+.arrow:hover {
+  height: 30px;
+  width: 30px;
 }
 
 /* video section */
@@ -130,7 +124,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 49px;
+  width: 40px;
 }
 .switch-circle {
   width: 8px;
