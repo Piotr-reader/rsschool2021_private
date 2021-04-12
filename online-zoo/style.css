@@ -10,7 +10,7 @@
   padding: 0;
 }
 body {
-  max-width: 1920px;
+  width: 1920px;
   margin: 0 auto;
 }
 :root {
@@ -334,12 +334,28 @@ input:checked + .switch-dark-button:before {
 .first-screen {
   background: url(assets/images/first-screen-bg.jpg) no-repeat;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 940px;
+}
+.first-screen-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 204px;
+}
+.btn-slider {
+  margin-top: 38px;
+}
+.first-screen-content {
+  display: flex;
+  justify-content: space-between;
+  width: 1920px;
 }
 .media-aside {
-  width: 360px;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  margin-left: 152px;
 }
 .main-media {
   display: flex;
@@ -347,8 +363,7 @@ input:checked + .switch-dark-button:before {
   justify-content: space-between;
   width: 20px;
   height: 113px;
-  margin-bottom: 106px;
-  margin-right: 37px;
+  margin-bottom: 93px;
 }
 .img-media {
   width: 20px;
@@ -358,20 +373,13 @@ input:checked + .switch-dark-button:before {
   border-radius: 5px;
   background: #4f4f4f;
 }
-.first-screen-content {
-  width: 1560px;
-  display: flex;
-  flex-direction: column;
-}
-
 .slider-small {
   display: flex;
-  justify-content: space-between;
-  background: url(./assets/icons/line.svg) no-repeat;
-  background-position: 100% 34%;
-}
-.btn-slider {
-  margin-top: 37px;
+  justify-content: flex-end;
+  width: 1124px;
+  height: 421px;
+  background: url(./assets/icons/line.svg) no-repeat center left;
+  background-position: 100% 20%;
 }
 .small-slider {
   display: flex;
@@ -381,7 +389,8 @@ input:checked + .switch-dark-button:before {
   margin-bottom: 0;
 }
 .slider-pets {
-  margin-top: -8px;
+ position: relative;
+ bottom: 100px;
 }
 .container-zoo-small {
   position: absolute;
@@ -430,7 +439,7 @@ input:checked + .switch-dark-button:before {
   margin: 0 auto;
 }
 .top-description {
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 .top-item {
   display: none;
@@ -467,6 +476,9 @@ input:checked + .switch-dark-button:before {
   flex-direction: column;
   align-items: center;
   background: var(--bg-dark, #ffffff);
+}
+.pets-in-zoo-h {
+  margin-bottom: 37px;
 }
 .slider {
   display: flex;
@@ -780,7 +792,6 @@ input:checked + .switch-dark-button:before {
   flex-direction: column;
 }
 footer {
-  /* margin-top: auto; */
   background: #333;
 }
 .footer {
@@ -983,7 +994,7 @@ input[type="checkbox"]:checked + .label-checkbox:before {
   line-height: 19px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1620px) {
   body {
     width: 1200px;
   }
@@ -995,21 +1006,26 @@ input[type="checkbox"]:checked + .label-checkbox:before {
   }
   h2 {
     margin-top: 127px;
-    margin-bottom: 2px;
   }
-  .media-aside {
-    width: 220px;
-    height: 865px;
+  .first-screen {
+    height: 924px;
+  }
+  .first-screen-top {
+    right: 54px;
   }
   .main-media {
-    margin-bottom: 0;
-    margin-right: 82px;
+    margin-bottom: -5px;
+  }
+  .first-screen-content {
+    width: 1200px;
   }
   .small-slider {
     width: 587px;
   }
   .slider-small {
-    background-position: -420% 48%;
+    width: 720px;
+    height: 426px;
+    background-position: 0 45%;
   }
   .small-slider-item {
     margin-right: 30px;
@@ -1021,10 +1037,11 @@ input[type="checkbox"]:checked + .label-checkbox:before {
     height: 355px;
   }
   .slider-pets {
-    margin-top: 97px;
+    bottom: 0;
   }
+
   .first-screen-input {
-    margin-top: -8px;
+    margin-top: -3px;
     margin-left: 217px;
     margin-bottom: 71px;
   }
@@ -1047,9 +1064,10 @@ input[type="checkbox"]:checked + .label-checkbox:before {
     width: 285px;
   }
 
+
   /* pets-in-zoo */
   .pets-in-zoo-h {
-    padding-top: 84px;
+    padding-top: 91px;
   }
   .slider-list {
     width: 900px;
@@ -1074,6 +1092,7 @@ input[type="checkbox"]:checked + .label-checkbox:before {
     margin-top: 2px;
     margin-bottom: 102px;
   }
+
 
   /* pay-and-feet */
   .pay-and-feet-tittle {
@@ -1136,6 +1155,7 @@ input[type="checkbox"]:checked + .label-checkbox:before {
   .right-tollip {
     left: -436px;
   }
+
   /* footer */
   .footer-top-center {
     margin-bottom: 60px;
@@ -1153,10 +1173,11 @@ input[type="checkbox"]:checked + .label-checkbox:before {
   }
 }
 
-/* @media {max-width: 640px;}{
+
+/* @media {max-width: 1200px;}{
 
 }
 
-@media {max-width: 320px;}{
+@media {max-width: 640px;}{
 
 } */
