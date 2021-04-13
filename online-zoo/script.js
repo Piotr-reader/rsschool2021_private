@@ -165,3 +165,13 @@ activeMapAnimal.addEventListener("mouseover", (event) => {
 });
 
 // zoos page
+
+
+// burger
+let burgerMenu = document.querySelector(".burger-menu");
+burgerMenu.addEventListener('mousedown', (event) => {
+  console.log(event.target);
+  event.target.classList.toggle("active-burger");
+  document.querySelector(".header-nav").classList.toggle("header-nav-active");
+  document.querySelector("body").classList.toggle("body-lock");
+})
