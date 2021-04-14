@@ -1,6 +1,6 @@
 main {
   background: #f2f2f2;
-  min-height: 1287px;
+  max-height: 1287px;
 }
 .map {
   display: flex;
@@ -17,16 +17,25 @@ h3 {
   margin-bottom: 20px;
 }
 .map-slider {
-  margin-top: 32px;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  height: 157px;
+  margin-top: 52px;
+  margin-bottom: 12px;
 }
-.arrow {
-  margin-top: 11px;
+.slider {
+  width: 1100px;
+  height: 157px;
+  position: relative;
+  overflow: hidden;
 }
 .map-pets-slider {
   display: flex;
   align-items: center;
   height: 157px;
+}
+.arrow {
+  margin-top: 11px;
 }
 /* circle */
 .map-pets-item {
@@ -180,4 +189,111 @@ h3 {
 }
 .footer-btn {
   margin-top: 2px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .map-slider {
+    margin-left: 5px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+  }
+  .slider {
+    width: 700px;
+  }
+  .arrow-left {
+    margin: 0px 21px;
+  }
+  .map-content {
+    background: url(../assets/icons/map-page-1200.svg) no-repeat 50% 40%;
+    height: 706px;
+  }
+  .button-container-input {
+    margin-right: 3px;
+  }
+  .map-panda {
+    left: 97%;
+    bottom: 64%;
+  }
+  .map-eagle {
+    right: 69%;
+    bottom: 74%;
+  }
+  .map-crocodile {
+    right: 72%;
+    bottom: 64%;
+  }
+  .map-monkey {
+    right: 36%;
+    top: 1%;
+  }
+  .btn-map {
+    margin-bottom: 100px;
+    margin-left: 0;
+  }
+  /* footer */
+  .footer {
+    height: 618px;
+  }
+  .footer-top {
+    margin-top: 93px;
+  }
+  .footer-middle {
+    margin-bottom: 29px;
+  }
+  fieldset {
+    margin-bottom: 18px;
+  }
+  .footer-submit {
+    margin-top: 16px;
+    margin-right: 2px;
+  }
+  .footer-center-top {
+  margin-bottom: 50px;
+  }
+  .footer-bottom-contact {
+    margin-bottom: 20px;
+  }
+  .media-footer {
+    margin-top: 0;
+  }
+  .footer-right {
+    margin-top: 27px;
+  }
+}
+
+@media (max-width: 1100px) {
+  h3 {
+    padding: 0;
+    margin-top: 155px;
+  }
+  .map-description {
+    max-width: 600px;
+  }
+  .slider {
+    max-width: 540px;
+  }
+  .inner-img {
+    margin-left: 0;
+  }
+  .inner-img-visible {
+    right: 278px;
+  }
+  .border-img {
+    right: 15px;
+  }
+  .circle-white {
+    right: 19px;
+  }
+  .big-circle {
+    right: 22px;
+  }
+  .arrow {
+    display: block;
+    margin: 0;
+  }
+  .output-range-container {
+    margin-top: 25px;
+  }
 }

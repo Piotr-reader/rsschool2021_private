@@ -1,7 +1,7 @@
 main {
   display: flex;
   background: var(--bg-soft, #f2f2f2);
-  min-height: 904px;
+  height: 904px;
 }
 h3 {
   padding-top: 15px;
@@ -25,16 +25,17 @@ h4 {
   align-items: center;
   margin-top: 1px;
   width: 210px;
-  height: 627px;
+  height: 600px;
   position: sticky;
   top: 155px;
-  margin-bottom: -18px;
+
 }
 .slider {
   width: 157px;
   height: 550px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 26px;
 }
 .zoos-pets-slider {
   display: flex;
@@ -91,9 +92,7 @@ h4 {
 .img-wrapper-visible {
   width: 137px;
   height: 137px;
-  /* visibility: hidden; */
 }
-
 .arrow-down {
   margin: 0;
   transform: rotate(90deg);
@@ -188,4 +187,112 @@ h4 {
 
 .footer-center-midle-zoos {
   margin-bottom: 73px;
+}
+
+
+@media (max-width: 1620px){
+  main {
+    height: 710px;
+  }
+  .map-slider {
+    width: 151px;
+    height: 521px;
+    top: 156px;
+  }
+  .slider {
+    width: 157px;
+    height: 459px;
+    margin-left: 38px;
+    margin-bottom: 19px;
+  }
+  .zoos-pets-slider {
+    width: 120px;
+    height: 430px;
+    margin-left: 10px;
+  }
+  .inner-img {
+    width: 96px;
+    height: 96px;
+    margin-left: 3px;
+  }
+  .inner-img-visible {
+    width: 104px;
+    height: 104px;
+    margin-top: 8px;
+  }
+  .map-pets-item {
+    width: 104px;
+    height: 90px;
+    margin: 8px;
+  }
+  .map-pets-item-visible {
+    width: 112px;
+    height: 112px;
+  }
+  .img-wrapper-visible {
+    width: 120px;
+    height: 120px;
+  }
+  .big-circle {
+    width: 120px;
+    height: 120px;
+    left: -5px;
+    top: 1px;
+  }
+  .circle-white {
+    width: 114px;
+    height: 115px;
+    bottom: 117px;
+    left: -2px;
+  }
+  .border-img {
+    width: 106px;
+    height: 106px;
+    bottom: 228px;
+    left: 2px;
+  }
+
+  /* video */
+  .video {
+    margin-left: 52px;
+    margin-right: 20px;
+  }
+  .size-video-top {
+    width: 525px;
+    height: 295px;
+  }
+  .size-video-down {
+    width: 163px;
+    height: 92px;
+  }
+  .switcher-container {
+  padding-right: 25px;
+  }
+  /* description */
+  .description {
+    width: 260px;
+  }
+  h4 {
+    margin-top: 14px;
+  margin-bottom: 7px;
+  }
+  .button-feed {
+    width: 185px;
+    height: 55px;
+    margin-top: 18px;
+  }
+
+  /* footer */
+  .footer-middle {
+    margin-bottom: 29px;
+  }
+  .footer-submit {
+    margin-top: 10px;
+  }
+  .footer-center-midle-zoos {
+    margin-bottom: 49px;
+  }
+  address {
+    margin-bottom: -3px;
+  }
 }

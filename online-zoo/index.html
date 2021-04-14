@@ -20,6 +20,7 @@
       <header>
         <div class="wrapper">
           <div class="header-top">
+
             <div class="logo">
               <a class="logo-online" href="./index.html"
                 >
@@ -27,6 +28,7 @@
                online
               </a>
             </div>
+
             <nav>
               <ul class="header-nav">
                 <li class="header-nav-link">
@@ -46,10 +48,19 @@
                 </li>
               </ul>
             </nav>
-            <label class="switch-dark">
-              <input type="checkbox" name="switch-dark" />
-              <span class="switch-dark-button round"></span>
-            </label>
+
+            <div class="burger">
+
+              <label class="switch-dark">
+                <input type="checkbox" name="switch-dark" />
+                <span class="switch-dark-button round"></span>
+              </label>
+
+              <div class="burger-menu">
+                <span></span>
+              </div>
+
+            </div>
           </div>
         </div>
       </header>
@@ -59,129 +70,135 @@
 
         <section class="first-screen">
           <h1>Online Zoo</h1>
-          <aside class="media-aside">
-            <ul class="main-media">
-              <li class="main-media-list">
-                <a href="https://www.instagram.com/" target="_blank"><img class="img-media" src="./assets/icons/social-instagram.svg" alt="instagram"/></a>
-              </li>
-              <li class="main-media-list">
-                  <a href="https://twitter.com/" target="_blank"><img class="img-media" src="./assets/icons/social-twetter.svg" alt="twit"/></a>
-              </li>
-              <li class="main-media-list">
-                <a href="https://www.youtube.com/" target="_blank"><img img class="img-media" src="./assets/icons/social-youtube.svg" alt="youtube"/></a>
-              </li>
-              <li class="main-media-list">
-                <a href="https://vk.com/" target="_blank"><img img class="img-media" src="./assets/icons/social-vk.svg" alt="vk" /></a>
-              </li>
-            </ul>
-          </aside>
+
+          <div class="first-screen-top">
+            <h2>Watch your favorite animal online</h2>
+
+            <form action="./pages/zoos.html">
+              <button class="button btn-slider">
+                <img
+                  class="img-btn"
+                  src="./assets/icons/btn.svg"
+                  alt="watch online"
+                />
+                watch online
+              </button>
+            </form>
+          </div>
+
           <aside class="first-screen-content">
-          <h2>Watch your favorite animal online</h2>
 
-              <div class="slider-small">
+            <div class="media-aside">
+              <ul class="main-media">
+                <li class="main-media-list">
+                  <a href="https://www.instagram.com/" target="_blank"><img class="img-media" src="./assets/icons/social-instagram.svg" alt="instagram"/></a>
+                </li>
+                <li class="main-media-list">
+                    <a href="https://twitter.com/" target="_blank"><img class="img-media" src="./assets/icons/social-twetter.svg" alt="twit"/></a>
+                </li>
+                <li class="main-media-list">
+                  <a href="https://www.youtube.com/" target="_blank"><img img class="img-media" src="./assets/icons/social-youtube.svg" alt="youtube"/></a>
+                </li>
+                <li class="main-media-list">
+                  <a href="https://vk.com/" target="_blank"><img img class="img-media" src="./assets/icons/social-vk.svg" alt="vk" /></a>
+                </li>
+              </ul>
+            </div>
 
-                <form action="./pages/zoos.html">
-                  <button class="button btn-slider">
-                    <img
-                      class="img-btn"
-                      src="./assets/icons/btn.svg"
-                      alt="watch online"
-                    />
-                    watch online
-                  </button>
-                </form>
+            <div class="slider-small">
+              <div class="slider-pets">
 
-                <div class="slider-pets">
+                      <ul class="small-slider" id="first-screen">
 
-                    <ul class="small-slider" id="first-screen">
+                        <li class="small-slider-item">
+                          <img class="slider-list-img" src="./assets/images/eagle.jpg" alt="eagle">
+                          <div class="container-zoo-small">
+                            <p class="slider-description">Panda’s name is Bei Bei. He
+                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                                <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
+                          </div>
+                        </li>
+                        <li class="small-slider-item slider-active">
+                          <img class="slider-list-img" src="./assets/images/panda.jpg" alt="crocodile">
+                          <div class="container-zoo-small visible">
+                            <p class="slider-description">Panda’s name is Bei Bei. He
+                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                                <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
+                          </div>
 
-                      <li class="small-slider-item">
-                        <img class="slider-list-img" src="./assets/images/eagle.jpg" alt="eagle">
-                        <div class="container-zoo-small">
-                          <p class="slider-description">Panda’s name is Bei Bei. He
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                              <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
-                        </div>
-                      </li>
-                      <li class="small-slider-item slider-active">
-                        <img class="slider-list-img" src="./assets/images/panda.jpg" alt="crocodile">
-                        <div class="container-zoo-small visible">
-                          <p class="slider-description">Panda’s name is Bei Bei. He
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                              <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
-                        </div>
+                        </li>
+                        <li class="small-slider-item">
+                          <img class="slider-list-img" src="./assets/images/monkey.jpg" alt="monkey">
+                          <div class="container-zoo-small">
+                            <p class="slider-description">Panda’s name is Bei Bei. He
+                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                                <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
+                          </div>
+                        </li>
+                        <li class="small-slider-item">
+                          <img class="slider-list-img" src="./assets/images/crocodile.jpg" alt="crocodile">
+                          <div class="container-zoo-small">
+                            <p class="slider-description">Panda’s name is Bei Bei. He
+                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                                <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
+                          </div>
+                        </li>
+                        <li class="small-slider-item">
+                          <img class="slider-list-img" src="./assets/images/fox.jpg" alt="fox">
+                          <div class="container-zoo-small">
+                            <p class="slider-description">Panda’s name is Bei Bei. He
+                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                                <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
+                          </div>
+                        </li>
+                        <li class="small-slider-item">
+                          <img class="slider-list-img" src="./assets/images/lase-animal.jpg" alt="lase-animal">
+                          <div class="container-zoo-small">
+                            <p class="slider-description">Panda’s name is Bei Bei. He
+                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                                <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
+                          </div>
+                        </li>
+                        <li class="small-slider-item">
+                          <img class="slider-list-img" src="./assets/images/elephant.jpg" alt="elephant">
+                          <div class="container-zoo-small">
+                            <p class="slider-description">Panda’s name is Bei Bei. He
+                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                                <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
+                          </div>
+                        </li>
+                        <li class="small-slider-item">
+                          <img class="slider-list-img" src="./assets/images/leopard.jpg" alt="leopard">
+                          <div class="container-zoo-small">
+                            <p class="slider-description">Panda’s name is Bei Bei. He
+                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                                <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
+                          </div>
+                        </li>
 
-                      </li>
-                      <li class="small-slider-item">
-                        <img class="slider-list-img" src="./assets/images/monkey.jpg" alt="monkey">
-                        <div class="container-zoo-small">
-                          <p class="slider-description">Panda’s name is Bei Bei. He
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                              <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
-                        </div>
-                      </li>
-                      <li class="small-slider-item">
-                        <img class="slider-list-img" src="./assets/images/crocodile.jpg" alt="crocodile">
-                        <div class="container-zoo-small">
-                          <p class="slider-description">Panda’s name is Bei Bei. He
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                              <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
-                        </div>
-                      </li>
-                      <li class="small-slider-item">
-                        <img class="slider-list-img" src="./assets/images/fox.jpg" alt="fox">
-                        <div class="container-zoo-small">
-                          <p class="slider-description">Panda’s name is Bei Bei. He
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                              <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
-                        </div>
-                      </li>
-                      <li class="small-slider-item">
-                        <img class="slider-list-img" src="./assets/images/lase-animal.jpg" alt="lase-animal">
-                        <div class="container-zoo-small">
-                          <p class="slider-description">Panda’s name is Bei Bei. He
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                              <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
-                        </div>
-                      </li>
-                      <li class="small-slider-item">
-                        <img class="slider-list-img" src="./assets/images/elephant.jpg" alt="elephant">
-                        <div class="container-zoo-small">
-                          <p class="slider-description">Panda’s name is Bei Bei. He
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                              <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
-                        </div>
-                      </li>
-                      <li class="small-slider-item">
-                        <img class="slider-list-img" src="./assets/images/leopard.jpg" alt="leopard">
-                        <div class="container-zoo-small">
-                          <p class="slider-description">Panda’s name is Bei Bei. He
-                            is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <a class="slider-watch" href="#"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                              <a href="#"><img src="./assets/icons/btn-donate.svg" alt="donate"></a>
-                        </div>
-                      </li>
+                      </ul>
 
-                    </ul>
-
-                  <div class="button-container first-screen-input">
-                    <div class="btn-wraper">
-                      <div class="output-range-container">
-                        <output class="output-range-strong small-strong-output" name="first-screen">02/</output>
-                        <output class="output-range-small" data-name="first-screen">08</output>
+                      <div class="button-container first-screen-input">
+                        <div class="btn-wraper">
+                          <div class="output-range-container first-screen-output">
+                            <output class="output-range-strong small-strong-output" name="first-screen">02/</output>
+                            <output class="output-range-small" data-name="first-screen">08</output>
+                          </div>
+                          <input class="input-range" type="range"  min="1" max="8" value="2" name="first-screen" step="1">
                       </div>
-                      <input class="input-range" type="range"  min="1" max="8" value="2" name="first-screen" step="1">
-                  </div>
-                </div>
-                </div>
+                        </div>
+
               </div>
+            </div>
+
           </aside>
 
         </section>
@@ -221,7 +238,7 @@
               </div>
             </aside>
 
-            <div class="button-container">
+            <div class="button-container btn-how-it-works">
                   <div class="btn-wraper">
                     <div class="output-range-container">
                       <output class="output-range-strong" name="how-it-works">01/</output>
@@ -262,7 +279,7 @@
         </section>
 
         <section class="pets-in-zoo">
-          <h3>Pets in Zoo</h3>
+          <h3 class="pets-in-zoo-h">Pets in Zoo</h3>
 
           <div class="slider">
             <div class="arrow arrow-left">
@@ -271,7 +288,7 @@
             <ul class="slider-list" id="pets-in-zoo">
               <li class="slider-list-item">
                 <img src="./assets/images/panda.jpg" alt="panda">
-                <div class="item-container visible">
+                <div class="item-container">
                   <div class="animation">
                     <p class="slider-description">Panda’s name is Bei Bei. He
                       is 2 years old. Bei Bei is from China. He loves bamboos.</p>
@@ -361,7 +378,7 @@
             <div class="arrow">
             </div>
           </div>
-          <div class="button-container">
+          <div class="button-container btn-pets-in-zoo">
             <div class="btn-wraper">
               <div class="output-range-container">
                 <output class="output-range-strong" name="pets-in-zoo">01/</output>
@@ -379,10 +396,10 @@
         </section>
 
         <section class="pay-and-feat wrapper-main">
-          <div class="wrapper-main-section">
+
             <div class="pay-and-feet-description">
               <h3 class="pay-and-feet-tittle">Pay and feed</h3>
-              <p>The opportunity to easily and naturally (but as often as possible) donate to the needs of animals that you like.</p>
+              <p class="pay-and-feet-description-p">The opportunity to easily and naturally (but as often as possible) donate to the needs of animals that you like.</p>
             </div>
 
             <div class="pay-and-feet-items">
@@ -391,15 +408,13 @@
                   <h4 class="circle-text">You pay with a
                     VISA card</h4>
               </div>
-
-              <img class="pay-and-feet-arrow" src="./assets/icons/Arrow3.svg" alt="arrow">
+              <div class="pay-and-feet-arrow"></div>
 
               <div class="pay-and-feet-circle pay-and-feet-svg">
                   <h4 class="circle-text">Payment goes
                     to the Zoo</h4>
               </div>
-
-              <img class="pay-and-feet-arrow" src="./assets/icons/Arrow3.svg" alt="arrow">
+              <div class="pay-and-feet-arrow"></div>
 
               <div class="pay-and-feet-circle pay-and-feet-panda">
                   <h4 class="circle-text">Panda gets
@@ -409,12 +424,12 @@
 
             <div class="button-container">
               <div class="btn-wraper">
-                <button class="button">
+                <button class="button btn-pay-and-feet">
                 Donate
                 </button>
             </div>
           </div>
-        </div>
+
         </section>
 
         <section class="testimonial wrapper-main">
@@ -429,42 +444,42 @@
               <div class="person-container" id="testimonial">
                 <div class="testimonial-person person-visible">
                   <img class="testimonial-person-img" src="./assets/images/testimonial-1.png" alt="person1">
-                  <h4>Nastya Sidorova</h4>
+                  <h4 class="testimonial-h4">Nastya Sidorova</h4>
                   <p class="testimonial-person-description">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
                 <div class="testimonial-person">
                   <img class="testimonial-person-img" src="./assets/images/testimonial-2.png" alt="person1">
-                  <h4>Vlad Kim</h4>
+                  <h4 class="testimonial-h4">Vlad Kim</h4>
                   <p class="testimonial-person-description">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
                 <div class="testimonial-person">
                   <img class="testimonial-person-img" src="./assets/images/testimonial-1.png" alt="person1">
-                  <h4>Nastya Sidorova</h4>
+                  <h4 class="testimonial-h4">Nastya Sidorova</h4>
                   <p class="testimonial-person-description">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
                 <div class="testimonial-person">
                   <img class="testimonial-person-img" src="./assets/images/testimonial-2.png" alt="person1">
-                  <h4>Vlad Kim</h4>
+                  <h4 class="testimonial-h4">Vlad Kim</h4>
                   <p class="testimonial-person-description">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
                 <div class="testimonial-person">
                   <img class="testimonial-person-img" src="./assets/images/testimonial-1.png" alt="person1">
-                  <h4>Nastya Sidorova</h4>
+                  <h4 class="testimonial-h4">Nastya Sidorova</h4>
                   <p class="testimonial-person-description">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
                 <div class="testimonial-person">
                   <img class="testimonial-person-img" src="./assets/images/testimonial-2.png" alt="person1">
-                  <h4>Vlad Kim</h4>
+                  <h4 class="testimonial-h4">Vlad Kim</h4>
                   <p class="testimonial-person-description">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
                 <div class="testimonial-person">
                   <img class="testimonial-person-img" src="./assets/images/testimonial-1.png" alt="person1">
-                  <h4>Nastya Sidorova</h4>
+                  <h4 class="testimonial-h4">Nastya Sidorova</h4>
                   <p class="testimonial-person-description">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
                 <div class="testimonial-person">
                   <img class="testimonial-person-img" src="./assets/images/testimonial-2.png" alt="person1">
-                  <h4>Vlad Kim</h4>
+                  <h4 class="testimonial-h4">Vlad Kim</h4>
                   <p class="testimonial-person-description">As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
                 </div>
               </div>
@@ -475,7 +490,7 @@
 
           </div>
 
-        <div class="button-container">
+        <div class="button-container btn-testimonial">
           <div class="btn-wraper">
             <div class="output-range-container">
               <output class="output-range-strong" name="testimonial">02/</output>
