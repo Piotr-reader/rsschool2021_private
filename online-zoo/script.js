@@ -85,7 +85,7 @@ if (btnSliderTop !== null) {
   });
 }
 
-// todo добавить стили в css
+
 // dark thema
 function thema(event) {
   if (event.target.name === "switch-dark" && !event.target.classList.contains("dark-active")) {
@@ -95,7 +95,7 @@ function thema(event) {
     root.style.setProperty(`--bg-testimonial-card`, `#3c3c3c`);
     root.style.setProperty(`--bg-dark`, `#333333`);
     root.style.setProperty(`--bg-soft`, `#4f4f4f`);
-    root.style.setProperty(`--bg-map`, `url(./assets/icons/map-dark.svg)`);
+    root.style.setProperty(`--bg-map`, `url(./assets/images/map-1920-dark.jpg)`);
     root.style.setProperty(`--arrow-right`, `url(./assets/icons/arrow-right-dark.png)`);
   } else {
     event.target.classList.remove("dark-active");

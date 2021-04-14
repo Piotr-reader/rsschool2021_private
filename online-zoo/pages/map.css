@@ -191,10 +191,13 @@ h3 {
   margin-top: 2px;
 }
 
+
+
 @media (max-width: 1200px) {
   .map-slider {
-    margin-top: 12px;
-    margin-bottom: 6px;
+    margin-left: 5px;
+    margin-top: 32px;
+    margin-bottom: 0px;
   }
   .slider {
     width: 700px;
@@ -228,5 +231,69 @@ h3 {
   .btn-map {
     margin-bottom: 100px;
     margin-left: 0;
+  }
+  /* footer */
+  .footer {
+    height: 618px;
+  }
+  .footer-top {
+    margin-top: 93px;
+  }
+  .footer-middle {
+    margin-bottom: 29px;
+  }
+  fieldset {
+    margin-bottom: 18px;
+  }
+  .footer-submit {
+    margin-top: 16px;
+    margin-right: 2px;
+  }
+  .footer-center-top {
+  margin-bottom: 50px;
+  }
+  .footer-bottom-contact {
+    margin-bottom: 20px;
+  }
+  .media-footer {
+    margin-top: 0;
+  }
+  .footer-right {
+    margin-top: 27px;
+  }
+}
+
+@media (max-width: 1100px) {
+  h3 {
+    padding: 0;
+    margin-top: 155px;
+  }
+  .map-description {
+    max-width: 600px;
+  }
+  .slider {
+    max-width: 540px;
+  }
+  .inner-img {
+    margin-left: 0;
+  }
+  .inner-img-visible {
+    right: 278px;
+  }
+  .border-img {
+    right: 15px;
+  }
+  .circle-white {
+    right: 19px;
+  }
+  .big-circle {
+    right: 22px;
+  }
+  .arrow {
+    display: block;
+    margin: 0;
+  }
+  .output-range-container {
+    margin-top: 25px;
   }
 }
