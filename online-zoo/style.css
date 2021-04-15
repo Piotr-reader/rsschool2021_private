@@ -10,7 +10,7 @@
   padding: 0;
 }
 body {
-  width: 1920px;
+  max-width: 1920px;
   margin: 0 auto;
   /* overflow-x: hidden; */
 }
@@ -129,7 +129,7 @@ h2 {
   font-size: 89px;
   line-height: 104px;
   color: #fefefe;
-  width: 793px;
+  max-width: 793px;
   margin-top: 206px;
   margin-bottom: 0;
 }
@@ -383,7 +383,7 @@ input:checked + .switch-dark-button:before {
 .small-slider {
   display: flex;
   align-items: center;
-  width: 945px;
+  max-width: 945px;
   overflow: hidden;
   margin-bottom: 0;
 }
@@ -605,6 +605,7 @@ input:checked + .switch-dark-button:before {
   margin-right: 63px;
   margin-left: 63px;
 }
+
 
 /* testimonials */
 .testimonial {
