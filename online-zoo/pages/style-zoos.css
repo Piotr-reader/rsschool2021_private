@@ -1,7 +1,7 @@
 main {
   display: flex;
   background: var(--bg-soft, #f2f2f2);
-  height: 904px;
+  height: 914px;
 }
 h3 {
   padding-top: 15px;
@@ -14,6 +14,8 @@ h4 {
 }
 .wrapper-zoos {
   display: flex;
+  flex-direction: column;
+  margin-left: 151px;
   margin-top: 46px;
 }
 .animals-video {
@@ -28,7 +30,6 @@ h4 {
   height: 600px;
   position: sticky;
   top: 155px;
-
 }
 .slider {
   width: 157px;
@@ -111,11 +112,12 @@ h4 {
 }
 
 /* video section */
+.video-description {
+  display: flex;
+}
 .video {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-left: 151px;
   margin-right: 30px;
 }
 .video-non-visible {
@@ -141,15 +143,11 @@ h4 {
   border-radius: 5px;
 }
 .switcher-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.switcher-btn {
+  width: 34px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40px;
+  margin: 0 auto;
 }
 .switch-circle {
   width: 8px;
@@ -177,20 +175,27 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 100px;
+}
+.population {
+  margin-top: 0;
 }
 .button-feed {
   width: 194px;
   height: 55px;
   margin-top: 34px;
 }
-
 .footer-center-midle-zoos {
   margin-bottom: 73px;
 }
 
-
-@media (max-width: 1620px){
+/* todo done */
+@media (max-width: 1600px) {
+  .wrapper-zoos {
+    margin-left: 30px;
+  }
+}
+/* todo done */
+@media (max-width: 1200px) {
   main {
     height: 710px;
   }
@@ -198,12 +203,14 @@ h4 {
     width: 151px;
     height: 521px;
     top: 156px;
+    margin-left: 0;
   }
   .slider {
     width: 157px;
     height: 459px;
-    margin-left: 38px;
-    margin-bottom: 19px;
+    margin-left: 33px;
+    margin-left: 26px;
+    margin-bottom: 24px;
   }
   .zoos-pets-slider {
     width: 120px;
@@ -253,8 +260,11 @@ h4 {
   }
 
   /* video */
+  .wrapper-zoos {
+    margin-left: 45px;
+  }
   .video {
-    margin-left: 52px;
+    margin-left: 0;
     margin-right: 20px;
   }
   .size-video-top {
@@ -266,7 +276,7 @@ h4 {
     height: 92px;
   }
   .switcher-container {
-  padding-right: 25px;
+    padding-right: 25px;
   }
   /* description */
   .description {
@@ -274,7 +284,7 @@ h4 {
   }
   h4 {
     margin-top: 14px;
-  margin-bottom: 7px;
+    margin-bottom: 7px;
   }
   .button-feed {
     width: 185px;
@@ -284,15 +294,25 @@ h4 {
 
   /* footer */
   .footer-middle {
-    margin-bottom: 29px;
+    margin-bottom: 34px;
   }
   .footer-submit {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .footer-center-midle-zoos {
-    margin-bottom: 49px;
+    margin-bottom: 59px;
   }
   address {
-    margin-bottom: -3px;
+    margin-bottom: 16px;
+  }
+  .footer-right {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    max-width: 640px;
+    height: 710px;
   }
 }

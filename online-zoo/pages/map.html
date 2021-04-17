@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,12 +14,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="./map.css" />
+    <link rel="stylesheet" href="./style-map.css" />
     <title>OnlineZoo</title>
   </head>
 
   <body>
+
     <div class="wrapper-around">
+
       <header>
         <div class="wrapper">
           <div class="header-top">
@@ -68,11 +71,15 @@
       </header>
 
       <main>
+
         <h1>Online Zoo</h1>
+
         <div class="map">
 
           <section class="map-description">
+
             <h3>Choose your favorite</h3>
+
             <p>As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat, and we are determined to assist in all aspects, including providing veterinary support and raising much-needed emergency funds. Zoo Online saves wildlife and inspires everyone to make conservation a priority in their lives. Animals have the right to a pain-free and happy life. They have equal claim to the resources of this planet, and deserve a life of dignity and compassion.As a voice for wildlife, we are devastated by the impact of the 2020 Australian bushfires on precious species and their habitat.</p>
           </section>
 
@@ -95,6 +102,7 @@
                       <div class="border-img"></div>
                     </div>
                 </li>
+
                 <li class="map-pets-item">
                   <a href="./zoos.html">
                     <div class="inner-img bg-panda inner-img-visible"></div>
@@ -105,6 +113,7 @@
                     </div>
                   </a>
                 </li>
+
                 <li class="map-pets-item">
                   <a href="./eagle.html">
                     <div class="inner-img bg-eagle"></div>
@@ -115,6 +124,7 @@
                     </div>
                   </a>
                 </li>
+
                 <li class="map-pets-item">
                   <a href="./crocodile.html">
                     <div class="inner-img bg-crocodile"></div>
@@ -125,6 +135,7 @@
                     </div>
                   </a>
                 </li>
+
                 <li class="map-pets-item">
                   <a href="./zoos.html">
                   <div class="inner-img bg-tiger"></div>
@@ -135,6 +146,7 @@
                   </div>
                 </a>
                 </li>
+
                 <li class="map-pets-item">
                   <a href="./zoos.html">
                   <div class="inner-img bg-elephant"></div>
@@ -145,6 +157,7 @@
                   </div>
                 </a>
                 </li>
+
                 <li class="map-pets-item">
                   <a href="./zoos.html">
                   <div class="inner-img bg-leon"></div>
@@ -155,6 +168,7 @@
                   </div>
                 </a>
                 </li>
+
                 <li class="map-pets-item">
                   <a href="./zoos.html">
                   <div class="inner-img bg-zebra"></div>
@@ -175,47 +189,86 @@
 
           </section>
 
+          <div class="button-container button-container-input">
+            <div class="btn-wraper">
+             <div class="output-range-container">
+              <output class="output-range-strong" name="map-zoo">02/</output>
+              <output class="output-range-small" data-name="map-zoo">08</output>
+             </div>
+            <input class="input-range" type="range"  min="1" max="8" value="2" name="map-zoo" step="1">
+          </div>
+          </div>
+
           <div class="map-content">
 
-            <div class="button-container button-container-input">
-              <div class="btn-wraper">
-               <div class="output-range-container">
-                <output class="output-range-strong" name="map-zoo">02/</output>
-                <output class="output-range-small" data-name="map-zoo">08</output>
-               </div>
-              <input class="input-range" type="range"  min="1" max="8" value="2" name="map-zoo" step="1">
-            </div>
-            </div>
+            <section class="map-animals">
 
-            <section class="active-map-animals">
-                <div class="active-map-placeholder map-panda">
-                  <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
-                  <img class="red-img-none panda" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+              <div class="map-placeholder map-panda">
+                <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
+                <img class="red-img-none panda" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+                <div class="tooltip-content">
+                    <img class="tooltip-img" src="../assets/images/panda.jpg" alt="image">
+                  <div class="tooltip-description">
+                    <h4 class="tooltip-heading">West End Bald Eagle</h4>
+                    <p class="tooltip-paragraph"><strong>Region: </strong>on an island near Los Angeles</p>
+                    <p><strong>Population: </strong>more than 270 pairs in 2013</p>
+                  </div>
                 </div>
-                <div class="active-map-placeholder map-eagle">
-                  <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
-                 <img class="red-img-none eagle" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
                 </div>
-                <div class="active-map-placeholder map-crocodile">
+
+              <div class="map-placeholder map-eagle">
+                <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
+                <img class="red-img-none eagle" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+                <div class="tooltip-content right-tollip">
+                  <img class="tooltip-img" src="../assets/images/eagle.jpg" alt="image">
+                <div class="tooltip-description">
+                  <h4 class="tooltip-heading">West End Bald Eagle</h4>
+                  <p class="tooltip-paragraph"><strong>Region: </strong>on an island near Los Angeles</p>
+                  <p><strong>Population: </strong>more than 270 pairs in 2013</p>
+                </div>
+              </div>
+              </div>
+
+              <div class="map-placeholder map-crocodile">
                   <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
                   <img class="red-img-none crocodile" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+                  <div class="tooltip-content right-tollip">
+                    <img class="tooltip-img" src="../assets/images/crocodile.jpg" alt="image">
+                  <div class="tooltip-description">
+                    <h4 class="tooltip-heading">West End Bald Eagle</h4>
+                    <p class="tooltip-paragraph"><strong>Region: </strong>on an island near Los Angeles</p>
+                    <p><strong>Population: </strong>more than 270 pairs in 2013</p>
+                  </div>
                 </div>
-                <div class="active-map-placeholder map-monkey">
-                  <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
-                  <img class="red-img-none monkey" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
-                </div>
+              </div>
+
+              <div class="map-placeholder map-monkey">
+                    <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
+                    <img class="red-img-none monkey" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+                    <div class="tooltip-content">
+                      <img class="tooltip-img" src="../assets/images/monkey.jpg" alt="image">
+                    <div class="tooltip-description">
+                      <h4 class="tooltip-heading">West End Bald Eagle</h4>
+                      <p class="tooltip-paragraph"><strong>Region: </strong>on an island near Los Angeles</p>
+                      <p><strong>Population: </strong>more than 270 pairs in 2013</p>
+                    </div>
+                  </div>
+              </div>
+
             </section>
 
             <div class="button-container btn-map">
               <div class="btn-wraper">
-                <button class="button">
-                <img
-                  class="img-btn"
-                  src="../assets/icons/btn.svg"
-                  alt="watch online"
-                />
-                watch online
-                </button>
+                <form action="../pages/zoos.html">
+                  <button class="button">
+                  <img
+                    class="img-btn"
+                    src="../assets/icons/btn.svg"
+                    alt="watch online"
+                  />
+                  watch online
+                  </button>
+                </form>
             </div>
             </div>
 
@@ -323,7 +376,7 @@
               <section class=" footer-top footer-right">
                 <form action="#">
                   <input
-                    class="button footer-btn"
+                    class="button footer-btn donate"
                     type="submit"
                     value="donate for volunteers"
                   />
@@ -343,7 +396,9 @@
       </footer>
 
     </div>
+
     <script src="../script.js"></script>
+
   </body>
 
 </html>

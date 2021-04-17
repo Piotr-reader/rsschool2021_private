@@ -109,18 +109,6 @@ function thema(event) {
 }
 input.forEach((event) => event.addEventListener("input", thema));
 
-// popup
-const popupOpenSlider = document.querySelectorAll(".donate");
-const popupClose = document.querySelector(".popup-close");
-popupOpenSlider.forEach((el) =>
-  el.addEventListener("mousedown", () => {
-    document.querySelector(".popup").classList.add("popup-visible");
-  })
-);
-popupClose.addEventListener("mousedown", () => {
-  document.querySelector(".popup").classList.remove("popup-visible");
-});
-
 // TODO не работает
 // let indexItem = 0;
 // leftPets.addEventListener('mousedown', () => {
@@ -176,6 +164,17 @@ activeMapAnimal.addEventListener("mouseover", (event) => {
 
 // zoos page
 
+// popup
+const popupOpenSlider = document.querySelectorAll(".donate");
+const popupClose = document.querySelector(".popup-close");
+popupOpenSlider.forEach((el) =>
+  el.addEventListener("mousedown", () => {
+    document.querySelector(".popup").classList.add("popup-visible");
+  })
+);
+popupClose.addEventListener("mousedown", () => {
+  document.querySelector(".popup").classList.remove("popup-visible");
+});
 // burger
 let burgerMenu = document.querySelector(".burger-menu");
 burgerMenu.addEventListener("mousedown", (event) => {
