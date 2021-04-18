@@ -195,6 +195,18 @@ h4 {
   .wrapper-zoos {
     margin-left: 30px;
   }
+  .switcher-container {
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+  .description {
+    max-width: 485px;
+  }
+  .button-feed {
+    margin-top: 31px;
+    margin-bottom: 78px;
+  }
 }
 /* todo done */
 @media (max-width: 1200px) {

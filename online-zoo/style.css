@@ -998,6 +998,14 @@ address {
   line-height: 19px;
 }
 
+@media (max-width: 1500px) {
+  .footer-center {
+    flex-direction: column;
+  }
+  .footer-center {
+    width: 480px;
+  }
+}
 @media (max-width: 1360px) {
   /* pets-in-zoo */
   .pets-in-zoo-h {
@@ -1102,7 +1110,6 @@ address {
   .slider-pets {
     bottom: 0;
   }
-  /* first-screen */
   .first-screen-input {
     margin-top: -3px;
     margin-left: 217px;
@@ -1213,6 +1220,14 @@ address {
 }
 
 @media (max-width: 1000px) {
+  .wrapper-around {
+    max-width: 900px;
+    z-index: 50;
+    position: absolute;
+  }
+  .wrapper {
+    margin: 0px 3%;
+  }
   /* pets-in-zoo */
   .slider-list {
     max-width: 671px;
@@ -1231,11 +1246,11 @@ address {
     margin-bottom: 101px;
   }
   .map-monkey {
-    left: 19%;
+    left: 15%;
     top: 42%;
   }
   .map-crocodile {
-    left: 8%;
+    left: 5%;
     top: 26%;
   }
 }
