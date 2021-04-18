@@ -21,9 +21,9 @@ function inputValue(event) {
       switch (event.target.name) {
         case "first-screen":
           firstScreenItem.forEach((item) => item.classList.remove("slider-active"));
-          firstScreenContainer.forEach((item) => item.classList.remove("visible"));
+          firstScreenContainer.forEach((item) => item.classList.remove("visible-small"));
           firstScreenItem[event.target.value - 1].classList.add("slider-active");
-          firstScreenContainer[event.target.value - 1].classList.add("visible");
+          firstScreenContainer[event.target.value - 1].classList.add("visible-small");
           break;
         case "map-zoo":
           mapPetsItem.forEach((item) => {
@@ -85,7 +85,6 @@ if (btnSliderTop !== null) {
   });
 }
 
-
 // dark thema
 function thema(event) {
   if (event.target.name === "switch-dark" && !event.target.classList.contains("dark-active")) {
@@ -141,11 +140,10 @@ input.forEach((event) => event.addEventListener("input", thema));
 //   })
 // });
 
-const activeMapAnimal = document.querySelector(".active-map-animals");
+const activeMapAnimal = document.querySelector(".map-animals");
 let activeImg = document.querySelectorAll(".red-img-none");
 let visibleImg = document.querySelectorAll(".active-img");
 // Map page
-
 activeMapAnimal.addEventListener("mouseover", (event) => {
   if (event.target.classList.contains("active-img")) {
     if (!event.target.classList.contains("red-img-none") && !event.target.classList.contains("img-visible")) {
@@ -166,12 +164,21 @@ activeMapAnimal.addEventListener("mouseover", (event) => {
 
 // zoos page
 
-
+// popup
+const popupOpenSlider = document.querySelectorAll(".donate");
+const popupClose = document.querySelector(".popup-close");
+popupOpenSlider.forEach((el) =>
+  el.addEventListener("mousedown", () => {
+    document.querySelector(".popup").classList.add("popup-visible");
+  })
+);
+popupClose.addEventListener("mousedown", () => {
+  document.querySelector(".popup").classList.remove("popup-visible");
+});
 // burger
 let burgerMenu = document.querySelector(".burger-menu");
-burgerMenu.addEventListener('mousedown', (event) => {
-  console.log(event.target);
+burgerMenu.addEventListener("mousedown", (event) => {
   event.target.classList.toggle("active-burger");
   document.querySelector(".header-nav").classList.toggle("header-nav-active");
   document.querySelector("body").classList.toggle("body-lock");
-})
+});
