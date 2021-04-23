@@ -182,3 +182,40 @@ burgerMenu.addEventListener("mousedown", (event) => {
   document.querySelector(".header-nav").classList.toggle("header-nav-active");
   document.querySelector("body").classList.toggle("body-lock");
 });
+
+// slider testimonial
+let position = 0;
+const sliderContainer = document.querySelector('.testimonials-card');
+const sliderTrack = document.querySelector('.person-container');
+const btnLeft = document.querySelector('.btn-left-testimonial');
+const btnRight = document.querySelector('.btn-right-testimonial');
+const slidesToShow = 2;
+const slidesToScroll = 1;
+const itemsCount = testimonialPerson.length;
+const itemWidth = sliderContainer.clientWidth / slidesToShow;
+const movePosition = slidesToScroll * itemWidth;
+testimonialPerson.forEach((el) => {
+el.style.minWidth = `${itemWidth}px`;
+})
+
+btnRight.addEventListener( 'mousedown', () => {
+  const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+  position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
+  setPosition();
+  checkBtns();
+})
+btnLeft.addEventListener( 'mousedown', () => {
+  const itemsLeft = Math.abs(position) / itemWidth;
+  position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
+  setPosition();
+  checkBtns();
+})
+
+const setPosition = () => {
+  sliderTrack.style.transform = `translateX(${position}px)`;
+}
+const checkBtns = () => {
+  btnRight.dissabled = position === 0;
+  btnLeft.dissabled = position <= -(itemsCount - slidesToShow) * itemWidth;
+}
+checkBtns();
