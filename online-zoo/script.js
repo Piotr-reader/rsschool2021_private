@@ -255,4 +255,5 @@ const checkBtnsZoo = () => {
   btnRightZoo.dissabled = position === 0;
   btnLeftZoo.dissabled = position <= -(itemsCountZoo - slidesToShowZoo) * itemWidthZoo;
 }
-checkBtns();
+checkBtnsZoo();
+
