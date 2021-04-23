@@ -219,3 +219,40 @@ const checkBtns = () => {
   btnLeft.dissabled = position <= -(itemsCount - slidesToShow) * itemWidth;
 }
 checkBtns();
+
+// slider PetsInZoo
+const sliderContainerZoo = document.querySelector('.slider-zoo');
+const sliderTrackZoo = document.querySelector('.slider-list');
+const slideItemZoo = document.querySelectorAll('.slider-list-item');
+const btnLeftZoo = document.querySelector('.btn-left-zoo');
+const btnRightZoo = document.querySelector('.btn-right-zoo');
+const slidesToShowZoo = 4;
+const slidesToScrollZoo = 1;
+const itemsCountZoo = slideItemZoo.length;
+const itemWidthZoo = sliderContainerZoo.clientWidth / slidesToShowZoo;
+const movePositionZoo = slidesToScrollZoo * itemWidthZoo;
+slideItemZoo.forEach((el) => {
+el.style.minWidth = `${itemWidthZoo}px`;
+})
+
+btnRightZoo.addEventListener( 'mousedown', () => {
+  const itemsLeft = itemsCountZoo - (Math.abs(position) + slidesToShowZoo * itemWidthZoo) / itemWidthZoo;
+  position -= itemsLeft >= slidesToScrollZoo ? movePositionZoo : itemsLeft * itemWidthZoo;
+  setPositionZoo();
+  checkBtnsZoo();
+})
+btnLeftZoo.addEventListener( 'mousedown', () => {
+  const itemsLeft = Math.abs(position) / itemWidthZoo;
+  position += itemsLeft >= slidesToScrollZoo ? movePositionZoo : itemsLeft * itemWidthZoo;
+  setPositionZoo();
+  checkBtnsZoo();
+})
+
+const setPositionZoo = () => {
+  sliderTrackZoo.style.transform = `translateX(${position}px)`;
+}
+const checkBtnsZoo = () => {
+  btnRightZoo.dissabled = position === 0;
+  btnLeftZoo.dissabled = position <= -(itemsCountZoo - slidesToShowZoo) * itemWidthZoo;
+}
+checkBtns();
