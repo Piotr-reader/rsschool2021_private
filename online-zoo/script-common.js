@@ -59,6 +59,9 @@ function inputValue(event) {
       el.value = "0" + event.target.value + "/";
       switch (event.target.name) {
         case "first-screen":
+          let positionSmall = 185;
+          let positionSmallCount = positionSmall + -(185 * (event.target.value - 1));
+          sliderSmall.style.transform = `translateX(${positionSmallCount}px)`;
           firstScreenItem.forEach((item) => item.classList.remove("slider-active"));
           firstScreenContainer.forEach((item) => item.classList.remove("visible-small"));
           firstScreenItem[event.target.value - 1].classList.add("slider-active");

@@ -382,11 +382,11 @@ input:checked + .switch-dark-button:before {
 }
 .slider-pets {
   max-width: 88%;
+  overflow: hidden;
 }
 .small-slider {
   display: flex;
   align-items: center;
-  overflow: hidden;
 }
 .container-zoo-small {
   position: absolute;
@@ -394,7 +394,6 @@ input:checked + .switch-dark-button:before {
   flex-direction: column;
   justify-content: flex-end;
   filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
-  border-radius: 5px;
   padding-left: 24px;
   padding-bottom: 30px;
   background: none;
@@ -412,13 +411,16 @@ input:checked + .switch-dark-button:before {
   height: 230px;
   margin-right: 45px;
   filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
-  border-radius: 5px;
   pointer-events: none;
+}
+.slider-list-img {
+  border-radius: 5px;
 }
 .slider-active {
   opacity: 1;
   width: 245px;
   height: 351px;
+  border-radius: 5px;
   pointer-events: visible;
 }
 .visible-small {
@@ -1026,8 +1028,8 @@ address {
     margin-right: 20px;
   }
   .item-container {
-    width: 210px;
-    height: 300px;
+    width: 204px;
+    height: 267px;
   }
   .animation {
     padding-bottom: 0;

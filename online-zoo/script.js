@@ -2,6 +2,8 @@
 
 const firstScreenItem = document.querySelectorAll(".small-slider-item");
 const firstScreenContainer = document.querySelectorAll(".container-zoo-small");
+const sliderSmall = document.querySelector(".small-slider");
+
 const petsInZooContainer = document.querySelectorAll(".item-container");
 const testimonialPerson = document.querySelectorAll(".testimonial-person");
 const howItWorksItem = document.querySelectorAll(".top-item");
