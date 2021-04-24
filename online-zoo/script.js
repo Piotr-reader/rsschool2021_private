@@ -185,75 +185,78 @@ burgerMenu.addEventListener("mousedown", (event) => {
 
 // slider testimonial
 let position = 0;
-const sliderContainer = document.querySelector('.testimonials-card');
-const sliderTrack = document.querySelector('.person-container');
-const btnLeft = document.querySelector('.btn-left-testimonial');
-const btnRight = document.querySelector('.btn-right-testimonial');
+const sliderContainer = document.querySelector(".testimonials-card");
+const sliderTrack = document.querySelector(".person-container");
+const btnLeft = document.querySelector(".btn-left-testimonial");
+const btnRight = document.querySelector(".btn-right-testimonial");
 const slidesToShow = 2;
 const slidesToScroll = 1;
 const itemsCount = testimonialPerson.length;
 const itemWidth = sliderContainer.clientWidth / slidesToShow;
 const movePosition = slidesToScroll * itemWidth;
 testimonialPerson.forEach((el) => {
-el.style.minWidth = `${itemWidth}px`;
-})
+  el.style.minWidth = `${itemWidth}px`;
+});
 
-btnRight.addEventListener( 'mousedown', () => {
+btnRight.addEventListener("mousedown", () => {
   const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
   position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
   setPosition();
   checkBtns();
-})
-btnLeft.addEventListener( 'mousedown', () => {
+});
+btnLeft.addEventListener("mousedown", () => {
   const itemsLeft = Math.abs(position) / itemWidth;
+
   position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
   setPosition();
   checkBtns();
-})
+});
 
 const setPosition = () => {
   sliderTrack.style.transform = `translateX(${position}px)`;
-}
+};
 const checkBtns = () => {
   btnRight.dissabled = position === 0;
   btnLeft.dissabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-}
+};
 checkBtns();
 
 // slider PetsInZoo
-const sliderContainerZoo = document.querySelector('.slider-zoo');
-const sliderTrackZoo = document.querySelector('.slider-list');
-const slideItemZoo = document.querySelectorAll('.slider-list-item');
-const btnLeftZoo = document.querySelector('.btn-left-zoo');
-const btnRightZoo = document.querySelector('.btn-right-zoo');
+const sliderContainerZoo = document.querySelector(".slider-zoo");
+const sliderTrackZoo = document.querySelector(".slider-list");
+const slideItemZoo = document.querySelectorAll(".slider-list-item");
+const btnLeftZoo = document.querySelector(".btn-left-zoo");
+const btnRightZoo = document.querySelector(".btn-right-zoo");
 const slidesToShowZoo = 4;
 const slidesToScrollZoo = 1;
 const itemsCountZoo = slideItemZoo.length;
 const itemWidthZoo = sliderContainerZoo.clientWidth / slidesToShowZoo;
 const movePositionZoo = slidesToScrollZoo * itemWidthZoo;
 slideItemZoo.forEach((el) => {
-el.style.minWidth = `${itemWidthZoo}px`;
-})
+  el.style.minWidth = `${itemWidthZoo - 23}px`;
+});
+petsInZooContainer.forEach((el) => {
+  el.style.minWidth = `${itemWidthZoo - 23}px`;
+});
 
-btnRightZoo.addEventListener( 'mousedown', () => {
+btnRightZoo.addEventListener("mousedown", () => {
   const itemsLeft = itemsCountZoo - (Math.abs(position) + slidesToShowZoo * itemWidthZoo) / itemWidthZoo;
   position -= itemsLeft >= slidesToScrollZoo ? movePositionZoo : itemsLeft * itemWidthZoo;
   setPositionZoo();
   checkBtnsZoo();
-})
-btnLeftZoo.addEventListener( 'mousedown', () => {
+});
+btnLeftZoo.addEventListener("mousedown", () => {
   const itemsLeft = Math.abs(position) / itemWidthZoo;
   position += itemsLeft >= slidesToScrollZoo ? movePositionZoo : itemsLeft * itemWidthZoo;
   setPositionZoo();
   checkBtnsZoo();
-})
+});
 
 const setPositionZoo = () => {
   sliderTrackZoo.style.transform = `translateX(${position}px)`;
-}
+};
 const checkBtnsZoo = () => {
   btnRightZoo.dissabled = position === 0;
   btnLeftZoo.dissabled = position <= -(itemsCountZoo - slidesToShowZoo) * itemWidthZoo;
-}
+};
 checkBtnsZoo();
-
