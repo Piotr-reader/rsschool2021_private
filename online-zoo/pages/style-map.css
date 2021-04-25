@@ -226,10 +226,8 @@ h3 {
   .inner-img {
     margin-left: 0;
   }
-  .inner-img-visible {
-    left: 143px;
-  }
-  .border-img {
+
+  /* .border-img {
     right: 15px;
   }
   .circle-white {
@@ -237,7 +235,7 @@ h3 {
   }
   .big-circle {
     right: 22px;
-  }
+  } */
   .arrow {
     display: block;
     margin: 0;

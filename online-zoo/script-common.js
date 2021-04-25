@@ -59,8 +59,8 @@ function inputValue(event) {
       el.value = "0" + event.target.value + "/";
       switch (event.target.name) {
         case "first-screen":
-          let positionSmall = 185;
-          let positionSmallCount = positionSmall + -(185 * (event.target.value - 1));
+          const widthSmallImg = document.querySelector(".small-slider-item").clientWidth;
+          let positionSmallCount = widthSmallImg + -(widthSmallImg * (event.target.value - 1));
           sliderSmall.style.transform = `translateX(${positionSmallCount}px)`;
           firstScreenItem.forEach((item) => item.classList.remove("slider-active"));
           firstScreenContainer.forEach((item) => item.classList.remove("visible-small"));
@@ -72,14 +72,13 @@ function inputValue(event) {
             item.firstElementChild.classList.remove("img-wrapper-visible");
           });
           mapPetsItem[event.target.value - 1].firstElementChild.classList.add("img-wrapper-visible");
+          positionMapPage();
           break;
         case "pets-in-zoo":
-          petsInZooContainer.forEach((item) => item.classList.remove("visible"));
-          petsInZooContainer[event.target.value - 1].classList.add("visible");
+          positinPetsInZoo();
           break;
         case "testimonial":
-          testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
-          testimonialPerson[event.target.value - 1].classList.add("person-visible");
+          positionTestimonial();
           break;
         case "how-it-works":
           howItWorksItem.forEach((item) => item.classList.remove("top-item-visible"));

@@ -4,25 +4,29 @@
 let position = 0;
 const sliderContainerMap = document.querySelector(".slider");
 const sliderTrackMap = document.querySelector(".zoos-pets-slider");
+const widthMapPageImg = document.querySelector(".map-pets-item");
 const sliderItemMap = document.querySelectorAll(".map-pets-item");
 const btnLeftMap = document.querySelector(".btn-left-zoos");
 const btnRightMap = document.querySelector(".btn-right-zoos");
-const slidesToScrollMap = 1;
-const itemsCountMap = sliderItemMap.length;
-const itemWidthMap = 157;
-const movePositionMap = slidesToScrollMap * itemWidthMap;
 
 btnRightMap.addEventListener("mousedown", () => {
-  const itemsLeftMap = itemsCountMap - (Math.abs(position) + itemWidthMap) / itemWidthMap;
-  position -= itemsLeftMap >= slidesToScrollMap ? movePositionMap : itemsLeftMap * itemWidthMap;
+  if (position < sliderItemMap.length) {
+    position++;
+  }
   setPositionMap();
 });
 btnLeftMap.addEventListener("mousedown", () => {
-  const itemsLeftMap = Math.abs(position) / itemWidthMap;
-  position += itemsLeftMap >= slidesToScrollMap ? movePositionMap : itemsLeftMap * itemWidthMap;
+  if (position > 0) {
+    position--;
+  }
   setPositionMap();
 });
 
 const setPositionMap = () => {
-  sliderTrackMap.style.transform = `translateY(${position}px)`;
+  let itemMapPage = document.querySelector(".img-wrapper-visible").clientHeight;
+  let positionMapPage = 0 + -(itemMapPage * position);
+  if (0 < sliderTrackMap.clientHeight + positionMapPage) {
+    sliderTrackMap.style.transform = `translateY(${positionMapPage}px)`;
+  }
 };
+setPositionMap();

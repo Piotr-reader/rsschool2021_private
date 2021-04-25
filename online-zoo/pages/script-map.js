@@ -23,28 +23,37 @@ activeMapAnimal.addEventListener("mouseover", (event) => {
 });
 
 // Map slider
-let position = 0;
 const sliderContainerMap = document.querySelector(".slider");
-const sliderTrackMap = document.querySelector(".map-pets-slider");
+const widthMapPageImg = document.querySelector(".map-pets-item");
 const sliderItemMap = document.querySelectorAll(".map-pets-item");
+const sliderTrackMapPage = document.querySelector(".map-pets-slider");
+let inputMapPage = document.querySelector(".input-map-page");
+let outputMapPage = document.querySelector(".output-map-page");
 const btnLeftMap = document.querySelector(".btn-left-map");
 const btnRightMap = document.querySelector(".btn-right-map");
-const slidesToScrollMap = 1;
-const itemsCountMap = sliderItemMap.length;
-const itemWidthMap = 157;
-const movePositionMap = slidesToScrollMap * itemWidthMap;
 
 btnRightMap.addEventListener("mousedown", () => {
-  const itemsLeftMap = itemsCountMap - (Math.abs(position) + itemWidthMap) / itemWidthMap;
-  position -= itemsLeftMap >= slidesToScrollMap ? movePositionMap : itemsLeftMap * itemWidthMap;
-  setPositionMap();
+  if (Number(inputMapPage.value) < sliderItemMap.length) {
+    inputMapPage.value = Number(inputMapPage.value) + 1;
+    positionMapPage();
+  }
 });
 btnLeftMap.addEventListener("mousedown", () => {
-  const itemsLeftMap = Math.abs(position) / itemWidthMap;
-  position += itemsLeftMap >= slidesToScrollMap ? movePositionMap : itemsLeftMap * itemWidthMap;
-  setPositionMap();
+  if (Number(inputMapPage.value) > 0) {
+    inputMapPage.value = Number(inputMapPage.value) - 1;
+    positionMapPage();
+  }
 });
 
-const setPositionMap = () => {
-  sliderTrackMap.style.transform = `translateX(${position}px)`;
+const positionMapPage = () => {
+  let itemMapPage = document.querySelector(".map-pets-item").clientWidth;
+  let positionMapPage = 0 + -(itemMapPage * (Number(inputMapPage.value) - 1));
+  sliderTrackMapPage.style.transform = `translateX(${positionMapPage}px)`;
+  if (
+    widthMapPageImg.clientWidth * Math.ceil(sliderContainerMap.clientWidth / widthMapPageImg.clientWidth) <
+    sliderTrackMapPage.clientWidth + positionMapPage
+  ) {
+  }
+  outputMapPage.value = "0" + inputMapPage.value + "/";
 };
+positionMapPage();

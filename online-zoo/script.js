@@ -30,80 +30,76 @@ activeMapAnimal.addEventListener("mouseover", (event) => {
   }
 });
 
+// slider PetsInZoo
+const itemWidthZoo = document.querySelector(".slider-zoo");
+const smallSliderLength = document.querySelectorAll(".small-slider-item").length;
+const widthZooImg = document.querySelector(".slider-list-item").clientWidth;
+let inputPetsInZoo = document.querySelector(".pets-in-zoo-input");
+let outputPetsInZoo = document.querySelector(".pets-in-zoo-output");
+const sliderTrackZoo = document.querySelector(".slider-list");
+const btnLeftZoo = document.querySelector(".btn-left-zoo");
+const btnRightZoo = document.querySelector(".btn-right-zoo");
+
+btnRightZoo.addEventListener("mousedown", () => {
+  if (Number(inputPetsInZoo.value) < smallSliderLength) {
+    inputPetsInZoo.value = Number(inputPetsInZoo.value) + 1;
+    positinPetsInZoo();
+  }
+});
+btnLeftZoo.addEventListener("mousedown", () => {
+  if (Number(inputPetsInZoo.value) > 0) {
+    inputPetsInZoo.value = Number(inputPetsInZoo.value) - 1;
+    positinPetsInZoo();
+  }
+});
+itemWidthZoo.addEventListener("mouseover", (event) => {
+  petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+});
+const positinPetsInZoo = () => {
+  let positionPetsInZoo = document.querySelector(".slider-list-item").clientWidth;
+  let positionPetsInZooCount = 0 + -(positionPetsInZoo * (Number(inputPetsInZoo.value) - 1));
+  if (-(widthZooImg * 5) < positionPetsInZooCount) {
+    sliderTrackZoo.style.transform = `translateX(${positionPetsInZooCount}px)`;
+  }
+  outputPetsInZoo.value = "0" + inputPetsInZoo.value + "/";
+  petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+  petsInZooContainer[Number(inputPetsInZoo.value) - 1].classList.add("visible");
+};
+positinPetsInZoo();
+
 // slider testimonial
-let position = 0;
-const sliderContainer = document.querySelector(".testimonials-card");
+const cardTestmonial = document.querySelector(".testimonials-card");
+const testimonialPersonLength = document.querySelectorAll(".testimonial-person").length;
+const widthTestimonialImg = document.querySelector(".testimonial-person").clientWidth;
+let inputTestmonial = document.querySelector(".input-testmonial");
+let outputTestmonial = document.querySelector(".output-testmonial");
 const sliderTrack = document.querySelector(".person-container");
 const btnLeft = document.querySelector(".btn-left-testimonial");
 const btnRight = document.querySelector(".btn-right-testimonial");
-const slidesToShow = 2;
-const slidesToScroll = 1;
-const itemsCount = testimonialPerson.length;
-const itemWidth = sliderContainer.clientWidth / slidesToShow;
-const movePosition = slidesToScroll * itemWidth;
-testimonialPerson.forEach((el) => {
-  el.style.minWidth = `${itemWidth}px`;
-});
 
 btnRight.addEventListener("mousedown", () => {
-  const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-  position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-  setPosition();
-  checkBtns();
+  if (Number(inputTestmonial.value) < testimonialPersonLength) {
+    inputTestmonial.value = Number(inputTestmonial.value) + 1;
+    positionTestimonial();
+  }
 });
 btnLeft.addEventListener("mousedown", () => {
-  const itemsLeft = Math.abs(position) / itemWidth;
-
-  position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-  setPosition();
-  checkBtns();
+  if (Number(inputTestmonial.value) > 0) {
+    inputTestmonial.value = Number(inputTestmonial.value) - 1;
+    positionTestimonial();
+  }
 });
-
-const setPosition = () => {
-  sliderTrack.style.transform = `translateX(${position}px)`;
+cardTestmonial.addEventListener("mouseover", (event) => {
+  testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
+});
+const positionTestimonial = () => {
+  let positionTestimonial = document.querySelector(".testimonial-person").clientWidth;
+  let positionTestimonialCount = 0 + -(positionTestimonial * (Number(inputTestmonial.value) - 1));
+  if (widthTestimonialImg < sliderTrack.clientWidth + positionTestimonialCount) {
+    sliderTrack.style.transform = `translateX(${positionTestimonialCount}px)`;
+  }
+  outputTestmonial.value = "0" + inputTestmonial.value + "/";
+  testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
+  testimonialPerson[Number(inputTestmonial.value - 1)].classList.add("person-visible");
 };
-const checkBtns = () => {
-  btnRight.dissabled = position === 0;
-  btnLeft.dissabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-};
-checkBtns();
-
-// slider PetsInZoo
-const sliderContainerZoo = document.querySelector(".slider-zoo");
-const sliderTrackZoo = document.querySelector(".slider-list");
-const slideItemZoo = document.querySelectorAll(".slider-list-item");
-const btnLeftZoo = document.querySelector(".btn-left-zoo");
-const btnRightZoo = document.querySelector(".btn-right-zoo");
-const slidesToShowZoo = 4;
-const slidesToScrollZoo = 1;
-const itemsCountZoo = slideItemZoo.length;
-const itemWidthZoo = sliderContainerZoo.clientWidth / slidesToShowZoo;
-const movePositionZoo = slidesToScrollZoo * itemWidthZoo;
-slideItemZoo.forEach((el) => {
-  el.style.minWidth = `${itemWidthZoo - 23}px`;
-});
-petsInZooContainer.forEach((el) => {
-  el.style.minWidth = `${itemWidthZoo - 23}px`;
-});
-
-btnRightZoo.addEventListener("mousedown", () => {
-  const itemsLeft = itemsCountZoo - (Math.abs(position) + slidesToShowZoo * itemWidthZoo) / itemWidthZoo;
-  position -= itemsLeft >= slidesToScrollZoo ? movePositionZoo : itemsLeft * itemWidthZoo;
-  setPositionZoo();
-  checkBtnsZoo();
-});
-btnLeftZoo.addEventListener("mousedown", () => {
-  const itemsLeft = Math.abs(position) / itemWidthZoo;
-  position += itemsLeft >= slidesToScrollZoo ? movePositionZoo : itemsLeft * itemWidthZoo;
-  setPositionZoo();
-  checkBtnsZoo();
-});
-
-const setPositionZoo = () => {
-  sliderTrackZoo.style.transform = `translateX(${position}px)`;
-};
-const checkBtnsZoo = () => {
-  btnRightZoo.dissabled = position === 0;
-  btnLeftZoo.dissabled = position <= -(itemsCountZoo - slidesToShowZoo) * itemWidthZoo;
-};
-checkBtnsZoo();
+positionTestimonial();
