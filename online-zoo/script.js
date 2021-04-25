@@ -1,149 +1,17 @@
 "use strict";
 
-const root = document.querySelector(":root");
-const input = document.querySelectorAll("input");
-const output = document.querySelectorAll("output");
-let firstScreenItem = document.querySelectorAll(".small-slider-item");
-let mapPetsItem = document.querySelectorAll(".map-pets-item");
-let firstScreenContainer = document.querySelectorAll(".container-zoo-small");
-let petsInZooContainer = document.querySelectorAll(".item-container");
-let testimonialPerson = document.querySelectorAll(".testimonial-person");
-let howItWorksItem = document.querySelectorAll(".top-item");
+const firstScreenItem = document.querySelectorAll(".small-slider-item");
+const firstScreenContainer = document.querySelectorAll(".container-zoo-small");
+const sliderSmall = document.querySelector(".small-slider");
 
-// checkbox required
-document.getElementById("checkbox-form").required = true;
+const petsInZooContainer = document.querySelectorAll(".item-container");
+const testimonialPerson = document.querySelectorAll(".testimonial-person");
+const howItWorksItem = document.querySelectorAll(".top-item");
 
-//  input output
-function inputValue(event) {
-  output.forEach((el) => {
-    if (el.name === event.target.name) {
-      el.value = "0" + event.target.value + "/";
-      switch (event.target.name) {
-        case "first-screen":
-          firstScreenItem.forEach((item) => item.classList.remove("slider-active"));
-          firstScreenContainer.forEach((item) => item.classList.remove("visible-small"));
-          firstScreenItem[event.target.value - 1].classList.add("slider-active");
-          firstScreenContainer[event.target.value - 1].classList.add("visible-small");
-          break;
-        case "map-zoo":
-          mapPetsItem.forEach((item) => {
-            item.firstElementChild.classList.remove("img-wrapper-visible");
-          });
-          mapPetsItem[event.target.value - 1].firstElementChild.classList.add("img-wrapper-visible");
-          break;
-        case "pets-in-zoo":
-          petsInZooContainer.forEach((item) => item.classList.remove("visible"));
-          petsInZooContainer[event.target.value - 1].classList.add("visible");
-          break;
-        case "testimonial":
-          testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
-          testimonialPerson[event.target.value - 1].classList.add("person-visible");
-          break;
-        case "how-it-works":
-          howItWorksItem.forEach((item) => item.classList.remove("top-item-visible"));
-          howItWorksItem[event.target.value - 1].classList.add("top-item-visible");
-          break;
-        default:
-          break;
-      }
-    }
-  });
-}
-input.forEach((event) => event.addEventListener("input", inputValue));
-
-function countLengthOutput() {
-  output.forEach((elem) => {
-    let doc = document.getElementById(`${elem.dataset.name}`);
-    if (doc !== null) {
-      elem.value = "0" + doc.childElementCount;
-      // root.style.setProperty(`--${elem.dataset.name}`, (245/doc.childElementCount) + "px");
-    }
-  });
-}
-countLengthOutput();
-
-function countLengthInput() {
-  input.forEach((el) => {
-    let doc = document.getElementById(`${el.name}`);
-    if (doc !== null) {
-      el.max = doc.childElementCount;
-    }
-  });
-}
-countLengthInput();
-
-// todo  нашел индекс страницы, доделать функцию для сслыки перехода
-// btn-slider
-const btnSliderTop = document.querySelector(".btn-slider");
-if (btnSliderTop !== null) {
-  btnSliderTop.addEventListener("mousedown", () => {
-    input.forEach((el) => {
-      if (el.name === "first-screen") {
-        console.log(el.value);
-      }
-    });
-  });
-}
-
-// dark thema
-function thema(event) {
-  if (event.target.name === "switch-dark" && !event.target.classList.contains("dark-active")) {
-    event.target.classList.add("dark-active");
-    root.style.setProperty(`--text-h4`, `#fefefe`);
-    root.style.setProperty(`--color-p`, `#f2f2f2`);
-    root.style.setProperty(`--bg-testimonial-card`, `#3c3c3c`);
-    root.style.setProperty(`--bg-dark`, `#333333`);
-    root.style.setProperty(`--bg-soft`, `#4f4f4f`);
-    root.style.setProperty(`--bg-map`, `url(./assets/images/map-1920-dark.jpg)`);
-    root.style.setProperty(`--arrow-right`, `url(./assets/icons/arrow-right-dark.png)`);
-  } else {
-    event.target.classList.remove("dark-active");
-    root.style.setProperty(`--text-h4`, null);
-    root.style.setProperty(`--color-p`, null);
-    root.style.setProperty(`--bg-testimonial-card`, null);
-    root.style.setProperty(`--bg-dark`, null);
-    root.style.setProperty(`--bg-soft`, null);
-    root.style.setProperty(`--bg-map`, null);
-    root.style.setProperty(`--arrow-right`, null);
-  }
-}
-input.forEach((event) => event.addEventListener("input", thema));
-
-// TODO не работает
-// let indexItem = 0;
-// leftPets.addEventListener('mousedown', () => {
-//   input.forEach((event) => {
-//     if(event.name === 'pets-in-zoo') {
-//       console.log(event.value);
-//       if(event.value > 0) {
-//         indexItem = event.value--;
-//         petsInZooContainer.forEach((item) => item.classList.remove('visible'));
-//         petsInZooContainer[indexItem-1].classList.add('visible');
-//       } else {
-//         petsInZooContainer.forEach((item) => item.classList.remove('visible'));
-//         petsInZooContainer[0].classList.add('visible');
-//       }
-
-//     }
-//   })
-// });
-// rightPets.addEventListener('mousedown', () => {
-//   input.forEach((event) => {
-//     if(event.name === 'pets-in-zoo') {
-//       indexItem = event.value++;
-//       if(indexItem < event.max+1) {
-//         petsInZooContainer.forEach((item) => item.classList.remove('visible'));
-//         console.log(indexItem);
-//         petsInZooContainer[indexItem].classList.add('visible');
-//      }
-//     }
-//   })
-// });
-
-const activeMapAnimal = document.querySelector(".map-animals");
-let activeImg = document.querySelectorAll(".red-img-none");
-let visibleImg = document.querySelectorAll(".active-img");
 // Map page
+const activeMapAnimal = document.querySelector(".map-animals");
+const activeImg = document.querySelectorAll(".red-img-none");
+const visibleImg = document.querySelectorAll(".active-img");
 activeMapAnimal.addEventListener("mouseover", (event) => {
   if (event.target.classList.contains("active-img")) {
     if (!event.target.classList.contains("red-img-none") && !event.target.classList.contains("img-visible")) {
@@ -162,23 +30,76 @@ activeMapAnimal.addEventListener("mouseover", (event) => {
   }
 });
 
-// zoos page
+// slider PetsInZoo
+const itemWidthZoo = document.querySelector(".slider-zoo");
+const smallSliderLength = document.querySelectorAll(".small-slider-item").length;
+const widthZooImg = document.querySelector(".slider-list-item").clientWidth;
+let inputPetsInZoo = document.querySelector(".pets-in-zoo-input");
+let outputPetsInZoo = document.querySelector(".pets-in-zoo-output");
+const sliderTrackZoo = document.querySelector(".slider-list");
+const btnLeftZoo = document.querySelector(".btn-left-zoo");
+const btnRightZoo = document.querySelector(".btn-right-zoo");
 
-// popup
-const popupOpenSlider = document.querySelectorAll(".donate");
-const popupClose = document.querySelector(".popup-close");
-popupOpenSlider.forEach((el) =>
-  el.addEventListener("mousedown", () => {
-    document.querySelector(".popup").classList.add("popup-visible");
-  })
-);
-popupClose.addEventListener("mousedown", () => {
-  document.querySelector(".popup").classList.remove("popup-visible");
+btnRightZoo.addEventListener("mousedown", () => {
+  if (Number(inputPetsInZoo.value) < smallSliderLength) {
+    inputPetsInZoo.value = Number(inputPetsInZoo.value) + 1;
+    positinPetsInZoo();
+  }
 });
-// burger
-let burgerMenu = document.querySelector(".burger-menu");
-burgerMenu.addEventListener("mousedown", (event) => {
-  event.target.classList.toggle("active-burger");
-  document.querySelector(".header-nav").classList.toggle("header-nav-active");
-  document.querySelector("body").classList.toggle("body-lock");
+btnLeftZoo.addEventListener("mousedown", () => {
+  if (Number(inputPetsInZoo.value) > 0) {
+    inputPetsInZoo.value = Number(inputPetsInZoo.value) - 1;
+    positinPetsInZoo();
+  }
 });
+itemWidthZoo.addEventListener("mouseover", (event) => {
+  petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+});
+const positinPetsInZoo = () => {
+  let positionPetsInZoo = document.querySelector(".slider-list-item").clientWidth;
+  let positionPetsInZooCount = 0 + -(positionPetsInZoo * (Number(inputPetsInZoo.value) - 1));
+  if (-(widthZooImg * 5) < positionPetsInZooCount) {
+    sliderTrackZoo.style.transform = `translateX(${positionPetsInZooCount}px)`;
+  }
+  outputPetsInZoo.value = "0" + inputPetsInZoo.value + "/";
+  petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+  petsInZooContainer[Number(inputPetsInZoo.value) - 1].classList.add("visible");
+};
+positinPetsInZoo();
+
+// slider testimonial
+const cardTestmonial = document.querySelector(".testimonials-card");
+const testimonialPersonLength = document.querySelectorAll(".testimonial-person").length;
+const widthTestimonialImg = document.querySelector(".testimonial-person").clientWidth;
+let inputTestmonial = document.querySelector(".input-testmonial");
+let outputTestmonial = document.querySelector(".output-testmonial");
+const sliderTrack = document.querySelector(".person-container");
+const btnLeft = document.querySelector(".btn-left-testimonial");
+const btnRight = document.querySelector(".btn-right-testimonial");
+
+btnRight.addEventListener("mousedown", () => {
+  if (Number(inputTestmonial.value) < testimonialPersonLength) {
+    inputTestmonial.value = Number(inputTestmonial.value) + 1;
+    positionTestimonial();
+  }
+});
+btnLeft.addEventListener("mousedown", () => {
+  if (Number(inputTestmonial.value) > 0) {
+    inputTestmonial.value = Number(inputTestmonial.value) - 1;
+    positionTestimonial();
+  }
+});
+cardTestmonial.addEventListener("mouseover", (event) => {
+  testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
+});
+const positionTestimonial = () => {
+  let positionTestimonial = document.querySelector(".testimonial-person").clientWidth;
+  let positionTestimonialCount = 0 + -(positionTestimonial * (Number(inputTestmonial.value) - 1));
+  if (widthTestimonialImg < sliderTrack.clientWidth + positionTestimonialCount) {
+    sliderTrack.style.transform = `translateX(${positionTestimonialCount}px)`;
+  }
+  outputTestmonial.value = "0" + inputTestmonial.value + "/";
+  testimonialPerson.forEach((item) => item.classList.remove("person-visible"));
+  testimonialPerson[Number(inputTestmonial.value - 1)].classList.add("person-visible");
+};
+positionTestimonial();

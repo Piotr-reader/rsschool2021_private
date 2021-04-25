@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="./style-map.css" />
     <link rel="stylesheet" href="./style-zoos.css" />
+    <link rel="stylesheet" href="./popup.css">
     <title>OnlineZoo</title>
   </head>
 
@@ -324,13 +325,13 @@
               </div>
 
               <section class="footer-top footer-right">
-                <form action="#">
+
                   <input
-                    class="button footer-btn"
+                    class="button footer-btn donate"
                     type="submit"
                     value="donate for volunteers"
                   />
-                </form>
+
               </section>
 
             </aside>
@@ -342,11 +343,163 @@
             <p class="footer-p-copyright ">©RSSchool and ©Yem Digital - 2021</p>
           </section>
 
+          <div class="popup">
+
+            <div class="bg-left"></div>
+
+              <form action="#" class="content-popup">
+
+                <span class="popup-close">&times;</span>
+                <h2 class="popup-h2">Donate for your animal </h2>
+
+                <div class="popup-forms-top">
+
+                    <fieldset class="popup-fieldset">
+                      <legend class="popup-legend">Сhoose an animal</legend>
+                      <div class="select-wrapper">
+                        <select class="popup-input select-animal" name="animals">
+                          <option selected value=""></option>
+                          <option value="Panda">Panda</option>
+                          <option value="Eagle">Eagle</option>
+                          <option value="Monkey">Monkey</option>
+                          <option value="Crocodile">Crocodile</option>
+                        </select>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="popup-fieldset">
+                      <legend class="popup-legend">To donate</legend>
+                        <p><input id="popup-animal" class="popup-input" type="text" name="Name" value=""></p>
+                    </fieldset>
+
+                </div>
+
+                <div class="popup-forms-down">
+
+                    <div class="form-left" action="#">
+                      <h3 class="popup-h3">About you</h3>
+
+                      <fieldset class="popup-fieldset">
+                          <legend class="popup-legend">Name</legend>
+                          <p><input class="popup-input" type="text" name="Name" value=""></p>
+                      </fieldset>
+
+                      <fieldset class="popup-fieldset">
+                          <legend class="popup-legend">Email</legend>
+                          <p><input class="popup-input" type="email" name="Email"/></p>
+
+                      </fieldset>
+
+                      <fieldset class="popup-fieldset">
+                          <legend class="popup-legend">Phone</legend>
+
+                          <div class="select-wrapper wrapper-phone">
+                            <select class="popup-input select-phone" name="phone">
+                              <option selected value="7">+7</option>
+                              <option value="375">+375</option>
+                            </select>
+                          </div>
+
+                          <p><input class="popup-input input-phone" type="tel" name="phone" value=""></p>
+
+                      </fieldset>
+
+                    </div>
+
+                    <div class="form-right" action="#">
+
+                      <h3 class="popup-h3 right-h3">Checkout</h3>
+
+                      <fieldset class="popup-fieldset">
+                          <legend class="popup-legend">Card number</legend>
+                          <p><input id="popup-card-number" class="popup-input" type="tel" name="card-number" value=""></p>
+                      </fieldset>
+
+                      <fieldset class="popup-fieldset">
+                          <legend class="popup-legend">Expiry date</legend>
+                          <div class="select-wrapper select-date">
+                            <select class="popup-input select-expire select-expire-date" name="expire-date">
+                              <option selected value=""></option>
+                              <option value="1">01</option>
+                              <option value="2">02</option>
+                              <option value="3">03</option>
+                              <option value="4">04</option>
+                              <option value="5">05</option>
+                              <option value="6">06</option>
+                              <option value="7">07</option>
+                              <option value="8">08</option>
+                              <option value="9">09</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                              <option value="13">13</option>
+                              <option value="14">14</option>
+                              <option value="15">15</option>
+                              <option value="16">16</option>
+                              <option value="17">17</option>
+                              <option value="18">18</option>
+                              <option value="19">19</option>
+                              <option value="20">20</option>
+                              <option value="21">21</option>
+                              <option value="22">22</option>
+                              <option value="23">23</option>
+                              <option value="24">24</option>
+                              <option value="25">25</option>
+                              <option value="26">26</option>
+                              <option value="27">27</option>
+                              <option value="28">28</option>
+                              <option value="29">29</option>
+                              <option value="30">30</option>
+                              <option value="31">31</option>
+                            </select>
+                          </div>
+                          <div class="select-wrapper">
+                              <select class="popup-input select-expire" name="expire-month">
+                                <option selected value=""></option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                              </select>
+                          </div>
+                      </fieldset>
+
+                      <fieldset class="popup-fieldset">
+                          <legend class="popup-legend">CVC</legend>
+                          <p><input id="cvc" class="popup-input" type="password" name="cvc" value=""></p>
+                      </fieldset>
+
+                    </div>
+
+                </div>
+
+                <p class="accept-text">If don’t cancel your subscription before the trial ends on April 15, 2021, you agree that you will automatically be charged</p>
+
+                <div class="button-container btn-popup">
+                  <div class="btn-wraper">
+                    <button class="button btn-popup-submit" type="submit">
+                    Donate
+                    </button>
+                  </div>
+                </div>
+
+              </form>
+
+          </div>
+
         </div>
       </footer>
 
     </div>
-    <script src="../script.js"></script>
+    <script src="../script-common.js"></script>
   </body>
 
 </html>
