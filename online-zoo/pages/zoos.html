@@ -357,7 +357,7 @@
                     <fieldset class="popup-fieldset">
                       <legend class="popup-legend">Сhoose an animal</legend>
                       <div class="select-wrapper">
-                        <select class="popup-input select-animal" name="animals">
+                        <select class="popup-input select-animal" name="animals" required>
                           <option selected value=""></option>
                           <option value="Panda">Panda</option>
                           <option value="Eagle">Eagle</option>
@@ -369,7 +369,7 @@
 
                     <fieldset class="popup-fieldset">
                       <legend class="popup-legend">To donate</legend>
-                        <p><input id="popup-animal" class="popup-input" type="text" name="Name" value=""></p>
+                        <p><input id="popup-animal" class="popup-input popup-animal" type="text" name="Name" value="" required></p>
                     </fieldset>
 
                 </div>
@@ -381,12 +381,12 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Name</legend>
-                          <p><input class="popup-input" type="text" name="Name" value=""></p>
+                          <p><input class="popup-input popup-input-name" type="text" name="Name" value="" required></p>
                       </fieldset>
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Email</legend>
-                          <p><input class="popup-input" type="email" name="Email"/></p>
+                          <p><input class="popup-input popup-input-email" type="email" name="Email" required></p>
 
                       </fieldset>
 
@@ -394,13 +394,13 @@
                           <legend class="popup-legend">Phone</legend>
 
                           <div class="select-wrapper wrapper-phone">
-                            <select class="popup-input select-phone" name="phone">
+                            <select class="popup-input select-phone" name="phone" required>
                               <option selected value="7">+7</option>
                               <option value="375">+375</option>
                             </select>
                           </div>
 
-                          <p><input class="popup-input input-phone" type="tel" name="phone" value=""></p>
+                          <p><input class="popup-input input-phone" type="tel" name="phone" value="" required></p>
 
                       </fieldset>
 
@@ -412,13 +412,13 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Card number</legend>
-                          <p><input id="popup-card-number" class="popup-input" type="tel" name="card-number" value=""></p>
+                          <p><input id="popup-card-number" class="popup-input" type="tel" name="card-number" value="" required></p>
                       </fieldset>
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Expiry date</legend>
                           <div class="select-wrapper select-date">
-                            <select class="popup-input select-expire select-expire-date" name="expire-date">
+                            <select class="popup-input select-expire select-expire-date" name="expire-date" required>
                               <option selected value=""></option>
                               <option value="1">01</option>
                               <option value="2">02</option>
@@ -454,7 +454,7 @@
                             </select>
                           </div>
                           <div class="select-wrapper">
-                              <select class="popup-input select-expire" name="expire-month">
+                              <select class="popup-input select-expire expire-month" name="expire-month" required>
                                 <option selected value=""></option>
                                 <option value="1">01</option>
                                 <option value="2">02</option>
@@ -474,7 +474,7 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">CVC</legend>
-                          <p><input id="cvc" class="popup-input" type="password" name="cvc" value=""></p>
+                          <p><input id="cvc" class="popup-input" type="password" name="cvc" value="" required></p>
                       </fieldset>
 
                     </div>
@@ -485,7 +485,7 @@
 
                 <div class="button-container btn-popup">
                   <div class="btn-wraper">
-                    <button class="button btn-popup-submit" type="submit">
+                    <button class="button btn-popup-submit invalid" type="submit">
                     Donate
                     </button>
                   </div>

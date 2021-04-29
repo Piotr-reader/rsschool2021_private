@@ -13,6 +13,9 @@ body {
   max-width: 1920px;
   margin: 0 auto;
 }
+body.body-lock {
+  overflow: hidden;
+}
 :root {
   --first-screen: 62px;
   --testimonial: 62px;
@@ -1311,9 +1314,7 @@ address {
     top: 84px;
     transition: all 0.3s ease 0s;
   }
-  body.body-lock {
-    /* overflow-y: hidden; */
-  }
+
   .logo {
     z-index: 3;
   }
@@ -1488,12 +1489,12 @@ address {
   .testimonial-description {
     margin-bottom: 24px;
   }
-  /* .testimonials-card {
+  .testimonials-card {
     width: 600px;
   }
   .testimonial-person {
     width: 585px;
-  } */
+  }
   .btn-testimonial {
     margin-bottom: 105px;
   }
@@ -1743,23 +1744,23 @@ address {
     padding-top: 50px;
     margin-bottom: 17px;
   }
-  /* .testimonials-card {
+  .testimonials-card {
     width: 320px;
   }
   .testimonial-person {
     width: 300px;
-    height: 363px;
-  } */
+    /* height: 363px; */
+  }
   .testimonial-h4 {
     font-size: 16px;
     line-height: 19px;
     margin-top: 46px;
     margin-bottom: 0px;
   }
-  .testimonial-person-description {
+  /* .testimonial-person-description {
     width: 272px;
     margin-top: 19px;
-  }
+  } */
   .btn-testimonial {
     margin-top: -9px;
     margin-bottom: 54px;

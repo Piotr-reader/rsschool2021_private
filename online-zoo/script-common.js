@@ -36,10 +36,12 @@ const popupClose = document.querySelector(".popup-close");
 popupOpenSlider.forEach((el) =>
   el.addEventListener("mousedown", () => {
     document.querySelector(".popup").classList.add("popup-visible");
+    document.querySelector("body").classList.add("body-lock");
   })
 );
 popupClose.addEventListener("mousedown", () => {
   document.querySelector(".popup").classList.remove("popup-visible");
+  document.querySelector("body").classList.remove("body-lock");
 });
 // burger
 let burgerMenu = document.querySelector(".burger-menu");
@@ -47,6 +49,69 @@ burgerMenu.addEventListener("mousedown", (event) => {
   event.target.classList.toggle("active-burger");
   document.querySelector(".header-nav").classList.toggle("header-nav-active");
   document.querySelector("body").classList.toggle("body-lock");
+});
+// validation popup btn
+const btnPopupSubmit = document.querySelector('.btn-popup-submit');
+const selectAnimal = document.querySelector('.select-animal');
+const popupAnimal = document.querySelector('.popup-animal');
+const popupInputName = document.querySelector('.popup-input-name');
+const popupInputEmail = document.querySelector('.popup-input-email');
+const inputPhone = document.querySelector('.input-phone');
+const popupCardNumber = document.querySelector('#popup-card-number');
+const selectExpireDate = document.querySelector('.select-expire-date');
+const expireMonth = document.querySelector('.expire-month');
+const cvc = document.querySelector('#cvc');
+
+const validate = () => {
+  if (selectAnimal.validity.valid &&
+    popupAnimal.validity.valid &&
+    popupInputName.validity.valid &&
+    popupInputEmail.validity.valid &&
+    inputPhone.validity.valid &&
+    popupCardNumber.validity.valid &&
+    selectExpireDate.validity.valid &&
+    expireMonth.validity.valid &&
+    cvc.validity.valid) {
+
+    btnPopupSubmit.classList.remove("invalid");
+
+  } else {
+    btnPopupSubmit.classList.add("invalid");
+  }
+};
+
+btnPopupSubmit.addEventListener('click', () => {
+  if (btnPopupSubmit.classList.contains("invalid")) return;
+  document.querySelector(".popup").classList.remove("popup-visible");
+  document.querySelector("body").classList.remove("body-lock");
+});
+
+selectAnimal.addEventListener('input', () =>{
+  validate();
+});
+popupAnimal.addEventListener('input', () =>{
+  validate();
+});
+popupInputName.addEventListener('input', () =>{
+  validate();
+});
+inputPhone.addEventListener('input', () =>{
+  validate();
+});
+popupInputEmail.addEventListener('input', () =>{
+  validate();
+});
+popupCardNumber.addEventListener('input', () =>{
+  validate();
+});
+selectExpireDate.addEventListener('input', () =>{
+  validate();
+});
+expireMonth.addEventListener('input', () =>{
+  validate();
+});
+cvc.addEventListener('input', () =>{
+  validate();
 });
 
 // checkbox required
