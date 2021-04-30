@@ -132,10 +132,9 @@ function inputValue(event) {
           firstScreenContainer[event.target.value - 1].classList.add("visible-small");
           break;
         case "map-zoo":
-          mapPetsItem.forEach((item) => {
-            item.firstElementChild.classList.remove("img-wrapper-visible");
-          });
-          mapPetsItem[event.target.value - 1].firstElementChild.classList.add("img-wrapper-visible");
+          mapRemoveActiveImg();
+          mapAddActiveImg();
+          animalPlaceholder();
           positionMapPage();
           break;
         case "pets-in-zoo":

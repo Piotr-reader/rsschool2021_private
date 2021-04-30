@@ -33,18 +33,15 @@ h3 {
 }
 .map-pets-slider {
   display: flex;
-  /* align-items: center; */
-  /* height: 157px; */
+margin-left: 10px;
 }
 .map-pets-item {
   min-width: 138px;
   height: 131px;
+  /* cursor: pointer; */
 }
-.arrow {
-  /* margin-top: 11px; */
-}
-/* circle */
 
+/* circle */
 .img-wrapper {
   height: 157px;
   width: 157px;
@@ -88,7 +85,8 @@ h3 {
   height: 108px;
   border-radius: 50%;
   position: absolute;
-  cursor: pointer;
+  /* cursor: pointer; */
+  pointer-events: none;
   z-index: 1;
   margin-top: 18px;
   margin-left: 15px;
@@ -97,6 +95,7 @@ h3 {
   width: 137px;
   height: 137px;
   margin: 0;
+  pointer-events: unset;
 }
 .img-wrapper-visible {
   visibility: visible;
@@ -111,33 +110,49 @@ h3 {
 }
 .bg-panda {
   background-image: url(../assets/icons/ellipse-panda.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .bg-eagle {
   background-image: url(../assets/icons/ellipse-eagle.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .bg-crocodile {
   background-image: url(../assets/icons/ellipse-crocodile.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .bg-monkey {
   background-image: url(../assets/icons/ellipse-monkye.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .bg-tiger {
   background-image: url(../assets/icons/ellipse-tiger.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .bg-elephant {
   background-image: url(../assets/icons/ellipse-elephant.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .bg-leon {
   background-image: url(../assets/icons/ellipse-leon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 .bg-zebra {
   background-image: url(../assets/icons/ellipse-zebra.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
+
 .button-container-input {
   margin-right: 34px;
   margin-bottom: 25px;
 }
-
 .footer-btn {
   margin-top: 2px;
 }
