@@ -36,7 +36,6 @@ const positionMapPage = () => {
   let itemMapWidth = document.querySelector(".map-pets-item").clientWidth;
   let sliderWidth = sliderContainerMap.clientWidth;
   let positionMapPage = 0 + -(itemMapWidth * (Number(inputMapPage.value) - 1));
-  console.log(positionMapPage);
   if (positionMapPage < -sliderWidth) {
     sliderTrackMapPage.style.transform = `translateX(${positionMapPage + sliderWidth - itemMapWidth}px)`;
   }

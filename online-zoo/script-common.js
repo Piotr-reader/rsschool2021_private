@@ -7,17 +7,12 @@ const mapPetsItem = document.querySelectorAll(".map-pets-item");
 
 // dark thema
 const switchDark = document.querySelector(".switch-dark");
+
 function thema(event) {
-  if (event.target.checked)
-  {
+  if (event.target.checked) {
+    darkThemaActive();
     event.target.classList.add("dark-active");
-    root.style.setProperty(`--text-h4`, `#fefefe`);
-    root.style.setProperty(`--color-p`, `#f2f2f2`);
-    root.style.setProperty(`--bg-testimonial-card`, `#3c3c3c`);
-    root.style.setProperty(`--bg-dark`, `#333333`);
-    root.style.setProperty(`--bg-soft`, `#4f4f4f`);
-    root.style.setProperty(`--bg-map`, `url(./assets/images/map-1920-dark.jpg)`);
-    root.style.setProperty(`--arrow-right`, `url(./assets/icons/arrow-right-dark.png)`);
+    localStorage.setItem('string', true);
   } else {
     event.target.classList.remove("dark-active");
     root.style.setProperty(`--text-h4`, null);
@@ -27,9 +22,30 @@ function thema(event) {
     root.style.setProperty(`--bg-soft`, null);
     root.style.setProperty(`--bg-map`, null);
     root.style.setProperty(`--arrow-right`, null);
+    localStorage.clear();
   }
 }
-switchDark.addEventListener("change", thema);
+switchDark.addEventListener("click", thema);
+
+const darkThemaActive = () => {
+  root.style.setProperty(`--text-h4`, `#fefefe`);
+  root.style.setProperty(`--color-p`, `#f2f2f2`);
+  root.style.setProperty(`--bg-testimonial-card`, `#3c3c3c`);
+  root.style.setProperty(`--bg-dark`, `#333333`);
+  root.style.setProperty(`--bg-soft`, `#4f4f4f`);
+  root.style.setProperty(`--bg-map`, `url(./assets/images/map-1920-dark.jpg)`);
+  root.style.setProperty(`--arrow-right`, `url(./assets/icons/arrow-right-dark.png)`);
+}
+
+const localStorageChecker = () => {
+  const localStorageInput = document.querySelector(".local-storage");
+  let localThemeDark = localStorage.getItem('string');
+    if (localThemeDark) {
+      darkThemaActive();
+      localStorageInput.checked = true;
+    }
+}
+localStorageChecker();
 
 // popup
 const popupOpenSlider = document.querySelectorAll(".donate");
