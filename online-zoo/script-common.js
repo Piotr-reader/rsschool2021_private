@@ -8,7 +8,8 @@ const mapPetsItem = document.querySelectorAll(".map-pets-item");
 // dark thema
 const switchDark = document.querySelector(".switch-dark");
 function thema(event) {
-  if (event.target.name === "switch-dark" && !event.target.classList.contains("dark-active")) {
+  if (event.target.checked)
+  {
     event.target.classList.add("dark-active");
     root.style.setProperty(`--text-h4`, `#fefefe`);
     root.style.setProperty(`--color-p`, `#f2f2f2`);
@@ -28,7 +29,7 @@ function thema(event) {
     root.style.setProperty(`--arrow-right`, null);
   }
 }
-switchDark.addEventListener("input", thema);
+switchDark.addEventListener("change", thema);
 
 // popup
 const popupOpenSlider = document.querySelectorAll(".donate");
