@@ -430,6 +430,7 @@ input:checked + .switch-dark-button:before {
   padding-bottom: 30px;
   background: none;
   opacity: 0;
+    pointer-events: none;
 }
 .slider-small-btn-donate {
   cursor: pointer;
@@ -443,7 +444,6 @@ input:checked + .switch-dark-button:before {
   height: 230px;
   padding-right: 45px;
   filter: drop-shadow(5px 4px 50px rgba(152, 157, 198, 0.25));
-  pointer-events: none;
 }
 .slider-list-img {
   border-radius: 5px;
@@ -458,6 +458,7 @@ input:checked + .switch-dark-button:before {
 .visible-small {
   padding-bottom: 28px;
   opacity: 1;
+    pointer-events: unset;
 }
 .first-screen-input {
   justify-content: flex-start !important;

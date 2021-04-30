@@ -3,6 +3,7 @@
 const firstScreenItem = document.querySelectorAll(".small-slider-item");
 const firstScreenContainer = document.querySelectorAll(".container-zoo-small");
 const sliderSmall = document.querySelector(".small-slider");
+const sliderListImg = document.querySelectorAll(".small-slider-item");
 
 const petsInZooContainer = document.querySelectorAll(".item-container");
 const testimonialPerson = document.querySelectorAll(".testimonial-person");
@@ -66,6 +67,25 @@ const positinPetsInZoo = () => {
   petsInZooContainer[Number(inputPetsInZoo.value) - 1].classList.add("visible");
 };
 positinPetsInZoo();
+
+// firstScreen slider
+let inputFirstScreen = document.querySelector(".first-screen-inputs");
+let outputFirstScreen = document.querySelector(".first-screen-outputs");
+sliderListImg.forEach((item) =>{
+  item.addEventListener('mousedown', (event) => {
+    if (event.target.classList.contains("slider-list-img")) {
+      const widthSmallImg = document.querySelector(".small-slider-item").clientWidth;
+      let dataNumber = widthSmallImg + -(widthSmallImg * (event.target.dataset.position - 1));
+      sliderSmall.style.transform = `translateX(${dataNumber}px)`;
+      firstScreenItem.forEach((item) => item.classList.remove("slider-active"));
+      firstScreenContainer.forEach((item) => item.classList.remove("visible-small"));
+      firstScreenItem[event.target.dataset.position - 1].classList.add("slider-active");
+      firstScreenContainer[event.target.dataset.position - 1].classList.add("visible-small");
+      inputFirstScreen.value = event.target.dataset.position;
+      outputFirstScreen.value = "0" + event.target.dataset.position + "/";
+    }
+  })
+})
 
 // slider testimonial
 const cardTestmonial = document.querySelector(".testimonials-card");

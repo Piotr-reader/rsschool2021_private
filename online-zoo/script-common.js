@@ -80,13 +80,11 @@ const validate = () => {
     btnPopupSubmit.classList.add("invalid");
   }
 };
-
 btnPopupSubmit.addEventListener('click', () => {
   if (btnPopupSubmit.classList.contains("invalid")) return;
   document.querySelector(".popup").classList.remove("popup-visible");
   document.querySelector("body").classList.remove("body-lock");
 });
-
 selectAnimal.addEventListener('input', () =>{
   validate();
 });
