@@ -169,7 +169,7 @@ margin-left: 10px;
     margin-bottom: 0px;
   }
   .slider {
-    max-width: 630px;
+    max-width: 785px;
   }
   .arrow-left {
     margin: 0px 21px;
@@ -243,16 +243,6 @@ margin-left: 10px;
   .inner-img {
     margin-left: 0;
   }
-
-  /* .border-img {
-    right: 15px;
-  }
-  .circle-white {
-    right: 19px;
-  }
-  .big-circle {
-    right: 22px;
-  } */
   .arrow {
     display: block;
     margin: 0;

@@ -1054,8 +1054,7 @@ address {
     margin-bottom: 25px;
   }
   .slider-list {
-    max-width: 900px;
-    margin-left: 10px;
+    max-width: 840px;
   }
   .slider-list-item {
     width: 210px;
@@ -1068,6 +1067,9 @@ address {
   }
   .visible {
     padding-bottom: 26px;
+  }
+  .item-container {
+    min-width: 247px;
   }
   .item-container:hover {
     padding-bottom: 26px;
@@ -1084,12 +1086,12 @@ address {
     padding-top: 98px;
     margin-bottom: 39px;
   }
-  /* .testimonials-card {
+  .testimonials-card {
     max-width: 910px;
   }
   .testimonial-person {
     min-width: 440px;
-  } */
+  }
   .testimonial-person-img {
     margin-top: 50px;
     margin-bottom: 2px;

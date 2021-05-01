@@ -15,7 +15,7 @@ let newItemVisebleValue = null;
 btnUpZoos.addEventListener("mousedown", () => {
   sliderItemMap.forEach((item) => {
     if (item.firstElementChild.classList.contains('inner-img-visible')) {
-      item.classList.remove('inner-img-visible');
+      item.classList.remove('map-pets-item-visible');
       newItemVisebleValue =  Number(item.dataset.value) - 1;
       if (newItemVisebleValue < 1) {
        newItemVisebleValue = 1;
@@ -29,7 +29,7 @@ btnUpZoos.addEventListener("mousedown", () => {
 btndownZoos.addEventListener("mousedown", () => {
     sliderItemMap.forEach((item) => {
       if (item.firstElementChild.classList.contains('inner-img-visible')) {
-        item.classList.remove('inner-img-visible');
+        item.classList.remove('map-pets-item-visible');
         newItemVisebleValue =  Number(item.dataset.value) + 1;
         if (newItemVisebleValue > sliderItemMap.length) {
           newItemVisebleValue = sliderItemMap.length;
@@ -66,6 +66,12 @@ const positionMapPage = () => {
   }
 };
 
-
-
+// click img slider
+sliderItemMap.forEach((elem) => {
+  elem.addEventListener("click", (el) => {
+    mapRemoveActiveImg();
+    el.target.firstElementChild.classList.add("inner-img-visible");
+    el.target.lastElementChild.classList.add("img-wrapper-visible");
+  })
+})
 
