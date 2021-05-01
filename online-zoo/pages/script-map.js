@@ -80,37 +80,23 @@ btnMapPage.addEventListener("click", () => {
   })
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// change animal-placeholder
+classPlaceholder.forEach((elem) => {
+ elem.addEventListener("click", (e) => {
+   let classPlaceholder = e.target.parentNode;
+   sliderItemMap.forEach((el) =>  {
+    el.firstElementChild.classList.remove("inner-img-visible");
+    el.childNodes[3].classList.remove("img-wrapper-visible");
+    if (classPlaceholder.classList.contains(el.dataset.animal)) {
+      el.firstElementChild.classList.add("inner-img-visible");
+      el.childNodes[3].classList.add("img-wrapper-visible");
+      sliderTrackMapPage.style.transform = `translateX(0px)`;
+      inputMapPage.value = Number(el.dataset.value);
+      outputMapPage.value = "0" + el.dataset.value + "/";
+     }
+   })
+ })
+})
 
 // sliderItemMap.forEach((elem) => {
 //   elem.addEventListener("click", (el) => {
