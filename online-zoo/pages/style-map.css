@@ -147,7 +147,10 @@ margin-left: 10px;
   background-repeat: no-repeat;
   background-size: 100%;
 }
-
+.btn-change-style {
+  pointer-events: none;
+  background: red;
+}
 .button-container-input {
   margin-right: 34px;
   margin-bottom: 25px;

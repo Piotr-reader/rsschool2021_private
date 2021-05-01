@@ -11,6 +11,7 @@ const btnLeftMap = document.querySelector(".btn-left-map");
 const btnRightMap = document.querySelector(".btn-right-map");
 const classPlaceholder = document.querySelectorAll(".map-placeholder");
 const btnMapPage = document.getElementById("choose-animal-btn");
+const btnMapPageValidation = document.querySelector("#btn-map-validation");
 
 
 // slider map page
@@ -18,30 +19,40 @@ btnRightMap.addEventListener("mousedown", () => {
   if (Number(inputMapPage.value) < sliderItemMap.length) {
     inputMapPage.value = Number(inputMapPage.value) + 1;
     outputMapPage.value = "0" + inputMapPage.value + "/";
-    mapRemoveActiveImg();
-    mapAddActiveImg();
-    positionMapPage();
-    animalPlaceholder();
+  } else {
+    sliderTrackMapPage.style.transform = `translateX(0px)`;
+    outputMapPage.value = "01/";
+    inputMapPage.value = 1;
   }
+  mapRemoveActiveImg();
+  mapAddActiveImg();
+  positionMapPage();
+  animalPlaceholder();
 });
 btnLeftMap.addEventListener("mousedown", () => {
-  if (Number(inputMapPage.value) > 0) {
+  if (Number(inputMapPage.value) > 1) {
     inputMapPage.value = Number(inputMapPage.value) - 1;
     outputMapPage.value = "0" + inputMapPage.value + "/";
-    mapRemoveActiveImg();
-    mapAddActiveImg();
-    positionMapPage();
-    animalPlaceholder();
+  } else {
+    let itemMapWidth = sliderItemMap.length;
+    let sliderWidth = widthMapPageImg.clientWidth;
+    sliderTrackMapPage.style.transform = `translateX(${-(sliderWidth * itemMapWidth-sliderContainerMap.clientWidth)}px)`;
+    outputMapPage.value = "0" + sliderItemMap.length + "/";
+    inputMapPage.value = sliderItemMap.length;
   }
+  mapRemoveActiveImg();
+  mapAddActiveImg();
+  positionMapPage();
+  animalPlaceholder();
 });
 const positionMapPage = () => {
   let itemMapWidth = document.querySelector(".map-pets-item").clientWidth;
   let sliderWidth = sliderContainerMap.clientWidth;
   let positionMapPage = 0 + -(itemMapWidth * (Number(inputMapPage.value) - 1));
-  if (positionMapPage < -sliderWidth) {
+  if (positionMapPage <= -sliderWidth) {
     sliderTrackMapPage.style.transform = `translateX(${positionMapPage + sliderWidth - itemMapWidth}px)`;
   }
-  if (positionMapPage > -itemMapWidth) {
+  if (positionMapPage > -sliderWidth) {
     sliderTrackMapPage.style.transform = `translateX(0px)`;
   }
 };
@@ -55,6 +66,19 @@ const mapAddActiveImg = () => {
   sliderItemMap[inputMapPage.value-1].firstElementChild.classList.add("inner-img-visible");
   sliderItemMap[inputMapPage.value-1].lastElementChild.classList.add("img-wrapper-visible");
 }
+
+// btnMapPageValidation
+const validatinMapBtn = () => {
+  btnMapPageValidation.classList.add("btn-change-style");
+  classPlaceholder.forEach((el) => {
+    if (el.firstElementChild.classList.contains("red-img-none")) {
+      btnMapPageValidation.classList.remove("btn-change-style");
+    }
+  });
+};
+validatinMapBtn();
+
+// change placeholder active
 const animalPlaceholder = () => {
   let dataAnimal = sliderItemMap[inputMapPage.value-1].dataset.animal;
   classPlaceholder.forEach((el) => {
@@ -65,6 +89,7 @@ const animalPlaceholder = () => {
       el.childNodes[3].classList.add("img-visible");
     }
   })
+  validatinMapBtn();
 }
 animalPlaceholder();
 
@@ -74,8 +99,7 @@ btnMapPage.addEventListener("click", () => {
     let classPlaceholder = el;
     let dataAnimal = sliderItemMap[inputMapPage.value-1].dataset.animal;
     if (classPlaceholder.classList.contains(dataAnimal)) {
-      let srcAnimal = `../pages/${dataAnimal.slice(4, dataAnimal.length)}.html`;
-       btnMapPage.action = srcAnimal;
+      btnMapPage.action = `../pages/${dataAnimal.slice(4, dataAnimal.length)}.html`;
     }
   })
 })
