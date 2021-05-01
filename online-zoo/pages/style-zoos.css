@@ -32,17 +32,16 @@ h4 {
   top: 155px;
 }
 .slider {
-  width: 157px;
-  height: 550px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 26px;
+  width: 168px;
+  height: 552px;
+  align-items: unset;
+  /* margin-bottom: 26px; */
 }
 .zoos-pets-slider {
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 137px;
+  /* height: 550px; */
+  /* width: 137px; */
 }
 .map-pets-item {
   width: 108px;

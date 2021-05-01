@@ -82,7 +82,7 @@ btnMapPage.addEventListener("click", () => {
 
 // change animal-placeholder
 classPlaceholder.forEach((elem) => {
- elem.addEventListener("click", (e) => {
+  elem.addEventListener("click", (e) => {
    let classPlaceholder = e.target.parentNode;
    sliderItemMap.forEach((el) =>  {
     el.firstElementChild.classList.remove("inner-img-visible");
@@ -93,6 +93,7 @@ classPlaceholder.forEach((elem) => {
       sliderTrackMapPage.style.transform = `translateX(0px)`;
       inputMapPage.value = el.dataset.value;
       outputMapPage.value = "0" + el.dataset.value + "/";
+      animalPlaceholder();
      }
    })
  })
