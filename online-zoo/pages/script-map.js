@@ -91,26 +91,22 @@ classPlaceholder.forEach((elem) => {
       el.firstElementChild.classList.add("inner-img-visible");
       el.childNodes[3].classList.add("img-wrapper-visible");
       sliderTrackMapPage.style.transform = `translateX(0px)`;
-      inputMapPage.value = Number(el.dataset.value);
+      inputMapPage.value = el.dataset.value;
       outputMapPage.value = "0" + el.dataset.value + "/";
      }
    })
  })
 })
 
-// sliderItemMap.forEach((elem) => {
-//   elem.addEventListener("click", (el) => {
-//       let indexImg = 0;
-//       while(elem.previousElementSibling) {
-//         elem = elem.previousElementSibling;
-//         indexImg++;
-//         }
-//     mapRemoveActiveImg();
-//     animalPlaceholder();
-//     el.target.firstElementChild.classList.add("inner-img-visible");
-//     el.target.lastElementChild.classList.add("img-wrapper-visible");
-//     inputMapPage.value = indexImg + 1;
-//     outputMapPage.value = "0" + (indexImg + 1) + "/";
-//   })
-// })
+// click img slider
+sliderItemMap.forEach((elem) => {
+  elem.addEventListener("click", (el) => {
+    mapRemoveActiveImg();
+    el.target.firstElementChild.classList.add("inner-img-visible");
+    el.target.lastElementChild.classList.add("img-wrapper-visible");
+    inputMapPage.value = el.target.dataset.value;
+    outputMapPage.value = "0" + el.target.dataset.value + "/";
+    animalPlaceholder();
+  })
+})
 

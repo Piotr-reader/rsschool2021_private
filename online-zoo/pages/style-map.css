@@ -38,7 +38,7 @@ margin-left: 10px;
 .map-pets-item {
   min-width: 138px;
   height: 131px;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 
 /* circle */
@@ -85,7 +85,6 @@ margin-left: 10px;
   height: 108px;
   border-radius: 50%;
   position: absolute;
-  /* cursor: pointer; */
   pointer-events: none;
   z-index: 1;
   margin-top: 18px;
