@@ -9,9 +9,11 @@ let inputMapPage = document.querySelector(".input-map-page");
 let outputMapPage = document.querySelector(".output-map-page");
 const btnLeftMap = document.querySelector(".btn-left-map");
 const btnRightMap = document.querySelector(".btn-right-map");
+const classPlaceholder = document.querySelectorAll(".map-placeholder");
+const btnMapPage = document.getElementById("choose-animal-btn");
 
 
-
+// slider map page
 btnRightMap.addEventListener("mousedown", () => {
   if (Number(inputMapPage.value) < sliderItemMap.length) {
     inputMapPage.value = Number(inputMapPage.value) + 1;
@@ -53,10 +55,8 @@ const mapAddActiveImg = () => {
   sliderItemMap[inputMapPage.value-1].firstElementChild.classList.add("inner-img-visible");
   sliderItemMap[inputMapPage.value-1].lastElementChild.classList.add("img-wrapper-visible");
 }
-
 const animalPlaceholder = () => {
   let dataAnimal = sliderItemMap[inputMapPage.value-1].dataset.animal;
-  let classPlaceholder = document.querySelectorAll(".map-placeholder");
   classPlaceholder.forEach((el) => {
     el.firstElementChild.classList.remove("red-img-none");
     el.childNodes[3].classList.remove("img-visible");
@@ -67,6 +67,50 @@ const animalPlaceholder = () => {
   })
 }
 animalPlaceholder();
+
+// btn src map page
+btnMapPage.addEventListener("click", () => {
+  classPlaceholder.forEach((el) => {
+    let classPlaceholder = el;
+    let dataAnimal = sliderItemMap[inputMapPage.value-1].dataset.animal;
+    if (classPlaceholder.classList.contains(dataAnimal)) {
+      let srcAnimal = `../pages/${dataAnimal.slice(4, dataAnimal.length)}.html`;
+       btnMapPage.action = srcAnimal;
+    }
+  })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // sliderItemMap.forEach((elem) => {
 //   elem.addEventListener("click", (el) => {

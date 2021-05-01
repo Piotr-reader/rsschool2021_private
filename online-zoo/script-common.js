@@ -36,7 +36,6 @@ const darkThemaActive = () => {
   root.style.setProperty(`--bg-map`, `url(./assets/images/map-1920-dark.jpg)`);
   root.style.setProperty(`--arrow-right`, `url(./assets/icons/arrow-right-dark.png)`);
 }
-
 const localStorageChecker = () => {
   const localStorageInput = document.querySelector(".local-storage");
   let localThemeDark = localStorage.getItem('string');
