@@ -75,3 +75,51 @@ sliderItemMap.forEach((elem) => {
   })
 })
 
+// video change src
+const mainVideo = document.querySelector(".size-video-top");
+const additionalVideoContainer = document.querySelector(".additional-video");
+const additionalVideos = document.querySelectorAll(".video-non-visible");
+const widthAddVideo = document.querySelector(".video-non-visible").clientWidth;
+const widthVideoContainer = document.querySelector(".video-container").clientWidth;
+additionalVideos.forEach((e) => {
+  e.addEventListener('click', (event) => {
+    let stack = [];
+    stack.push(mainVideo.src);
+    mainVideo.src = event.target.firstElementChild.src;
+    event.target.firstElementChild.src = stack;
+    stack = [];
+  });
+});
+
+// switcher btn
+const switcherBtn = document.querySelectorAll(".switch-circle");
+let countVideoOnPage = Math.ceil(widthVideoContainer / widthAddVideo);
+switcherBtn.forEach((e) => {
+  e.addEventListener('click', (event) => {
+    switcherBtn.forEach((e) => {
+      e.classList.remove('active-circle');
+    });
+    event.target.classList.add('active-circle');
+    let valueBtn = event.target.dataset.value;
+    let moveSlider = -((widthAddVideo*countVideoOnPage)*(valueBtn-1))
+    additionalVideoContainer.style.transform = `translateX(${moveSlider}px)`;
+    clearInterval(intervalSlider);
+  })
+})
+
+// set interval
+const switcherContainer = switcherBtn.length;
+let moveSliderinterval = widthAddVideo * countVideoOnPage;
+let count = 0;
+const intervalSlider = () => {
+  count++;
+  if (count > switcherContainer-1) {
+    count = 0;
+  };
+  switcherBtn.forEach((el) => {
+    el.classList.remove("active-circle");
+  })
+  switcherBtn[count].classList.add("active-circle");
+  additionalVideoContainer.style.transform = `translateX(${-(moveSliderinterval*count)}px)`;
+};
+setInterval(intervalSlider, 3000);

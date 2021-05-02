@@ -1898,6 +1898,9 @@ address {
     position: relative;
     top: -78px;
   }
+  .footer-left {
+    max-width: 300px;
+  }
   .footer-right {
     top: -65px;
     left: 12px;

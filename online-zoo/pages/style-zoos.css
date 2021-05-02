@@ -12,6 +12,7 @@ h4 {
   margin-top: 12px;
   margin-bottom: 7px;
 }
+
 .wrapper-zoos {
   display: flex;
   flex-direction: column;
@@ -71,27 +72,33 @@ h4 {
   flex-direction: column;
   margin-right: 30px;
 }
-.video-non-visible {
-  display: flex;
-  justify-content: space-between;
-  visibility: 0;
-  pointer-events: none;
-}
+
 .size-video-top {
   width: 790px;
   height: 442px;
   border-radius: 5px;
 }
+.video-container {
+max-width: 790px;
+overflow: hidden;
+margin: 30px 0;
+transition: 0.3s;
+}
 .additional-video {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  margin: 30px 0;
+}
+.video-non-visible {
+  position: relative;
+  cursor: pointer;
+
 }
 .size-video-down {
   width: 246px;
   height: 141px;
   border-radius: 5px;
+  margin-right: 18px;
+  pointer-events: none;
 }
 .switcher-container {
   width: 37px;
@@ -108,18 +115,16 @@ h4 {
   cursor: pointer;
 }
 .switch-circle:hover {
+  transform: scale(1.15);
   background: #c4c4c49a;
 }
-.active-circle {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: #4bd8b5;
-}
+.active-circle,
 .active-circle:hover {
+  transform: scale(1.25);
   background: #4bd8b5;
   pointer-events: none;
 }
+
 /* description section */
 .description {
   max-width: 380px;
@@ -139,7 +144,6 @@ h4 {
   margin-bottom: 73px;
 }
 
-/* todo done */
 @media (max-width: 1600px) {
   .wrapper-zoos {
     margin-left: 30px;
@@ -157,7 +161,6 @@ h4 {
     margin-bottom: 78px;
   }
 }
-/* todo done */
 @media (max-width: 1200px) {
   .map-slider {
     width: 151px;
@@ -217,6 +220,9 @@ h4 {
   .size-video-top {
     width: 525px;
     height: 295px;
+  }
+  .video-container {
+    width: 525px;
   }
   .size-video-down {
     width: 163px;
@@ -341,12 +347,16 @@ h4 {
     max-width: 496px;
     height: 279px;
   }
+  .video-container {
+    max-width: 496px;
+  }
   .additional-video {
     margin: 15px 0;
   }
   .size-video-down {
     width: 155px;
     height: 90px;
+    margin-right: 16px;
   }
   .switcher-container {
     padding: 0;
@@ -375,7 +385,6 @@ h4 {
     margin-top: 93px;
   }
 }
-
 @media (max-width: 320px) {
   /*  slider */
   .map-slider {
@@ -402,7 +411,6 @@ h4 {
   .map-pets-item-visible {
     width: 65px;
     height: 65px;
-    /* margin: 12px; */
   }
   .img-wrapper {
     width: 40px;
@@ -453,11 +461,11 @@ h4 {
     max-width: 205px;
     height: 116px;
   }
+  .video-container{
+    max-width: 205px;
+  }
   .additional-video {
     margin: 10px 0;
-  }
-  .video-remove {
-    display: none;
   }
   .size-video-down {
     width: 98px;
