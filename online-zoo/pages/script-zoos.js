@@ -92,6 +92,7 @@ additionalVideos.forEach((e) => {
 });
 
 // switcher btn
+
 const switcherBtn = document.querySelectorAll(".switch-circle");
 let countVideoOnPage = Math.ceil(widthVideoContainer / widthAddVideo);
 switcherBtn.forEach((e) => {
@@ -103,7 +104,6 @@ switcherBtn.forEach((e) => {
     let valueBtn = event.target.dataset.value;
     let moveSlider = -((widthAddVideo*countVideoOnPage)*(valueBtn-1))
     additionalVideoContainer.style.transform = `translateX(${moveSlider}px)`;
-    clearInterval(intervalSlider);
   })
 })
 
@@ -119,7 +119,8 @@ const intervalSlider = () => {
   switcherBtn.forEach((el) => {
     el.classList.remove("active-circle");
   })
+
   switcherBtn[count].classList.add("active-circle");
-  additionalVideoContainer.style.transform = `translateX(${-(moveSliderinterval*count)}px)`;
+  additionalVideoContainer.style.transform = `translateX(${-((widthAddVideo*2)*count)}px)`;
 };
 setInterval(intervalSlider, 3000);

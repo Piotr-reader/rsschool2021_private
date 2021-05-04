@@ -40,25 +40,28 @@ h4 {
   flex-direction: column;
   margin-bottom: 15px;
   margin-left: 15px;
+  margin-top: 9px;
 }
 .map-pets-item {
   height: 138px;
 }
+.arrow {
+  background: url(../assets/icons/arrow-up-light.png) no-repeat center;
+}
 .arrow-down {
   margin: 0;
-  transform: rotate(90deg);
-  width: 20px;
-  height: 40px;
+  transform: rotate(180deg);
+  width: 40px;
+  height: 20px;
 }
 .arrow-up {
   margin: 0;
-  transform: rotate(-90deg);
-  width: 20px;
-  height: 40px;
+  width: 40px;
+  height: 20px;
 }
 .arrow:hover {
-  height: 40px;
-  width: 20px;
+  height: 20px;
+  width: 40px;
 }
 
 /* video section */
@@ -82,10 +85,10 @@ h4 {
 max-width: 790px;
 overflow: hidden;
 margin: 30px 0;
-transition: 0.3s;
 }
 .additional-video {
   width: 100%;
+  transition: 0.3s;
   display: flex;
 }
 .video-non-visible {
@@ -97,7 +100,7 @@ transition: 0.3s;
   width: 246px;
   height: 141px;
   border-radius: 5px;
-  margin-right: 18px;
+  margin-right: 26px;
   pointer-events: none;
 }
 .switcher-container {
@@ -106,6 +109,7 @@ transition: 0.3s;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  margin-top: 15px;
 }
 .switch-circle {
   width: 8px;
@@ -150,7 +154,6 @@ transition: 0.3s;
   }
   .switcher-container {
     padding: 0;
-    margin-top: 15px;
     margin-bottom: 50px;
   }
   .description {
@@ -168,24 +171,26 @@ transition: 0.3s;
     top: 156px;
   }
   .zoos-pets-slider {
-    width: 120px;
+    width: 143px;
     margin: 0;
   }
   .map-pets-item {
     height: 104px;
     margin-bottom: 8px;
   }
-  .map-pets-item-visible {
-    margin-left: 15px;
-  }
   .inner-img {
     width: 96px;
     height: 96px;
+    margin-left: 25px;
+  }
+  .map-pets-item-visible {
+    margin-left: 15px;
   }
   .inner-img-visible {
     width: 104px;
     height: 104px;
     margin-top: 8px;
+    margin-left: 0px;
   }
   .big-circle {
     width: 120px;
@@ -227,6 +232,7 @@ transition: 0.3s;
   .size-video-down {
     width: 163px;
     height: 92px;
+    margin-right: 18px;
   }
 
   /* description */
@@ -261,11 +267,9 @@ transition: 0.3s;
   }
 }
 @media (max-width: 1100px) {
-  .inner-img {
-    margin-left: 15px;
-  }
   .inner-img-visible {
     margin-left: 0;
+    margin-top: 8px;
   }
 }
 @media (max-width: 640px) {
@@ -305,12 +309,15 @@ transition: 0.3s;
   .inner-img {
     width: 68px;
     height: 68px;
+    margin-left: 8px;
+    margin-top: 0px;
   }
   .inner-img-visible {
     width: 82px;
     height: 82px;
     right: 7px;
     top: 6px;
+    margin-top: 7px;
   }
   .img-wrapper {
     width: 95px;
@@ -427,26 +434,26 @@ transition: 0.3s;
   .inner-img-visible {
     width: 59px;
     height: 59px;
-    right: 2px;
+    right: -8px;
     top: 4px;
   }
   .big-circle {
-    top: 2px;
-    left: 14px;
+    top: 7px;
+    left: -1px;
     width: 65px;
     height: 65px;
   }
   .circle-white {
     width: 64px;
     height: 64px;
-    bottom: 63px;
-    left: 15px;
+    bottom: 58px;
+    left: 0px;
   }
   .border-img {
     width: 60px;
     height: 60px;
-    bottom: 125px;
-    left: 17px;
+    bottom: 120px;
+    left: 1px;
   }
   /* video */
   .wrapper-zoos {

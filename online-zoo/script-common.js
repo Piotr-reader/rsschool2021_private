@@ -153,7 +153,7 @@ function inputValue(event) {
           positionMapPage();
           break;
         case "pets-in-zoo":
-          positinPetsInZoo();
+          positinPetsInZooLeft();
           break;
         case "testimonial":
           positionTestimonial();

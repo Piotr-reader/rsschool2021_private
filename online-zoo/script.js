@@ -45,18 +45,53 @@ btnRightZoo.addEventListener("mousedown", () => {
   if (Number(inputPetsInZoo.value) < smallSliderLength) {
     inputPetsInZoo.value = Number(inputPetsInZoo.value) + 1;
     positinPetsInZoo();
+  } else {
+    sliderTrackZoo.style.transform = `translateX(0px)`;
+    inputPetsInZoo.value = 1;
+    outputPetsInZoo.value = "01/";
+    petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+    petsInZooContainer[Number(inputPetsInZoo.value) - 1].classList.add("visible");
   }
 });
 btnLeftZoo.addEventListener("mousedown", () => {
-  if (Number(inputPetsInZoo.value) > 0) {
+  let count = inputPetsInZoo.value -1;
+   if (count === 0) {
+     let widthMedia = 1232;
+     if (itemWidthZoo.clientWidth < 1081) {
+      widthMedia = 1108;
+     }
+    sliderTrackZoo.style.transform = `translateX(${-widthMedia}px)`;
+    inputPetsInZoo.value = smallSliderLength;
+    outputPetsInZoo.value = "0" + smallSliderLength + "/";
+    petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+    petsInZooContainer[Number(inputPetsInZoo.value) - 1].classList.add("visible");
+  } else {
     inputPetsInZoo.value = Number(inputPetsInZoo.value) - 1;
-    positinPetsInZoo();
+    positinPetsInZooLeft();
   }
 });
-itemWidthZoo.addEventListener("mouseover", (event) => {
+itemWidthZoo.addEventListener("mouseover", () => {
   petsInZooContainer.forEach((item) => item.classList.remove("visible"));
 });
+itemWidthZoo.addEventListener("mouseout", () => {
+  petsInZooContainer[inputPetsInZoo.value-1].classList.add("visible");
+});
+let count = 0;
 const positinPetsInZoo = () => {
+  let positionPetsInZooCount = 0 + -(widthZooImg * (Number(inputPetsInZoo.value) - 1));
+  if (-(widthZooImg * 4) >= positionPetsInZooCount) {
+    count++;
+    sliderTrackZoo.style.transform = `translateX(${-widthZooImg*count}px)`;
+  } else {
+    count = 0;
+  }
+  outputPetsInZoo.value = "0" + inputPetsInZoo.value + "/";
+  petsInZooContainer.forEach((item) => item.classList.remove("visible"));
+  petsInZooContainer[Number(inputPetsInZoo.value) - 1].classList.add("visible");
+};
+positinPetsInZoo();
+
+const positinPetsInZooLeft = () => {
   let positionPetsInZoo = document.querySelector(".slider-list-item").clientWidth;
   let positionPetsInZooCount = 0 + -(positionPetsInZoo * (Number(inputPetsInZoo.value) - 1));
   if (-(widthZooImg * 5) < positionPetsInZooCount) {
@@ -65,8 +100,8 @@ const positinPetsInZoo = () => {
   outputPetsInZoo.value = "0" + inputPetsInZoo.value + "/";
   petsInZooContainer.forEach((item) => item.classList.remove("visible"));
   petsInZooContainer[Number(inputPetsInZoo.value) - 1].classList.add("visible");
-};
-positinPetsInZoo();
+}
+positinPetsInZooLeft();
 
 // firstScreen slider
 let inputFirstScreen = document.querySelector(".first-screen-inputs");
