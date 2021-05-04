@@ -41,7 +41,7 @@
                   <a href="../index.html" class="header-nav-anchor">About</a>
                 </li>
                 <li class="header-nav-link">
-                  <a href="./zoos.html" class="header-nav-anchor">Zoos</a>
+                  <a href="./panda.html" class="header-nav-anchor">Zoos</a>
                 </li>
                 <li class="header-nav-link">
                   <a href="./map.html" class="header-nav-anchor active">Map</a>
@@ -58,7 +58,7 @@
             <div class="burger">
 
               <label class="switch-dark">
-                <input type="checkbox" name="switch-dark" />
+                <input type="checkbox" name="switch-dark" class="switch-dark local-storage"/>
                 <span class="switch-dark-button round"></span>
               </label>
 
@@ -93,92 +93,100 @@
 
               <ul class="map-pets-slider" id="map-zoo">
 
-                <li class="map-pets-item">
-                  <a href="./monkey.html">
-                    <div class="inner-img bg-monkey"></div>
-                  </a>
-                    <div class="img-wrapper">
-                      <div class="big-circle"></div>
-                      <div class="circle-white"></div>
-                      <div class="border-img"></div>
-                    </div>
-                </li>
+                <li class="map-pets-item" data-animal="map-monkey" data-value="1">
 
-                <li class="map-pets-item">
-                  <a href="./zoos.html">
-                    <div class="inner-img bg-panda inner-img-visible"></div>
-                  </a>
-                    <div class="img-wrapper  img-wrapper-visible">
-                      <div class="big-circle"></div>
-                      <div class="circle-white"></div>
-                      <div class="border-img"></div>
-                    </div>
-                </li>
+                  <a href="./monkey.html" class="inner-img bg-monkey"></a>
 
-                <li class="map-pets-item">
-                  <a href="./eagle.html">
-                    <div class="inner-img bg-eagle"></div>
-                    <div class="img-wrapper">
-                      <div class="big-circle"></div>
-                      <div class="circle-white"></div>
-                      <div class="border-img"></div>
-                    </div>
-                  </a>
-                </li>
-
-                <li class="map-pets-item">
-                  <a href="./crocodile.html">
-                    <div class="inner-img bg-crocodile"></div>
-                    <div class="img-wrapper">
-                      <div class="big-circle"></div>
-                      <div class="circle-white"></div>
-                      <div class="border-img"></div>
-                    </div>
-                  </a>
-                </li>
-
-                <li class="map-pets-item">
-                  <a href="./zoos.html">
-                  <div class="inner-img bg-tiger"></div>
                   <div class="img-wrapper">
                     <div class="big-circle"></div>
                     <div class="circle-white"></div>
                     <div class="border-img"></div>
                   </div>
-                </a>
+
                 </li>
 
-                <li class="map-pets-item">
-                  <a href="./zoos.html">
-                  <div class="inner-img bg-elephant"></div>
+                <li class="map-pets-item" data-animal="map-panda" data-value="2">
+
+                  <a href="./panda.html" class="inner-img bg-panda inner-img-visible"></a>
+
+                  <div class="img-wrapper img-wrapper-visible">
+                    <div class="big-circle"></div>
+                    <div class="circle-white"></div>
+                    <div class="border-img"></div>
+                  </div>
+
+                </li>
+
+                <li class="map-pets-item" data-animal="map-eagle" data-value="3">
+
+                  <a href="./eagle.html" class="inner-img bg-eagle"></a>
+
                   <div class="img-wrapper">
                     <div class="big-circle"></div>
                     <div class="circle-white"></div>
                     <div class="border-img"></div>
                   </div>
-                </a>
+
                 </li>
 
-                <li class="map-pets-item">
-                  <a href="./zoos.html">
-                  <div class="inner-img bg-leon"></div>
+                <li class="map-pets-item" data-animal="map-crocodile" data-value="4">
+
+                  <a href="./crocodile.html"  class="inner-img bg-crocodile"></a>
+
                   <div class="img-wrapper">
                     <div class="big-circle"></div>
                     <div class="circle-white"></div>
                     <div class="border-img"></div>
                   </div>
-                </a>
+
                 </li>
 
-                <li class="map-pets-item">
-                  <a href="./zoos.html">
-                  <div class="inner-img bg-zebra"></div>
+                <li class="map-pets-item" data-value="5">
+
+                  <a href="./panda.html" class="inner-img bg-tiger"></a>
+
                   <div class="img-wrapper">
                     <div class="big-circle"></div>
                     <div class="circle-white"></div>
                     <div class="border-img"></div>
                   </div>
-                </a>
+
+                </li>
+
+                <li class="map-pets-item" data-value="6">
+
+                  <a href="./panda.html" class="inner-img bg-elephant"></a>
+
+                  <div class="img-wrapper">
+                    <div class="big-circle"></div>
+                    <div class="circle-white"></div>
+                    <div class="border-img"></div>
+                  </div>
+
+                </li>
+
+                <li class="map-pets-item" data-value="7">
+
+                  <a href="./panda.html" class="inner-img bg-leon"></a>
+
+                  <div class="img-wrapper">
+                    <div class="big-circle"></div>
+                    <div class="circle-white"></div>
+                    <div class="border-img"></div>
+                  </div>
+
+                </li>
+
+                <li class="map-pets-item" data-value="8">
+
+                  <a href="./panda.html" class="inner-img bg-zebra"></a>
+
+                  <div class="img-wrapper">
+                    <div class="big-circle"></div>
+                    <div class="circle-white"></div>
+                    <div class="border-img"></div>
+                  </div>
+
                 </li>
 
               </ul>
@@ -205,8 +213,10 @@
             <section class="map-animals">
 
               <div class="map-placeholder map-panda">
-                <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
+
+                <img class="active-img panda" src="../assets/icons/map-placeholder.svg" alt="placeholder">
                 <img class="red-img-none panda" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+
                 <div class="tooltip-content">
                     <img class="tooltip-img" src="../assets/images/panda.jpg" alt="image">
                   <div class="tooltip-description">
@@ -215,11 +225,14 @@
                     <p><strong>Population: </strong>more than 270 pairs in 2013</p>
                   </div>
                 </div>
+
                 </div>
 
               <div class="map-placeholder map-eagle">
-                <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
+
+                <img class="active-img eagle" src="../assets/icons/map-placeholder.svg" alt="placeholder">
                 <img class="red-img-none eagle" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+
                 <div class="tooltip-content right-tollip">
                   <img class="tooltip-img" src="../assets/images/eagle.jpg" alt="image">
                 <div class="tooltip-description">
@@ -228,11 +241,14 @@
                   <p><strong>Population: </strong>more than 270 pairs in 2013</p>
                 </div>
               </div>
+
               </div>
 
               <div class="map-placeholder map-crocodile">
-                  <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
+
+                  <img class="active-img crocodile" src="../assets/icons/map-placeholder.svg" alt="placeholder">
                   <img class="red-img-none crocodile" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+
                   <div class="tooltip-content right-tollip">
                     <img class="tooltip-img" src="../assets/images/crocodile.jpg" alt="image">
                   <div class="tooltip-description">
@@ -241,11 +257,14 @@
                     <p><strong>Population: </strong>more than 270 pairs in 2013</p>
                   </div>
                 </div>
+
               </div>
 
               <div class="map-placeholder map-monkey">
-                    <img class="active-img" src="../assets/icons/map-placeholder.svg" alt="placeholder">
+
+                    <img class="active-img monkey" src="../assets/icons/map-placeholder.svg" alt="placeholder">
                     <img class="red-img-none monkey" src="../assets/icons/map-placeholder-red.svg" alt="placeholder">
+
                     <div class="tooltip-content">
                       <img class="tooltip-img" src="../assets/images/monkey.jpg" alt="image">
                     <div class="tooltip-description">
@@ -254,14 +273,15 @@
                       <p><strong>Population: </strong>more than 270 pairs in 2013</p>
                     </div>
                   </div>
+
               </div>
 
             </section>
 
             <div class="button-container btn-map">
               <div class="btn-wraper">
-                <form action="../pages/zoos.html">
-                  <button class="button">
+                <form id="choose-animal-btn" action="../pages/panda.html">
+                  <button class="button btn-map-validation btn-change-style" id="btn-map-validation">
                   <img
                     class="img-btn"
                     src="../assets/icons/btn.svg"
@@ -329,7 +349,7 @@
                         <a href="../index.html" class="footer-center-link">About</a>
                       </li>
                       <li class="footer-center-list">
-                        <a href="./zoos.html" class="footer-center-link">Zoos</a>
+                        <a href="./panda.html" class="footer-center-link">Zoos</a>
                       </li>
                       <li class="footer-center-list">
                         <a href="./map.html" class="footer-center-link">Map</a>
@@ -407,7 +427,7 @@
                     <fieldset class="popup-fieldset">
                       <legend class="popup-legend">Сhoose an animal</legend>
                       <div class="select-wrapper">
-                        <select class="popup-input select-animal" name="animals">
+                        <select class="popup-input select-animal" name="animals" required>
                           <option selected value=""></option>
                           <option value="Panda">Panda</option>
                           <option value="Eagle">Eagle</option>
@@ -419,7 +439,7 @@
 
                     <fieldset class="popup-fieldset">
                       <legend class="popup-legend">To donate</legend>
-                        <p><input id="popup-animal" class="popup-input" type="text" name="Name" value=""></p>
+                        <p><input id="popup-animal" class="popup-input popup-animal" type="text" name="Name" value="" required></p>
                     </fieldset>
 
                 </div>
@@ -431,12 +451,12 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Name</legend>
-                          <p><input class="popup-input" type="text" name="Name" value=""></p>
+                          <p><input class="popup-input popup-input-name" type="text" name="Name" value="" required></p>
                       </fieldset>
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Email</legend>
-                          <p><input class="popup-input" type="email" name="Email"/></p>
+                          <p><input class="popup-input popup-input-email" type="email" name="Email" required></p>
 
                       </fieldset>
 
@@ -444,13 +464,13 @@
                           <legend class="popup-legend">Phone</legend>
 
                           <div class="select-wrapper wrapper-phone">
-                            <select class="popup-input select-phone" name="phone">
+                            <select class="popup-input select-phone" name="phone" required>
                               <option selected value="7">+7</option>
                               <option value="375">+375</option>
                             </select>
                           </div>
 
-                          <p><input class="popup-input input-phone" type="tel" name="phone" value=""></p>
+                          <p><input class="popup-input input-phone" type="tel" name="phone" value="" required></p>
 
                       </fieldset>
 
@@ -462,13 +482,13 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Card number</legend>
-                          <p><input id="popup-card-number" class="popup-input" type="tel" name="card-number" value=""></p>
+                          <p><input id="popup-card-number" class="popup-input" type="tel" name="card-number" value="" required></p>
                       </fieldset>
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Expiry date</legend>
                           <div class="select-wrapper select-date">
-                            <select class="popup-input select-expire select-expire-date" name="expire-date">
+                            <select class="popup-input select-expire select-expire-date" name="expire-date" required>
                               <option selected value=""></option>
                               <option value="1">01</option>
                               <option value="2">02</option>
@@ -504,7 +524,7 @@
                             </select>
                           </div>
                           <div class="select-wrapper">
-                              <select class="popup-input select-expire" name="expire-month">
+                              <select class="popup-input select-expire expire-month" name="expire-month" required>
                                 <option selected value=""></option>
                                 <option value="1">01</option>
                                 <option value="2">02</option>
@@ -524,7 +544,7 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">CVC</legend>
-                          <p><input id="cvc" class="popup-input" type="password" name="cvc" value=""></p>
+                          <p><input id="cvc" class="popup-input" type="password" name="cvc" value="" required></p>
                       </fieldset>
 
                     </div>
@@ -535,7 +555,7 @@
 
                 <div class="button-container btn-popup">
                   <div class="btn-wraper">
-                    <button class="button btn-popup-submit" type="submit">
+                    <button class="button btn-popup-submit invalid" type="submit">
                     Donate
                     </button>
                   </div>
@@ -552,7 +572,7 @@
 
     </div>
 
-      <script src="../script-common.js"></script>
+    <script src="../script-common.js"></script>
     <script src="./script-map.js"></script>
   </body>
 

@@ -36,7 +36,7 @@
                   <a href="./index.html" class="header-nav-anchor active">About</a>
                 </li>
                 <li class="header-nav-link">
-                  <a href="./pages/zoos.html" class="header-nav-anchor">Zoos</a>
+                  <a href="./pages/panda.html" class="header-nav-anchor">Zoos</a>
                 </li>
                 <li class="header-nav-link">
                   <a href="./pages/map.html" class="header-nav-anchor">Map</a>
@@ -53,7 +53,7 @@
             <div class="burger">
 
               <label class="switch-dark">
-                <input type="checkbox" name="switch-dark" class="switch-dark" />
+                <input type="checkbox" name="switch-dark" class="switch-dark local-storage"/>
                 <span class="switch-dark-button round"></span>
               </label>
 
@@ -75,7 +75,7 @@
           <div class="first-screen-top">
             <h2>Watch your favorite animal online</h2>
 
-            <form action="./pages/zoos.html">
+            <form action="./pages/panda.html">
               <button class="button btn-slider">
                 <img
                   class="img-btn"
@@ -108,120 +108,133 @@
 
             <div class="slider-small">
 
+              <div class="line-dots">
+                <div class="dots-container">
+                  <span class="dots"></span>
+                  <span class="dots"></span>
+                  <span class="dots"></span>
+                  <span class="dots"></span>
+                  <span class="dots"></span>
+                  <span class="dots"></span>
+                  <span class="dots"></span>
+                </div>
+              </div>
+
               <div class="slider-pets">
 
-                      <ul class="small-slider" id="first-screen">
+                <ul class="small-slider" id="first-screen">
 
-                        <li class="small-slider-item">
-                          <img class="slider-list-img" src="./assets/images/eagle.jpg" alt="eagle">
-                          <div class="container-zoo-small">
-                            <p class="slider-description">Panda’s name is Bei Bei. He
-                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <div class="slider-small-btn-container">
-                                <a class="slider-watch" href="./pages/eagle.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                                <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
-                              </div>
-                          </div>
-                        </li>
+                  <li class="small-slider-item">
+                    <img class="slider-list-img" src="./assets/images/eagle.jpg" alt="eagle" data-position="1">
+                    <div class="container-zoo-small">
+                      <p class="slider-description">Panda’s name is Bei Bei. He
+                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="slider-small-btn-container">
+                          <a class="slider-watch" href="./pages/eagle.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
+                        </div>
+                    </div>
+                  </li>
 
-                        <li class="small-slider-item slider-active">
-                          <img class="slider-list-img" src="./assets/images/panda.jpg" alt="crocodile">
-                          <div class="container-zoo-small visible-small">
-                            <p class="slider-description">Panda’s name is Bei Bei. He
-                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <div class="slider-small-btn-container">
-                                <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                                <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
-                              </div>
-                          </div>
+                  <li class="small-slider-item slider-active">
+                    <img class="slider-list-img" src="./assets/images/panda.jpg" alt="crocodile" data-position="2">
+                    <div class="container-zoo-small visible-small">
+                      <p class="slider-description">Panda’s name is Bei Bei. He
+                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="slider-small-btn-container">
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
+                        </div>
+                    </div>
 
-                        </li>
+                  </li>
 
-                        <li class="small-slider-item">
-                          <img class="slider-list-img" src="./assets/images/monkey.jpg" alt="monkey">
-                          <div class="container-zoo-small">
-                            <p class="slider-description">Panda’s name is Bei Bei. He
-                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <div class="slider-small-btn-container">
-                                <a class="slider-watch" href="./pages/monkey.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                                <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
-                              </div>
-                          </div>
-                        </li>
+                  <li class="small-slider-item">
+                    <img class="slider-list-img" src="./assets/images/monkey.jpg" alt="monkey" data-position="3">
+                    <div class="container-zoo-small">
+                      <p class="slider-description">Panda’s name is Bei Bei. He
+                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="slider-small-btn-container">
+                          <a class="slider-watch" href="./pages/monkey.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
+                        </div>
+                    </div>
+                  </li>
 
-                        <li class="small-slider-item">
-                          <img class="slider-list-img" src="./assets/images/crocodile.jpg" alt="crocodile">
-                          <div class="container-zoo-small">
-                            <p class="slider-description">Panda’s name is Bei Bei. He
-                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <div class="slider-small-btn-container">
-                                <a class="slider-watch" href="./pages/crocodile.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                                <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
-                              </div>
-                          </div>
-                        </li>
+                  <li class="small-slider-item">
+                    <img class="slider-list-img" src="./assets/images/crocodile.jpg" alt="crocodile" data-position="4">
+                    <div class="container-zoo-small">
+                      <p class="slider-description">Panda’s name is Bei Bei. He
+                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="slider-small-btn-container">
+                          <a class="slider-watch" href="./pages/crocodile.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
+                        </div>
+                    </div>
+                  </li>
 
-                        <li class="small-slider-item">
-                          <img class="slider-list-img" src="./assets/images/fox.jpg" alt="fox">
-                          <div class="container-zoo-small">
-                            <p class="slider-description">Panda’s name is Bei Bei. He
-                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <div class="slider-small-btn-container">
-                                <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                                <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
-                              </div>
-                          </div>
-                        </li>
+                  <li class="small-slider-item">
+                    <img class="slider-list-img" src="./assets/images/fox.jpg" alt="fox" data-position="5">
+                    <div class="container-zoo-small">
+                      <p class="slider-description">Panda’s name is Bei Bei. He
+                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="slider-small-btn-container">
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
+                        </div>
+                    </div>
+                  </li>
 
-                        <li class="small-slider-item">
-                          <img class="slider-list-img" src="./assets/images/lase-animal.jpg" alt="lase-animal">
-                          <div class="container-zoo-small">
-                            <p class="slider-description">Panda’s name is Bei Bei. He
-                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <div class="slider-small-btn-container">
-                                <a class="slider-watch" href="./pages/eagle.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                                <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
-                              </div>
-                          </div>
-                        </li>
+                  <li class="small-slider-item">
+                    <img class="slider-list-img" src="./assets/images/lase-animal.jpg" alt="lase-animal" data-position="6">
+                    <div class="container-zoo-small">
+                      <p class="slider-description">Panda’s name is Bei Bei. He
+                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="slider-small-btn-container">
+                          <a class="slider-watch" href="./pages/eagle.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
+                        </div>
+                    </div>
+                  </li>
 
-                        <li class="small-slider-item">
-                          <img class="slider-list-img" src="./assets/images/elephant.jpg" alt="elephant">
-                          <div class="container-zoo-small">
-                            <p class="slider-description">Panda’s name is Bei Bei. He
-                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <div class="slider-small-btn-container">
-                                <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                                <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
-                              </div>
-                          </div>
-                        </li>
+                  <li class="small-slider-item">
+                    <img class="slider-list-img" src="./assets/images/elephant.jpg" alt="elephant" data-position="7">
+                    <div class="container-zoo-small">
+                      <p class="slider-description">Panda’s name is Bei Bei. He
+                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="slider-small-btn-container">
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
+                        </div>
+                    </div>
+                  </li>
 
-                        <li class="small-slider-item">
-                          <img class="slider-list-img" src="./assets/images/leopard.jpg" alt="leopard">
-                          <div class="container-zoo-small">
-                            <p class="slider-description">Panda’s name is Bei Bei. He
-                              is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                              <div class="slider-small-btn-container">
-                                <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
-                                <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
-                              </div>
-                          </div>
-                        </li>
+                  <li class="small-slider-item">
+                    <img class="slider-list-img" src="./assets/images/leopard.jpg" alt="leopard" data-position="8">
+                    <div class="container-zoo-small">
+                      <p class="slider-description">Panda’s name is Bei Bei. He
+                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                        <div class="slider-small-btn-container">
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
+                        </div>
+                    </div>
+                  </li>
 
-                      </ul>
+                </ul>
 
-                      <div class="button-container first-screen-input">
-                        <div class="btn-wraper">
-                          <div class="output-range-container first-screen-output">
-                            <output class="output-range-strong small-strong-output" name="first-screen">02/</output>
-                            <output class="output-range-small" data-name="first-screen">08</output>
-                          </div>
-                          <input class="input-range" type="range"  min="1" max="8" value="2" name="first-screen" step="1">
-                      </div>
-                      </div>
+                <div class="button-container first-screen-input">
+                  <div class="btn-wraper">
+                    <div class="output-range-container first-screen-output">
+                      <output class="output-range-strong small-strong-output first-screen-outputs" name="first-screen">02/</output>
+                      <output class="output-range-small" data-name="first-screen">08</output>
+                    </div>
+                    <input class="input-range first-screen-inputs" type="range"  min="1" max="8" value="2" name="first-screen" step="1">
+                  </div>
+                </div>
 
               </div>
+
             </div>
 
           </aside>
@@ -270,7 +283,7 @@
                       <output class="output-range-small" data-name="how-it-works">04</output>
                     </div>
                     <input class="input-range" type="range"  min="1" max="4" value="0" name="how-it-works" step="1">
-                    <form action="./pages/zoos.html">
+                    <form action="./pages/panda.html">
                       <button class="button">
                       <img
                         class="img-btn"
@@ -322,7 +335,7 @@
                       <p class="slider-description">Panda’s name is Bei Bei. He
                         is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                         <div class="slider-small-btn-container">
-                          <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
                           <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
                         </div>
                     </div>
@@ -378,7 +391,7 @@
                       <p class="slider-description">Panda’s name is Bei Bei. He
                         is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                         <div class="slider-small-btn-container">
-                          <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
                           <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
                         </div>
                     </div>
@@ -392,7 +405,7 @@
                       <p class="slider-description">Panda’s name is Bei Bei. He
                         is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                         <div class="slider-small-btn-container">
-                          <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
                           <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
                         </div>
                     </div>
@@ -406,7 +419,7 @@
                       <p class="slider-description">Panda’s name is Bei Bei. He
                         is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                         <div class="slider-small-btn-container">
-                          <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
                           <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
                         </div>
                     </div>
@@ -420,7 +433,7 @@
                       <p class="slider-description">Panda’s name is Bei Bei. He
                         is 2 years old. Bei Bei is from China. He loves bamboos.</p>
                         <div class="slider-small-btn-container">
-                          <a class="slider-watch" href="./pages/zoos.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
+                          <a class="slider-watch" href="./pages/panda.html"><img  src="./assets/icons/btn-green.svg" alt="play"></a>
                           <span class="slider-small-btn-donate donate"><img src="./assets/icons/btn-donate.svg" alt="donate"></span>
                         </div>
                     </div>
@@ -580,7 +593,7 @@
             <section class="map-animals">
 
               <div class="map-placeholder map-panda">
-                <img class="active-img" src="./assets/icons/map-placeholder.svg" alt="placeholder">
+                <img class="active-img panda" src="./assets/icons/map-placeholder.svg" alt="placeholder">
                 <img class="red-img-none panda" src="./assets/icons/map-placeholder-red.svg" alt="placeholder">
                 <div class="tooltip-content">
                     <img class="tooltip-img" src="./assets/images/panda.jpg" alt="image">
@@ -593,7 +606,7 @@
                 </div>
 
               <div class="map-placeholder map-eagle">
-                <img class="active-img" src="./assets/icons/map-placeholder.svg" alt="placeholder">
+                <img class="active-img eagle" src="./assets/icons/map-placeholder.svg" alt="placeholder">
                 <img class="red-img-none eagle" src="./assets/icons/map-placeholder-red.svg" alt="placeholder">
                 <div class="tooltip-content right-tollip">
                   <img class="tooltip-img" src="./assets/images/eagle.jpg" alt="image">
@@ -606,7 +619,7 @@
               </div>
 
               <div class="map-placeholder map-crocodile">
-                  <img class="active-img" src="./assets/icons/map-placeholder.svg" alt="placeholder">
+                  <img class="active-img crocodile" src="./assets/icons/map-placeholder.svg" alt="placeholder">
                   <img class="red-img-none crocodile" src="./assets/icons/map-placeholder-red.svg" alt="placeholder">
                   <div class="tooltip-content right-tollip">
                     <img class="tooltip-img" src="./assets/images/crocodile.jpg" alt="image">
@@ -619,7 +632,7 @@
               </div>
 
               <div class="map-placeholder map-monkey">
-                    <img class="active-img" src="./assets/icons/map-placeholder.svg" alt="placeholder">
+                    <img class="active-img monkey" src="./assets/icons/map-placeholder.svg" alt="placeholder">
                     <img class="red-img-none monkey" src="./assets/icons/map-placeholder-red.svg" alt="placeholder">
                     <div class="tooltip-content">
                       <img class="tooltip-img" src="./assets/images/monkey.jpg" alt="image">
@@ -635,7 +648,7 @@
 
             <div class="button-container btn-map">
               <div class="btn-wraper">
-                <form action="./pages/zoos.html">
+                <form action="./pages/panda.html">
                   <button class="button">
                   <img
                     class="img-btn"
@@ -705,7 +718,7 @@
                         <a href="./index.html" class="footer-center-link">About</a>
                       </li>
                       <li class="footer-center-list">
-                        <a href="./pages/zoos.html" class="footer-center-link">Zoos</a>
+                        <a href="./pages/panda.html" class="footer-center-link">Zoos</a>
                       </li>
                       <li class="footer-center-list">
                         <a href="./pages/map.html" class="footer-center-link">Map</a>
@@ -783,7 +796,7 @@
                     <fieldset class="popup-fieldset">
                       <legend class="popup-legend">Сhoose an animal</legend>
                       <div class="select-wrapper">
-                        <select class="popup-input select-animal" name="animals">
+                        <select class="popup-input select-animal" name="animals" required>
                           <option selected value=""></option>
                           <option value="Panda">Panda</option>
                           <option value="Eagle">Eagle</option>
@@ -795,7 +808,7 @@
 
                     <fieldset class="popup-fieldset">
                       <legend class="popup-legend">To donate</legend>
-                        <p><input id="popup-animal" class="popup-input" type="text" name="Name" value=""></p>
+                        <p><input id="popup-animal" class="popup-input popup-animal" type="text" name="Name" value="" required></p>
                     </fieldset>
 
                 </div>
@@ -807,12 +820,12 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Name</legend>
-                          <p><input class="popup-input" type="text" name="Name" value=""></p>
+                          <p><input class="popup-input popup-input-name" type="text" name="Name" value="" required></p>
                       </fieldset>
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Email</legend>
-                          <p><input class="popup-input" type="email" name="Email"/></p>
+                          <p><input class="popup-input popup-input-email" type="email" name="Email" required></p>
 
                       </fieldset>
 
@@ -820,13 +833,13 @@
                           <legend class="popup-legend">Phone</legend>
 
                           <div class="select-wrapper wrapper-phone">
-                            <select class="popup-input select-phone" name="phone">
+                            <select class="popup-input select-phone" name="phone" required>
                               <option selected value="7">+7</option>
                               <option value="375">+375</option>
                             </select>
                           </div>
 
-                          <p><input class="popup-input input-phone" type="tel" name="phone" value=""></p>
+                          <p><input class="popup-input input-phone" type="tel" name="phone" value="" required></p>
 
                       </fieldset>
 
@@ -838,13 +851,13 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Card number</legend>
-                          <p><input id="popup-card-number" class="popup-input" type="tel" name="card-number" value=""></p>
+                          <p><input id="popup-card-number" class="popup-input" type="tel" name="card-number" value="" required></p>
                       </fieldset>
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">Expiry date</legend>
                           <div class="select-wrapper select-date">
-                            <select class="popup-input select-expire select-expire-date" name="expire-date">
+                            <select class="popup-input select-expire select-expire-date" name="expire-date" required>
                               <option selected value=""></option>
                               <option value="1">01</option>
                               <option value="2">02</option>
@@ -880,7 +893,7 @@
                             </select>
                           </div>
                           <div class="select-wrapper">
-                              <select class="popup-input select-expire" name="expire-month">
+                              <select class="popup-input select-expire expire-month" name="expire-month" required>
                                 <option selected value=""></option>
                                 <option value="1">01</option>
                                 <option value="2">02</option>
@@ -900,7 +913,7 @@
 
                       <fieldset class="popup-fieldset">
                           <legend class="popup-legend">CVC</legend>
-                          <p><input id="cvc" class="popup-input" type="password" name="cvc" value=""></p>
+                          <p><input id="cvc" class="popup-input" type="password" name="cvc" value="" required></p>
                       </fieldset>
 
                     </div>
@@ -911,7 +924,7 @@
 
                 <div class="button-container btn-popup">
                   <div class="btn-wraper">
-                    <button class="button btn-popup-submit" type="submit">
+                    <button class="button btn-popup-submit invalid" type="submit">
                     Donate
                     </button>
                   </div>
