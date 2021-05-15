@@ -14,7 +14,7 @@ module.exports = {
     assetModuleFilename: 'assets/[hash][ext]',
   },
   resolve: {
-    extensions: [ '.js', '.ts', '.png', 'jpg', '.svg']
+    extensions: [ '.js', '.ts', '.png', '.jpg', '.svg']
   },
   optimization: {
       splitChunks: {
@@ -50,12 +50,12 @@ module.exports = {
         },
           {
             test: /\.(jpg|svg|png)$/,
-            type: 'asset/resource',
+            // type: 'asset/resource',
             use: ['file-loader'],
           },
           {
             test: /\.(ttf|woff|woff2|eot)$/,
-            type: 'asset/resource',
+            // type: 'asset/resource',
             use: ['file-loader'],
           },
           {
