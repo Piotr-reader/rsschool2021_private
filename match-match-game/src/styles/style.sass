@@ -1,22 +1,141 @@
-// $import "~normalize.css"
-// $import "fonts.css"
+@import "~normalize.css"
+// @import "fonts.css"
+
+html
+  font-size: 16px
 
 body
-    font-family: 'Roboto', sans-serif
-    margin: 0
-    padding: 0
+  min-height: 100vh
+  font-family: 'Roboto', sans-serif
+  margin: 0
+  padding: 0
 
-// .wrapper
-//     max-width: 1440px
-//     margin: 0 auto
+li
+  list-style-type: none
 
-// h1
-//     text-align: center
-// background: #000
+.wrapper
+  max-width: 1440px
+  margin: 0 auto
 
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
 
-// .card
-//     background-image: url(../assets/card.jpg)
-//     background-size: cover
-//     width: 178px
-//     height: 178px
+  background: #2196F3
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24)
+  height: 64px
+
+  .header-left
+    display: flex
+
+    .btn-container
+      display: flex
+      flex-direction: column
+      width: 80px
+      height: 40px
+      margin-left: 20px
+      margin-right: 150px
+
+      .btn-left
+        background: #FFFFFF
+        color: #2196F3
+
+    //   .header-btn-active"
+    //     background: #2196F3
+    //     color: #FFFFFF
+
+    .nav-header
+      display: flex
+      margin: 0
+
+      .nav-item
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 96px
+
+      .img-header
+        width: 24px
+        height: 24px
+        border-radius: 50%
+        background: white
+        margin-bottom: 7px
+
+      .nav-link
+          font-family: Roboto
+          font-style: normal
+          font-weight: normal
+          font-size: 12px
+          line-height: 15px
+          text-align: center
+          letter-spacing: 0.4px
+          color: #FFFFFF
+
+.register-player
+  margin-right: 20px
+  width: 207px
+  height: 36px
+  background: #F2F9FE
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 6px 10px rgba(0, 0, 0, 0.14)
+  border-radius: 4px
+  font-family: Roboto
+  font-style: normal
+  font-weight: 700
+  font-size: 13px
+  line-height: 16px
+  letter-spacing: 1.25px
+  text-transform: uppercase
+  color: #2196F3
+
+.main
+  width: 70%
+  margin: 0 auto
+  margin-top: 33px
+  background: rgba(0, 0, 0, 0.05)
+  border-radius: 5px
+
+  .title-description
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    font-size: 20px
+    line-height: 30px
+    letter-spacing: 0.15px
+    color: rgba(0, 0, 0, 0.87)
+    padding-top: 28px
+    margin-left: 36px
+
+.rules
+  width: 360px
+  margin-left: 36px
+  padding-bottom: 85px
+
+  .rules-all
+    display: flex
+    margin: 20px 0
+    padding: 16px
+    height: 230px
+    background: #FFFFFF
+    &:nth-child(2)
+      height: 130px
+
+    .number-rule
+      margin-right: 16px
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background-color: #2196F3
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14)
+      font-family: Roboto
+      font-style: normal
+      font-weight: normal
+      font-size: 24px
+      align-items: center
+      text-align: center
+      letter-spacing: 0.25px
+      color: #FFFFFF
+
+    span
+      width: 270px
+
