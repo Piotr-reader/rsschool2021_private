@@ -2,7 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlagin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    assetModuleFilename: 'assets/[hash][ext]',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   resolve: {
     extensions: [ '.js', '.ts', '.png', '.jpg', '.svg']
@@ -32,11 +32,11 @@ module.exports = {
       new MiniCssExtractPlugin({
           filename: '[name].[contenthash].css',
       }),
-      // new CopyPlagin({
-      //   patterns: [
-      //     { from: './public'}
-      //   ]
-      // })
+      new CopyPlugin({
+        patterns: [
+          { from: '../public'}
+        ]
+      })
   ],
   module: {
       rules: [
@@ -55,7 +55,7 @@ module.exports = {
           },
           {
             test: /\.(ttf|woff|woff2|eot)$/,
-            // type: 'asset/resource',
+            type: 'asset/resource',
             use: ['file-loader'],
           },
           {

@@ -1,10 +1,16 @@
 import './styles/style.sass';
-import './styles/card.sass';
-// import pinguin from './assets/pinguin.jpg';
+import { App } from './app';
 
-// const img = require('./assets/card.jpg')
-// document.body.innerHTML = `
-// <img src="${img}" alt="card">
-// `;
+window.onload = () => {
+    const appElement = document.getElementById('app');
+    const startGame = document.querySelector('#start-game');
+
+    if (!appElement) throw Error('App root element not found');
+    startGame?.addEventListener('mousedown', () => {
+        new App(appElement).start();
+    })
+
+}
+
 
 
