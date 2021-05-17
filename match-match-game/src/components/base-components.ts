@@ -1,9 +1,8 @@
-export class BaseComponent {
-    readonly element: HTMLElement;
+export default class BaseComponent {
+  readonly element: HTMLElement;
 
-    constructor(tag: keyof HTMLElementTagNameMap = 'div', styles: string[] = []) {
-
-        this.element = document.createElement(tag);
-        this.element.classList.add(...styles);
-    }
+  constructor(tag: keyof HTMLElementTagNameMap = 'div', styles: string[] = []) {
+    this.element = document.createElement(tag);
+    this.element.classList.add(...styles);
+  }
 }

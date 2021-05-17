@@ -1,5 +1,6 @@
 @import "~normalize.css"
 // @import "fonts.css"
+
 *
   margin: 0
   padding: 0
@@ -19,18 +20,28 @@ li
   max-width: 1440px
   margin: 0 auto
 
+.popup
+  background: rgba(0, 0, 0, 0.35)
+.non-visible
+  display: none
+.start-game
+  width: 129px !important
+.stop-game
+  width: 129px !important
+.img-btn-avatar
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  margin-right: 20px
 .header
   display: flex
   justify-content: space-between
   align-items: center
-
   background: #2196F3
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24)
   height: 64px
-
   .header-left
     display: flex
-
     .btn-container
       display: flex
       flex-direction: column
@@ -38,32 +49,27 @@ li
       height: 40px
       margin-left: 20px
       margin-right: 150px
-
       .btn-left
         background: #FFFFFF
         color: #2196F3
-
-    //   .header-btn-active"
-    //     background: #2196F3
-    //     color: #FFFFFF
+      // .header-btn-active"
+      //   background: #2196F3
+      //   color: #FFFFFF
 
     .nav-header
       display: flex
       margin: 0
-
       .nav-item
         display: flex
         flex-direction: column
         align-items: center
         width: 96px
-
       .img-header
         width: 24px
         height: 24px
         border-radius: 50%
         background: white
         margin-bottom: 7px
-
       .nav-link
           font-family: Roboto
           font-style: normal
@@ -108,7 +114,11 @@ li
     padding-top: 28px
     margin-left: 36px
 
-.rules
+.rules-sections
+  display: flex
+  justify-content: space-between
+
+.rules-left
   width: 360px
   margin-left: 36px
   padding-bottom: 85px
@@ -138,5 +148,118 @@ li
       letter-spacing: 0.25px
       color: #FFFFFF
 
-    span
+    p
       width: 270px
+
+.rules-right
+  width: 360px
+  margin: 20px 0
+  margin-right: 185px
+  padding-bottom: 85px
+  .rules-register-user
+    width: 302px
+    height: 218px
+    float: right
+  .rules-game-settings
+    display: flex
+    flex-direction: column
+    width: 116px
+    height: 73px
+    background-color: #2196F3
+    color: #FFFFFF
+    float: right
+    align-items: center
+    margin-top: 20px
+    margin-bottom: 85px
+    .rules-game-settings-img
+        width: 24px
+        height: 24px
+        border-radius: 50%
+        background: white
+        margin-top: 15px
+        margin-bottom: 7px
+  .rules-game-img
+    width: 330px
+    height: 240px
+    float: right
+
+// register new player form
+.register-new-player
+  position: absolute
+  margin-left: auto
+  margin-right: auto
+  top: 30%
+  left: 0
+  right: 0
+  width: 639px
+  height: 460px
+  margin: 0 auto
+  background: #FAFAFA
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14)
+  border-radius: 4px
+  .form-description
+    font-family: Roboto
+    font-style: normal
+    font-weight: 500
+    font-size: 20px
+    line-height: 30px
+    letter-spacing: 0.15px
+    color: rgba(0, 0, 0, 0.87)
+    padding: 20px 16px
+    background: white
+  .form-register-new-user
+    display: flex
+    justify-content: space-between
+    .form-left
+      display: flex
+      flex-direction: column
+      width: 328px
+      margin-left: 20px
+      .register-input
+        height: 56px
+        background: rgba(33, 33, 33, 0.08)
+        border-radius: 4px 4px 0px 0px
+        margin: 16px 0
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        line-height: 16px
+        letter-spacing: 0.4px
+        padding-left: 50px
+        text-transform: capitalize
+    .form-right
+      display: flex
+      flex-direction: column
+      .form-avatar
+        width: 198px
+        height: 198px
+        margin-right: 50px
+        margin-top: 16px
+  .form-down
+    float: right
+    .add-user
+      align-items: center
+      padding: 10px 16px
+      width: 108px
+      height: 36px
+      left: 802px
+      top: 682px
+      background: #2196F3
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24)
+      border-radius: 4px
+      color: white
+      text-transform: uppercase
+    .cancel
+      align-items: center
+      padding: 10px 16px
+      width: 93px
+      height: 36px
+      left: 927px
+      top: 682px
+      background: #E3F2FD
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24)
+      border-radius: 4px
+      margin-right: 20px
+      color: #2196F3
+      text-transform: uppercase
